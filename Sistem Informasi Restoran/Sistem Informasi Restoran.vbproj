@@ -76,6 +76,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bayar.Designer.vb">
+      <DependentUpon>Bayar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bayar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CrystalReport1.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -88,7 +94,31 @@
       <DependentUpon>CrystalReport2.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Data Karyawan.Designer.vb">
+      <DependentUpon>Data Karyawan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Data Karyawan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kasir.Designer.vb">
+      <DependentUpon>Kasir.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Kasir.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Koneksi.vb" />
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main Menu.Designer.vb">
+      <DependentUpon>Main Menu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Main Menu.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Menu Makanan.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +168,18 @@
     <EmbeddedResource Include="CrystalReport2.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data Karyawan.resx">
+      <DependentUpon>Data Karyawan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kasir.resx">
+      <DependentUpon>Kasir.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main Menu.resx">
+      <DependentUpon>Main Menu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu Makanan.resx">
       <DependentUpon>Menu Makanan.vb</DependentUpon>

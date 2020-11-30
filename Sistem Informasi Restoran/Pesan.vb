@@ -46,7 +46,7 @@
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles save.Click
         If kode_pemesanan.Text = "" Or ID_Pelanggan.Text = "" Or jumlah_pemesanan.Text = "" Then
             MsgBox("Data Pesanan Belum Lengkap")
-            Exit Sub 'keluar
+            Exit Sub
         Else
             Call koneksiDB()
             CMD = New OleDb.OleDbCommand(" select * from Pesan where kode_Pesanan ='" & kode_pemesanan.Text & "'", Conn)
