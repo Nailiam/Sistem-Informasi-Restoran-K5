@@ -32,11 +32,11 @@ Partial Class Menu_Minuman
         Me.btn_input = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txt_harga_minuman = New System.Windows.Forms.TextBox()
-        Me.txt_jenis_minuman = New System.Windows.Forms.TextBox()
         Me.txt_id_minuman = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.cmb_jenis_minuman = New System.Windows.Forms.ComboBox()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -116,8 +116,8 @@ Partial Class Menu_Minuman
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.cmb_jenis_minuman)
         Me.GroupBox1.Controls.Add(Me.txt_harga_minuman)
-        Me.GroupBox1.Controls.Add(Me.txt_jenis_minuman)
         Me.GroupBox1.Controls.Add(Me.txt_id_minuman)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
@@ -135,13 +135,6 @@ Partial Class Menu_Minuman
         Me.txt_harga_minuman.Name = "txt_harga_minuman"
         Me.txt_harga_minuman.Size = New System.Drawing.Size(106, 20)
         Me.txt_harga_minuman.TabIndex = 5
-        '
-        'txt_jenis_minuman
-        '
-        Me.txt_jenis_minuman.Location = New System.Drawing.Point(109, 69)
-        Me.txt_jenis_minuman.Name = "txt_jenis_minuman"
-        Me.txt_jenis_minuman.Size = New System.Drawing.Size(106, 20)
-        Me.txt_jenis_minuman.TabIndex = 4
         '
         'txt_id_minuman
         '
@@ -177,6 +170,15 @@ Partial Class Menu_Minuman
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ID Minuman :"
         '
+        'cmb_jenis_minuman
+        '
+        Me.cmb_jenis_minuman.FormattingEnabled = True
+        Me.cmb_jenis_minuman.Items.AddRange(New Object() {"Milk Tea", "Jasmine Tea", "Lemon Tea", "Coffee", "Soda", "Mineral", "Juice", "Milkshake"})
+        Me.cmb_jenis_minuman.Location = New System.Drawing.Point(109, 67)
+        Me.cmb_jenis_minuman.Name = "cmb_jenis_minuman"
+        Me.cmb_jenis_minuman.Size = New System.Drawing.Size(106, 21)
+        Me.cmb_jenis_minuman.TabIndex = 6
+        '
         'Menu_Minuman
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -210,9 +212,9 @@ Partial Class Menu_Minuman
     Friend WithEvents btn_input As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents txt_harga_minuman As TextBox
-    Friend WithEvents txt_jenis_minuman As TextBox
     Friend WithEvents txt_id_minuman As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents cmb_jenis_minuman As ComboBox
 End Class

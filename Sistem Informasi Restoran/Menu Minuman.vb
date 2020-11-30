@@ -1,17 +1,17 @@
 ﻿Public Class Menu_Minuman
     Sub KosongkanForm()
         txt_id_minuman.Text = ""
-        txt_jenis_minuman.Text = ""
+        cmb_jenis_minuman.Text = ""
         txt_harga_minuman.Text = ""
     End Sub
     Sub MatikanForm()
         txt_id_minuman.Enabled = False
-        txt_jenis_minuman.Enabled = False
+        cmb_jenis_minuman.Enabled = False
         txt_harga_minuman.Enabled = False
     End Sub
     Sub HidupkanForm()
         txt_id_minuman.Enabled = True
-        txt_jenis_minuman.Enabled = True
+        cmb_jenis_minuman.Enabled = True
         txt_harga_minuman.Enabled = True
     End Sub
     Sub TampilkanData()
@@ -42,7 +42,7 @@
     End Sub
 
     Private Sub btn_save_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_save.Click
-        If txt_id_minuman.Text = "" Or txt_jenis_minuman.Text = "" Or txt_harga_minuman.Text = "" Then
+        If txt_id_minuman.Text = "" Or cmb_jenis_minuman.Text = "" Or txt_harga_minuman.Text = "" Then
             MsgBox("Data Menu_Minuman Belum Lengkap")
             Exit Sub
         Else
@@ -54,7 +54,7 @@
                 Call koneksiDB()
                 Dim simpan As String
                 simpan = "insert into Menu_Minuman values ('" & txt_id_minuman.Text &
-               "', '" & txt_jenis_minuman.Text & "', '" & txt_harga_minuman.Text & "')"
+               "', '" & cmb_jenis_minuman.Text & "', '" & txt_harga_minuman.Text & "')"
                 CMD = New OleDb.OleDbCommand(simpan, Conn)
                 CMD.ExecuteNonQuery()
                 MsgBox("Input Data Sukses")
@@ -70,20 +70,20 @@
     Private Sub DataGridView1_CellMouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles DataGridView1.CellMouseClick
         On Error Resume Next
         txt_id_minuman.Text = DataGridView1.Rows(e.RowIndex).Cells(0).Value
-        txt_jenis_minuman.Text = DataGridView1.Rows(e.RowIndex).Cells(1).Value
+        cmb_jenis_minuman.Text = DataGridView1.Rows(e.RowIndex).Cells(1).Value
         txt_harga_minuman.Text = DataGridView1.Rows(e.RowIndex).Cells(2).Value
         Call HidupkanForm()
         txt_id_minuman.Enabled = False
     End Sub
 
     Private Sub btn_edit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_edit.Click
-        If txt_id_minuman.Text = "" Or txt_jenis_minuman.Text = "" Or txt_harga_minuman.Text = "" Then
+        If txt_id_minuman.Text = "" Or cmb_jenis_minuman.Text = "" Or txt_harga_minuman.Text = "" Then
             MsgBox("Data Menu_Minuman Belum Lengkap")
             Exit Sub
         Else
             Call koneksiDB()
             CMD = New OleDb.OleDbCommand("update Menu_Minuman set Jenis_Minuman = '" &
-           txt_jenis_minuman.Text & "', Harga_Minuman = '" & txt_harga_minuman.Text & "'  where ID_Minuman ='" & txt_id_minuman.Text & "'", Conn)
+           cmb_jenis_minuman.Text & "', Harga_Minuman = '" & txt_harga_minuman.Text & "'  where ID_Minuman ='" & txt_id_minuman.Text & "'", Conn)
             DM = CMD.ExecuteReader
             MsgBox("Update Data Berhasil")
         End If

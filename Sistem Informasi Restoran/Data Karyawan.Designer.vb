@@ -77,7 +77,7 @@ Partial Class Data_Karyawan
         '
         'btn_simpan
         '
-        Me.btn_simpan.Location = New System.Drawing.Point(348, 389)
+        Me.btn_simpan.Location = New System.Drawing.Point(432, 379)
         Me.btn_simpan.Name = "btn_simpan"
         Me.btn_simpan.Size = New System.Drawing.Size(76, 32)
         Me.btn_simpan.TabIndex = 29
@@ -86,7 +86,7 @@ Partial Class Data_Karyawan
         '
         'btn_cari
         '
-        Me.btn_cari.Location = New System.Drawing.Point(523, 389)
+        Me.btn_cari.Location = New System.Drawing.Point(348, 76)
         Me.btn_cari.Name = "btn_cari"
         Me.btn_cari.Size = New System.Drawing.Size(76, 32)
         Me.btn_cari.TabIndex = 28
@@ -95,7 +95,7 @@ Partial Class Data_Karyawan
         '
         'btn_delete
         '
-        Me.btn_delete.Location = New System.Drawing.Point(438, 389)
+        Me.btn_delete.Location = New System.Drawing.Point(522, 379)
         Me.btn_delete.Name = "btn_delete"
         Me.btn_delete.Size = New System.Drawing.Size(76, 32)
         Me.btn_delete.TabIndex = 27
@@ -104,7 +104,7 @@ Partial Class Data_Karyawan
         '
         'txt_foto
         '
-        Me.txt_foto.Location = New System.Drawing.Point(438, 351)
+        Me.txt_foto.Location = New System.Drawing.Point(522, 337)
         Me.txt_foto.Name = "txt_foto"
         Me.txt_foto.Size = New System.Drawing.Size(161, 20)
         Me.txt_foto.TabIndex = 26
@@ -112,7 +112,7 @@ Partial Class Data_Karyawan
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(345, 354)
+        Me.Label11.Location = New System.Drawing.Point(429, 340)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(52, 13)
         Me.Label11.TabIndex = 25
@@ -120,7 +120,7 @@ Partial Class Data_Karyawan
         '
         'btn_browse
         '
-        Me.btn_browse.Location = New System.Drawing.Point(523, 313)
+        Me.btn_browse.Location = New System.Drawing.Point(607, 379)
         Me.btn_browse.Name = "btn_browse"
         Me.btn_browse.Size = New System.Drawing.Size(76, 32)
         Me.btn_browse.TabIndex = 24
@@ -129,9 +129,10 @@ Partial Class Data_Karyawan
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(348, 54)
+        Me.PictureBox1.Location = New System.Drawing.Point(432, 54)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(251, 253)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.PictureBox1.TabIndex = 23
         Me.PictureBox1.TabStop = False
         '
@@ -331,7 +332,7 @@ Partial Class Data_Karyawan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(637, 544)
+        Me.ClientSize = New System.Drawing.Size(695, 544)
         Me.Controls.Add(Me.lblselamat)
         Me.Controls.Add(Me.DGV2)
         Me.Controls.Add(Me.btn_simpan)
