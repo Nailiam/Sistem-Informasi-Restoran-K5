@@ -5,7 +5,7 @@
         cmbJenismakanan.Text = ""
         txtHargamakan.Text = ""
         txtIdMakanan.Focus()
-    End Sub
+    End Sub 'akhir sub
     Sub MatikanForm()
         txtIdMakanan.Enabled = False
         cmbJenismakanan.Enabled = False
