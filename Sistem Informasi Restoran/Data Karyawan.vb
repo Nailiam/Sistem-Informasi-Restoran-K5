@@ -91,20 +91,20 @@ Public Class Data_Karyawan
         Call HidupkanForm()
         Dim pegawai = InputBox("Silahkan Masukan ID Karyawan")
         Try
-            DS.Tables(0).PrimaryKey = New DataColumn() {DS.Tables(0).Columns("id_karyawan")}
+            DS.Tables(0).PrimaryKey = New DataColumn() {DS.Tables(0).Columns("Id_Kasir")}
 
             Dim row As DataRow
             row = DS.Tables(0).Rows.Find(pegawai)
-            txt_id_karyawan.Text = row("id_karyawan")
-            txt_nama_karyawan.Text = row("nama_karyawan")
-            txt_lahir.Text = row("tempat_lahir")
-            DateTimePicker1.Text = row("tgl_lahir")
+            txt_id_karyawan.Text = row("Id_Kasir")
+            txt_nama_karyawan.Text = row("Nama_Kasir")
+            txt_lahir.Text = row("Tempat_Lahir")
+            DateTimePicker1.Text = row("Tanggal_Lahir")
             cmb_jk.Text = row("Jenis_Kelamin")
-            cmb_agama.Text = row("agama")
-            txt_hp.Text = row("no_telp")
-            txt_alamat.Text = row("alamat")
-            cmb_status.Text = row("status")
-            txt_foto.Text = row("photo")
+            cmb_agama.Text = row("Agama")
+            txt_hp.Text = row("No_Telepon")
+            txt_alamat.Text = row("Alamat")
+            cmb_status.Text = row("Status")
+            txt_foto.Text = row("Photo")
 
             Refresh()
 
