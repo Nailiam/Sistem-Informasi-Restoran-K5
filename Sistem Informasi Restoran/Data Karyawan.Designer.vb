@@ -52,6 +52,8 @@ Partial Class Data_Karyawan
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.txtumur = New System.Windows.Forms.TextBox()
         CType(Me.DGV2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -77,7 +79,7 @@ Partial Class Data_Karyawan
         '
         'btn_simpan
         '
-        Me.btn_simpan.Location = New System.Drawing.Point(432, 379)
+        Me.btn_simpan.Location = New System.Drawing.Point(527, 369)
         Me.btn_simpan.Name = "btn_simpan"
         Me.btn_simpan.Size = New System.Drawing.Size(76, 32)
         Me.btn_simpan.TabIndex = 29
@@ -86,16 +88,16 @@ Partial Class Data_Karyawan
         '
         'btn_cari
         '
-        Me.btn_cari.Location = New System.Drawing.Point(348, 76)
+        Me.btn_cari.Location = New System.Drawing.Point(264, 22)
         Me.btn_cari.Name = "btn_cari"
-        Me.btn_cari.Size = New System.Drawing.Size(76, 32)
+        Me.btn_cari.Size = New System.Drawing.Size(78, 27)
         Me.btn_cari.TabIndex = 28
         Me.btn_cari.Text = "Cari Data"
         Me.btn_cari.UseVisualStyleBackColor = True
         '
         'btn_delete
         '
-        Me.btn_delete.Location = New System.Drawing.Point(522, 379)
+        Me.btn_delete.Location = New System.Drawing.Point(620, 369)
         Me.btn_delete.Name = "btn_delete"
         Me.btn_delete.Size = New System.Drawing.Size(76, 32)
         Me.btn_delete.TabIndex = 27
@@ -104,7 +106,7 @@ Partial Class Data_Karyawan
         '
         'txt_foto
         '
-        Me.txt_foto.Location = New System.Drawing.Point(522, 337)
+        Me.txt_foto.Location = New System.Drawing.Point(620, 329)
         Me.txt_foto.Name = "txt_foto"
         Me.txt_foto.Size = New System.Drawing.Size(161, 20)
         Me.txt_foto.TabIndex = 26
@@ -112,7 +114,7 @@ Partial Class Data_Karyawan
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(429, 340)
+        Me.Label11.Location = New System.Drawing.Point(548, 336)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(52, 13)
         Me.Label11.TabIndex = 25
@@ -120,7 +122,7 @@ Partial Class Data_Karyawan
         '
         'btn_browse
         '
-        Me.btn_browse.Location = New System.Drawing.Point(607, 379)
+        Me.btn_browse.Location = New System.Drawing.Point(705, 369)
         Me.btn_browse.Name = "btn_browse"
         Me.btn_browse.Size = New System.Drawing.Size(76, 32)
         Me.btn_browse.TabIndex = 24
@@ -129,18 +131,21 @@ Partial Class Data_Karyawan
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(432, 54)
+        Me.PictureBox1.Location = New System.Drawing.Point(527, 54)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(251, 253)
+        Me.PictureBox1.Size = New System.Drawing.Size(254, 253)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.PictureBox1.TabIndex = 23
         Me.PictureBox1.TabStop = False
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.txtumur)
+        Me.GroupBox1.Controls.Add(Me.Label12)
         Me.GroupBox1.Controls.Add(Me.cmb_status)
         Me.GroupBox1.Controls.Add(Me.txt_alamat)
         Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBox1.Controls.Add(Me.btn_cari)
         Me.GroupBox1.Controls.Add(Me.cmb_agama)
         Me.GroupBox1.Controls.Add(Me.cmb_jk)
         Me.GroupBox1.Controls.Add(Me.txt_lahir)
@@ -158,7 +163,7 @@ Partial Class Data_Karyawan
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Location = New System.Drawing.Point(38, 54)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(301, 367)
+        Me.GroupBox1.Size = New System.Drawing.Size(452, 367)
         Me.GroupBox1.TabIndex = 22
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Data Karyawan"
@@ -328,15 +333,30 @@ Partial Class Data_Karyawan
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(261, 115)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(38, 13)
+        Me.Label12.TabIndex = 29
+        Me.Label12.Text = "Umur :"
+        '
+        'txtumur
+        '
+        Me.txtumur.Location = New System.Drawing.Point(305, 109)
+        Me.txtumur.Name = "txtumur"
+        Me.txtumur.Size = New System.Drawing.Size(126, 20)
+        Me.txtumur.TabIndex = 30
+        '
         'Data_Karyawan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(695, 544)
+        Me.ClientSize = New System.Drawing.Size(808, 544)
         Me.Controls.Add(Me.lblselamat)
         Me.Controls.Add(Me.DGV2)
         Me.Controls.Add(Me.btn_simpan)
-        Me.Controls.Add(Me.btn_cari)
         Me.Controls.Add(Me.btn_delete)
         Me.Controls.Add(Me.txt_foto)
         Me.Controls.Add(Me.Label11)
@@ -385,4 +405,6 @@ Partial Class Data_Karyawan
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents txtumur As TextBox
+    Friend WithEvents Label12 As Label
 End Class
