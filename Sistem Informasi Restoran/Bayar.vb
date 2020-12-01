@@ -6,19 +6,18 @@
 
 
     Sub KosongkanForm()
-            txtkodetransaksi.Text = ""
-        DateTimePicker1.Text = ""
+        txtkodetransaksi.Text = ""
         txtjamtransaksi.Text = ""
-            txtidkasir.Text = ""
-            txtkodepesanan.Text = ""
-            txtsubtotal.Text = ""
-            txtpajak.Text = ""
-            txttotalbayar.Text = ""
-            txtuangbayar.Text = ""
-            txtkembalian.Text = ""
-            txtfreekembalian.Text = ""
-            txttotalkembalian.Text = ""
-        End Sub
+        txtidkasir.Text = ""
+        txtkodepesanan.Text = ""
+        txtsubtotal.Text = ""
+        txtpajak.Text = ""
+        txttotalbayar.Text = ""
+        txtuangbayar.Text = ""
+        txtkembalian.Text = ""
+        txtfreekembalian.Text = ""
+        txttotalkembalian.Text = ""
+    End Sub
         Sub MatikanForm()
         txtkodetransaksi.Enabled = False
         txtjamtransaksi.Enabled = False
@@ -78,20 +77,20 @@
 
         Else
             Call koneksiDB()
-                CMD = New OleDb.OleDbCommand(" select * from Bayar where txtkodetransaksi ='" & txtkodetransaksi.Text & "'", Conn)
+            CMD = New OleDb.OleDbCommand(" select * from Bayar where Kode_Transaksi ='" & txtkodetransaksi.Text & "'", Conn)
             DM = CMD.ExecuteReader
             DM.Read()
                 If Not DM.HasRows Then
                     Call koneksiDB()
                     Dim simpan As String
-                    simpan = "insert into Bayar values ('" & txtkodetransaksi.Text & "', '" & DateTimePicker1.Format & "',
+                simpan = "insert into Bayar values ('" & txtkodetransaksi.Text & "', '" & DateTimePicker1.Value & "',
                 '" & txtjamtransaksi.Text & "', '" & txtidkasir.Text & "', '" & txtkodepesanan.Text & "', 
                 '" & txtsubtotal.Text & "', '" & txtpajak.Text & "', '" & txttotalbayar.Text & "',
                 '" & txtuangbayar.Text & "', '" & txtkembalian.Text & "', '" & txtfreekembalian.Text & "',
-                '" & txttotalkembalian.Text & "')”
-                    CMD = New OleDb.OleDbCommand(simpan, Conn)
-                    CMD.ExecuteNonQuery()
-                    MsgBox("Input Data Sukses")
+                '" & txttotalkembalian.Text & "')"
+                CMD = New OleDb.OleDbCommand(simpan, Conn)
+                CMD.ExecuteNonQuery()
+                MsgBox("Input Data Sukses")
                 Else
                     MsgBox("Data Sudah Ada")
                 End If
@@ -102,16 +101,16 @@
         End Sub
 
         Private Sub btnedit_Click(sender As Object, e As EventArgs) Handles btnedit.Click
-            If txtkodetransaksi.Text = "" Or DateTimePicker1.Format = "" Or txtjamtransaksi.Text = "" Or txtidkasir.Text = "" Or
+        If txtkodetransaksi.Text = "" Or DateTimePicker1.Value = "" Or txtjamtransaksi.Text = "" Or txtidkasir.Text = "" Or
             txtkodepesanan.Text = "" Or txtsubtotal.Text = "" Or txtpajak.Text = "" Or
             txttotalbayar.Text = "" Or txtuangbayar.Text = "" Or txtkembalian.Text = "" Or
             txtfreekembalian.Text = "" Or txttotalkembalian.Text = "" Then
-                MsgBox("Data Pembayaran Belum Lengkap")
-                Exit Sub
-            Else
-                Call koneksiDB()
-                CMD = New OleDb.OleDbCommand("update Bayar Set id_kasir = '", Conn)
-                DM = CMD.ExecuteReader
+            MsgBox("Data Pembayaran Belum Lengkap")
+            Exit Sub
+        Else
+            Call koneksiDB()
+            CMD = New OleDb.OleDbCommand("update Bayar Set Id_Kasir = '", Conn)
+            DM = CMD.ExecuteReader
                 MsgBox("Update Data Berhasil")
             End If
             Call KosongkanForm()
@@ -126,8 +125,8 @@
             Else
                 If MessageBox.Show(" Are you sure to delete this data?", "Konfirmasi", MessageBoxButtons.YesNoCancel) Then
                     Call koneksiDB()
-                    CMD = New OleDb.OleDbCommand(" delete from Pesan where kode_transaksi = '" & txtkodetransaksi.Text & "'", Conn)
-                    DM = CMD.ExecuteReader
+                CMD = New OleDb.OleDbCommand(" delete from Pesan where Kode_Transaksi = '" & txtkodetransaksi.Text & "'", Conn)
+                DM = CMD.ExecuteReader
                     MsgBox("Hapus Data Berhasil")
                     Call MatikanForm()
                     Call KosongkanForm()
