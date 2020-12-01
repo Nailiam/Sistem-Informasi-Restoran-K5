@@ -87,7 +87,7 @@ Public Class Data_Karyawan
         End Try
     End Sub
 
-    Private Sub btn_cari_Click(sender As Object, e As EventArgs) Handles btn_cari.Click
+    Private Sub btn_caridata_Click(sender As Object, e As EventArgs) Handles btn_caridata.Click
         Call HidupkanForm()
         Dim pegawai = InputBox("Silahkan Masukan ID Karyawan")
         Try
@@ -128,5 +128,21 @@ Public Class Data_Karyawan
         Bulan = DateDiff(DateInterval.Month, CDate(DateTimePicker1.Value), CDate(Now))
         Hari = DateDiff(DateInterval.Day, CDate(DateTimePicker1.Value), CDate(Now))
         txtumur.Text = (Umur & " Tahun " & Bulan & " Bulan " & Hari & "Hari")
+    End Sub
+
+    Private Sub btn_cari_Click(sender As Object, e As EventArgs) Handles btn_cari.Click
+        Call koneksiDB()
+
+        DA = OleDb.OleDbDataAdapter("SELECT * form Kasir where
+        Id_Kasir like '%" & txt_cari.Text.Replace("'", "''") & "%' or Nama_Kasir 
+        like '%" & txt_cari.Text.Replace("'", "''") & "%' or Alamat like '%" &
+        txt_cari.Text.Replace("'", "''") & "%' ", Conn)
+
+        DS = New DataSet
+        Dim SRT As New DataTable
+        SRT.Clear()
+        DA.Fill(SRT)
+        DGV2.DataSource = SRT
+
     End Sub
 End Class
