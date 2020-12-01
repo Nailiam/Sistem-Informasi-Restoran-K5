@@ -76,12 +76,12 @@ Partial Class Data_Karyawan
         Me.DGV2.Location = New System.Drawing.Point(38, 474)
         Me.DGV2.Name = "DGV2"
         Me.DGV2.RowHeadersWidth = 51
-        Me.DGV2.Size = New System.Drawing.Size(743, 91)
+        Me.DGV2.Size = New System.Drawing.Size(640, 91)
         Me.DGV2.TabIndex = 30
         '
         'btn_simpan
         '
-        Me.btn_simpan.Location = New System.Drawing.Point(527, 389)
+        Me.btn_simpan.Location = New System.Drawing.Point(517, 388)
         Me.btn_simpan.Name = "btn_simpan"
         Me.btn_simpan.Size = New System.Drawing.Size(76, 32)
         Me.btn_simpan.TabIndex = 29
@@ -90,7 +90,7 @@ Partial Class Data_Karyawan
         '
         'btn_caridata
         '
-        Me.btn_caridata.Location = New System.Drawing.Point(264, 22)
+        Me.btn_caridata.Location = New System.Drawing.Point(265, 25)
         Me.btn_caridata.Name = "btn_caridata"
         Me.btn_caridata.Size = New System.Drawing.Size(78, 27)
         Me.btn_caridata.TabIndex = 28
@@ -99,7 +99,7 @@ Partial Class Data_Karyawan
         '
         'btn_delete
         '
-        Me.btn_delete.Location = New System.Drawing.Point(620, 389)
+        Me.btn_delete.Location = New System.Drawing.Point(602, 388)
         Me.btn_delete.Name = "btn_delete"
         Me.btn_delete.Size = New System.Drawing.Size(76, 32)
         Me.btn_delete.TabIndex = 27
@@ -108,7 +108,7 @@ Partial Class Data_Karyawan
         '
         'txt_foto
         '
-        Me.txt_foto.Location = New System.Drawing.Point(620, 343)
+        Me.txt_foto.Location = New System.Drawing.Point(517, 357)
         Me.txt_foto.Name = "txt_foto"
         Me.txt_foto.Size = New System.Drawing.Size(161, 20)
         Me.txt_foto.TabIndex = 26
@@ -116,7 +116,7 @@ Partial Class Data_Karyawan
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(548, 350)
+        Me.Label11.Location = New System.Drawing.Point(421, 364)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(52, 13)
         Me.Label11.TabIndex = 25
@@ -124,16 +124,16 @@ Partial Class Data_Karyawan
         '
         'btn_browse
         '
-        Me.btn_browse.Location = New System.Drawing.Point(705, 313)
+        Me.btn_browse.Location = New System.Drawing.Point(602, 313)
         Me.btn_browse.Name = "btn_browse"
-        Me.btn_browse.Size = New System.Drawing.Size(76, 24)
+        Me.btn_browse.Size = New System.Drawing.Size(76, 31)
         Me.btn_browse.TabIndex = 24
         Me.btn_browse.Text = "Browse"
         Me.btn_browse.UseVisualStyleBackColor = True
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(527, 54)
+        Me.PictureBox1.Location = New System.Drawing.Point(424, 54)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(254, 253)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
@@ -165,22 +165,22 @@ Partial Class Data_Karyawan
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Location = New System.Drawing.Point(38, 54)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(452, 367)
+        Me.GroupBox1.Size = New System.Drawing.Size(361, 402)
         Me.GroupBox1.TabIndex = 22
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Data Karyawan"
         '
         'txtumur
         '
-        Me.txtumur.Location = New System.Drawing.Point(305, 109)
+        Me.txtumur.Location = New System.Drawing.Point(103, 135)
         Me.txtumur.Name = "txtumur"
-        Me.txtumur.Size = New System.Drawing.Size(126, 20)
+        Me.txtumur.Size = New System.Drawing.Size(141, 20)
         Me.txtumur.TabIndex = 30
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(261, 115)
+        Me.Label12.Location = New System.Drawing.Point(6, 142)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(38, 13)
         Me.Label12.TabIndex = 29
@@ -190,14 +190,14 @@ Partial Class Data_Karyawan
         '
         Me.cmb_status.FormattingEnabled = True
         Me.cmb_status.Items.AddRange(New Object() {"Karyawan Tetap", "Karyawan Kontrak"})
-        Me.cmb_status.Location = New System.Drawing.Point(103, 322)
+        Me.cmb_status.Location = New System.Drawing.Point(104, 350)
         Me.cmb_status.Name = "cmb_status"
         Me.cmb_status.Size = New System.Drawing.Size(141, 21)
         Me.cmb_status.TabIndex = 17
         '
         'txt_alamat
         '
-        Me.txt_alamat.Location = New System.Drawing.Point(103, 222)
+        Me.txt_alamat.Location = New System.Drawing.Point(104, 250)
         Me.txt_alamat.Name = "txt_alamat"
         Me.txt_alamat.Size = New System.Drawing.Size(184, 94)
         Me.txt_alamat.TabIndex = 16
@@ -214,7 +214,7 @@ Partial Class Data_Karyawan
         '
         Me.cmb_agama.FormattingEnabled = True
         Me.cmb_agama.Items.AddRange(New Object() {"Islam", "Budha", "Hindhu", "Kristen"})
-        Me.cmb_agama.Location = New System.Drawing.Point(103, 162)
+        Me.cmb_agama.Location = New System.Drawing.Point(104, 190)
         Me.cmb_agama.Name = "cmb_agama"
         Me.cmb_agama.Size = New System.Drawing.Size(141, 21)
         Me.cmb_agama.TabIndex = 14
@@ -223,7 +223,7 @@ Partial Class Data_Karyawan
         '
         Me.cmb_jk.FormattingEnabled = True
         Me.cmb_jk.Items.AddRange(New Object() {"Perempuan", "Laki-Laki"})
-        Me.cmb_jk.Location = New System.Drawing.Point(103, 135)
+        Me.cmb_jk.Location = New System.Drawing.Point(104, 163)
         Me.cmb_jk.Name = "cmb_jk"
         Me.cmb_jk.Size = New System.Drawing.Size(141, 21)
         Me.cmb_jk.TabIndex = 13
@@ -237,7 +237,7 @@ Partial Class Data_Karyawan
         '
         'txt_hp
         '
-        Me.txt_hp.Location = New System.Drawing.Point(103, 189)
+        Me.txt_hp.Location = New System.Drawing.Point(104, 217)
         Me.txt_hp.Name = "txt_hp"
         Me.txt_hp.Size = New System.Drawing.Size(141, 20)
         Me.txt_hp.TabIndex = 11
@@ -259,7 +259,7 @@ Partial Class Data_Karyawan
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(12, 325)
+        Me.Label10.Location = New System.Drawing.Point(13, 353)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(43, 13)
         Me.Label10.TabIndex = 8
@@ -268,7 +268,7 @@ Partial Class Data_Karyawan
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(9, 222)
+        Me.Label9.Location = New System.Drawing.Point(10, 250)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(45, 13)
         Me.Label9.TabIndex = 7
@@ -277,7 +277,7 @@ Partial Class Data_Karyawan
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(9, 192)
+        Me.Label8.Location = New System.Drawing.Point(10, 220)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(45, 13)
         Me.Label8.TabIndex = 6
@@ -286,7 +286,7 @@ Partial Class Data_Karyawan
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(9, 165)
+        Me.Label7.Location = New System.Drawing.Point(10, 193)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(46, 13)
         Me.Label7.TabIndex = 5
@@ -295,7 +295,7 @@ Partial Class Data_Karyawan
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(6, 138)
+        Me.Label6.Location = New System.Drawing.Point(7, 166)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(77, 13)
         Me.Label6.TabIndex = 4
@@ -353,7 +353,7 @@ Partial Class Data_Karyawan
         '
         'btn_cari
         '
-        Me.btn_cari.Location = New System.Drawing.Point(706, 434)
+        Me.btn_cari.Location = New System.Drawing.Point(603, 434)
         Me.btn_cari.Name = "btn_cari"
         Me.btn_cari.Size = New System.Drawing.Size(75, 22)
         Me.btn_cari.TabIndex = 32
@@ -362,16 +362,16 @@ Partial Class Data_Karyawan
         '
         'txt_cari
         '
-        Me.txt_cari.Location = New System.Drawing.Point(600, 436)
+        Me.txt_cari.Location = New System.Drawing.Point(424, 436)
         Me.txt_cari.Name = "txt_cari"
-        Me.txt_cari.Size = New System.Drawing.Size(100, 20)
+        Me.txt_cari.Size = New System.Drawing.Size(173, 20)
         Me.txt_cari.TabIndex = 33
         '
         'Data_Karyawan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(808, 577)
+        Me.ClientSize = New System.Drawing.Size(719, 577)
         Me.Controls.Add(Me.txt_cari)
         Me.Controls.Add(Me.btn_cari)
         Me.Controls.Add(Me.lblselamat)
