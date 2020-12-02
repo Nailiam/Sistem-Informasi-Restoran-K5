@@ -133,7 +133,7 @@ Public Class Data_Karyawan
     Private Sub btn_cari_Click(sender As Object, e As EventArgs) Handles btn_cari.Click
         Call koneksiDB()
 
-        DA = OleDb.OleDbDataAdapter("SELECT * form Kasir where
+        DA = New OleDb.OleDbDataAdapter("SELECT * form Kasir where
         Id_Kasir like '%" & txt_cari.Text.Replace("'", "''") & "%' or Nama_Kasir 
         like '%" & txt_cari.Text.Replace("'", "''") & "%' or Alamat like '%" &
         txt_cari.Text.Replace("'", "''") & "%' ", Conn)
