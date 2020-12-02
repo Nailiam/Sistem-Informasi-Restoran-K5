@@ -107,7 +107,7 @@ Partial Class Main_Menu
         '
         Me.MenuMakananToolStripMenuItem.Name = "MenuMakananToolStripMenuItem"
         Me.MenuMakananToolStripMenuItem.Size = New System.Drawing.Size(202, 24)
-        Me.MenuMakananToolStripMenuItem.Text = " Menu Makanan"
+        Me.MenuMakananToolStripMenuItem.Text = "Menu Makanan"
         '
         'MenuMinumanToolStripMenuItem1
         '

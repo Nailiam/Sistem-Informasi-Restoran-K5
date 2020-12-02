@@ -64,7 +64,7 @@
             Exit Sub
         Else
             Call koneksiDB()
-            CMD = New OleDb.OleDbCommand(" select * from Kasir where txt_id ='" & txt_id.Text & "'", Conn)
+            CMD = New OleDb.OleDbCommand(" select * from Kasir where Id_Kasir ='" & txt_id.Text & "'", Conn)
             DM = CMD.ExecuteReader
             DM.Read()
             If Not DM.HasRows Then
@@ -103,7 +103,7 @@
     End Sub
 
     Private Sub btn_edit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_edit.Click
-        If txt_id.Text = "" Or txt_nama.Text = "" Or cmb_jeniskelamin.Text = "" Or txt_tempatlahir.Text = "" Or
+        If txt_id.Text = "" Or txt_nama.Text = "" Or cmb_jeniskelamin.Text = "" Or txt_tempatlahir.Text = "" Or DateTimePicker1.Text = "" Or
             cmb_agama.Text = "" Or txt_notelp.Text = "" Or txt_alamat.Text = "" Or cmb_status.Text = "" Then
             MsgBox("Data Kasir Belum Lengkap")
             Exit Sub
@@ -111,9 +111,9 @@
             Call koneksiDB()
             CMD = New OleDb.OleDbCommand("update Kasir set Nama_Kasir = '" &
            txt_nama.Text & "', Jenis_Kelamin = '" & cmb_jeniskelamin.Text & "', Tempat_Lahir = '" &
-           txt_tempatlahir.Text & "', Tanggal_Lahir = '" & DateTimePicker1.Format & "', Agama = '" &
+           txt_tempatlahir.Text & "', Tanggal_Lahir = '" & DateTimePicker1.Value & "', Agama = '" &
            cmb_agama.Text & "', No_Telepon = '" & txt_notelp.Text & "', Alamat = '" &
-           txt_alamat.Text & "', Status = '" & cmb_status.Text & "'", Conn)
+           txt_alamat.Text & "', Status = '" & cmb_status.Text & "'where Id_Kasir = '" & txt_id.Text & "'", Conn)
             DM = CMD.ExecuteReader
             MsgBox("Update Data Berhasil")
         End If
@@ -129,7 +129,7 @@
         Else
             If MessageBox.Show(" Are you sure to delete this data?", "Konfirmasi", MessageBoxButtons.YesNoCancel) Then
                 Call koneksiDB()
-                CMD = New OleDb.OleDbCommand(" delete from Kasir where txt_id = '" & txt_id.Text & "'", Conn)
+                CMD = New OleDb.OleDbCommand(" delete from Kasir where Id_Kasir = '" & txt_id.Text & "'", Conn)
                 DM = CMD.ExecuteReader
                 MsgBox("Hapus Data Berhasil")
                 Call MatikanForm()
