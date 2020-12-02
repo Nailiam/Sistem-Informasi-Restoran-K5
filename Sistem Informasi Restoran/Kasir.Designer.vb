@@ -41,7 +41,6 @@ Partial Class Kasir
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txt_notelp = New System.Windows.Forms.TextBox()
-        Me.txt_agama = New System.Windows.Forms.TextBox()
         Me.txt_tempatlahir = New System.Windows.Forms.TextBox()
         Me.cmb_jeniskelamin = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -50,6 +49,7 @@ Partial Class Kasir
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.LabelID = New System.Windows.Forms.Label()
+        Me.cmb_agama = New System.Windows.Forms.ComboBox()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Input_Data_Kasir.SuspendLayout()
@@ -129,6 +129,7 @@ Partial Class Kasir
         '
         'Input_Data_Kasir
         '
+        Me.Input_Data_Kasir.Controls.Add(Me.cmb_agama)
         Me.Input_Data_Kasir.Controls.Add(Me.txt_alamat)
         Me.Input_Data_Kasir.Controls.Add(Me.cmb_status)
         Me.Input_Data_Kasir.Controls.Add(Me.DateTimePicker1)
@@ -139,7 +140,6 @@ Partial Class Kasir
         Me.Input_Data_Kasir.Controls.Add(Me.Label5)
         Me.Input_Data_Kasir.Controls.Add(Me.Label1)
         Me.Input_Data_Kasir.Controls.Add(Me.txt_notelp)
-        Me.Input_Data_Kasir.Controls.Add(Me.txt_agama)
         Me.Input_Data_Kasir.Controls.Add(Me.txt_tempatlahir)
         Me.Input_Data_Kasir.Controls.Add(Me.cmb_jeniskelamin)
         Me.Input_Data_Kasir.Controls.Add(Me.Label4)
@@ -166,6 +166,7 @@ Partial Class Kasir
         'cmb_status
         '
         Me.cmb_status.FormattingEnabled = True
+        Me.cmb_status.Items.AddRange(New Object() {"Karyawan Tetap", "Karyawan Kontrak"})
         Me.cmb_status.Location = New System.Drawing.Point(137, 372)
         Me.cmb_status.Name = "cmb_status"
         Me.cmb_status.Size = New System.Drawing.Size(109, 21)
@@ -239,13 +240,6 @@ Partial Class Kasir
         Me.txt_notelp.Size = New System.Drawing.Size(109, 20)
         Me.txt_notelp.TabIndex = 10
         '
-        'txt_agama
-        '
-        Me.txt_agama.Location = New System.Drawing.Point(137, 208)
-        Me.txt_agama.Name = "txt_agama"
-        Me.txt_agama.Size = New System.Drawing.Size(109, 20)
-        Me.txt_agama.TabIndex = 9
-        '
         'txt_tempatlahir
         '
         Me.txt_tempatlahir.Location = New System.Drawing.Point(137, 136)
@@ -256,6 +250,7 @@ Partial Class Kasir
         'cmb_jeniskelamin
         '
         Me.cmb_jeniskelamin.FormattingEnabled = True
+        Me.cmb_jeniskelamin.Items.AddRange(New Object() {"Perempuan", "Laki-Laki"})
         Me.cmb_jeniskelamin.Location = New System.Drawing.Point(137, 99)
         Me.cmb_jeniskelamin.Name = "cmb_jeniskelamin"
         Me.cmb_jeniskelamin.Size = New System.Drawing.Size(107, 21)
@@ -310,6 +305,15 @@ Partial Class Kasir
         Me.LabelID.TabIndex = 0
         Me.LabelID.Text = "ID Kasir :"
         '
+        'cmb_agama
+        '
+        Me.cmb_agama.FormattingEnabled = True
+        Me.cmb_agama.Items.AddRange(New Object() {"Islam", "Budha", "Hindhu", "Kristen"})
+        Me.cmb_agama.Location = New System.Drawing.Point(137, 204)
+        Me.cmb_agama.Name = "cmb_agama"
+        Me.cmb_agama.Size = New System.Drawing.Size(109, 21)
+        Me.cmb_agama.TabIndex = 23
+        '
         'Kasir
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -351,7 +355,6 @@ Partial Class Kasir
     Friend WithEvents Label5 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents txt_notelp As TextBox
-    Friend WithEvents txt_agama As TextBox
     Friend WithEvents txt_tempatlahir As TextBox
     Friend WithEvents cmb_jeniskelamin As ComboBox
     Friend WithEvents Label4 As Label
@@ -360,4 +363,5 @@ Partial Class Kasir
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents LabelID As Label
+    Friend WithEvents cmb_agama As ComboBox
 End Class
