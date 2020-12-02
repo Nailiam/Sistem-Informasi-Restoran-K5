@@ -68,7 +68,7 @@
     End Sub
 
     Private Sub btnsave_Click(sender As Object, e As EventArgs) Handles btnsave.Click
-        If txtkodetransaksi.Text = "" Or DateTimePicker1.Format = "" Or txtjamtransaksi.Text = "" Or txtidkasir.Text = "" Or
+        If txtkodetransaksi.Text = "" Or txtjamtransaksi.Text = "" Or txtidkasir.Text = "" Or
              txtkodepesanan.Text = "" Or txtsubtotal.Text = "" Or txtpajak.Text = "" Or
             txttotalbayar.Text = "" Or txtuangbayar.Text = "" Or txtkembalian.Text = "" Or
             txtfreekembalian.Text = "" Or txttotalkembalian.Text = "" Then
@@ -100,7 +100,7 @@
     End Sub
 
     Private Sub btnedit_Click(sender As Object, e As EventArgs) Handles btnedit.Click
-        If txtkodetransaksi.Text = "" Or DateTimePicker1.Value = "" Or txtjamtransaksi.Text = "" Or txtidkasir.Text = "" Or
+        If txtkodetransaksi.Text = "" Or txtjamtransaksi.Text = "" Or txtidkasir.Text = "" Or
             txtkodepesanan.Text = "" Or txtsubtotal.Text = "" Or txtpajak.Text = "" Or
             txttotalbayar.Text = "" Or txtuangbayar.Text = "" Or txtkembalian.Text = "" Or
             txtfreekembalian.Text = "" Or txttotalkembalian.Text = "" Then
@@ -108,9 +108,9 @@
             Exit Sub
         Else
             Call koneksiDB()
-            CMD = New OleDb.OleDbCommand("update Bayar Set Kode_Transaksi = '" & txtkodetransaksi.Text & "', Tanggal_Transaksi = '" & DateTimePicker1.Format & "',
-            Jam_Transaksi = '" & txtjamtransaksi.Text & "', Id_Kasir = '" & txtidkasir.Text & "', Kode_Pesanan = '" & txtkodepesanan.Text & "', Sub_Total = '" & txtsubtotal.Text & "',  Paja_Resto 10% = '" & txtpajak.Text & "', Total_Bayar = '" & txttotalbayar.Text & "', Uang_Bayar = '" & txtuangbayar.Text & "', 
-            Kembalian = '" & txtkembalian.Text & "', Free_Kembalian = '" & txtfreekembalian.Text & "', Total_Kembalian = '" & txttotalkembalian.Text & "'", Conn)
+            CMD = New OleDb.OleDbCommand("update Bayar Set Tanggal_Transaksi = '" & DateTimePicker1.Value & "',
+            Jam_Transaksi = '" & txtjamtransaksi.Text & "', Id_Kasir = '" & txtidkasir.Text & "', Kode_Pesanan = '" & txtkodepesanan.Text & "', Sub_Total = " & txtsubtotal.Text & ",  Pajak_Resto_10% = " & txtpajak.Text & ", Total_Bayar = " & txttotalbayar.Text & ", Uang_Bayar = " & txtuangbayar.Text & ", 
+            Kembalian = " & txtkembalian.Text & ", Free_Kembalian = " & txtfreekembalian.Text & ", Total_Kembalian = " & txttotalkembalian.Text & " where Kode_Transaksi = '" & txtkodetransaksi.Text & "'", Conn)
             DM = CMD.ExecuteReader
             MsgBox("Update Data Berhasil")
         End If
@@ -126,7 +126,7 @@
             If MessageBox.Show(" Are you sure to delete this data?", "Konfirmasi", MessageBoxButtons.YesNoCancel) Then
                 Call koneksiDB()
                 CMD = New OleDb.OleDbCommand(" delete from Pesan where Kode_Transaksi = '" & txtkodetransaksi.Text & "'", Conn)
-                DM = CMD.ExecuteReader
+            DM = CMD.ExecuteReader
                 MsgBox("Hapus Data Berhasil")
                 Call MatikanForm()
                 Call KosongkanForm()
