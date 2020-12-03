@@ -117,7 +117,23 @@ Public Class Data_Karyawan
     End Sub
 
     Private Sub btn_delete_Click(sender As Object, e As EventArgs) Handles btn_delete.Click
-
+        If txt_id_karyawan.Text = "" Then
+            MsgBox("Tidak ada data yang dipilih")
+            Exit Sub
+        Else
+            If MessageBox.Show(" Are you sure to delete this data?", "Konfirmasi", MessageBoxButtons.YesNoCancel) Then
+                Call koneksiDB()
+                CMD = New OleDb.OleDbCommand(" delete from Kasir where Id_Kasir = '" & txt_id_karyawan.Text & "'", Conn)
+                DM = CMD.ExecuteReader
+                MsgBox("Hapus Data Berhasil")
+                Call MatikanForm()
+                Call KosongkanForm()
+                Call TampilkanData()
+            Else
+                Call KosongkanForm()
+                Call TampilkanData()
+            End If
+        End If
     End Sub
 
     Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
