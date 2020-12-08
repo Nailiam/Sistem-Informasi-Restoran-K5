@@ -182,4 +182,9 @@ Public Class Data_Karyawan
         Call TampilkanData()
 
     End Sub
+
+    Private Sub btn_input_Click(sender As Object, e As EventArgs) Handles btn_input.Click
+        Call HidupkanForm()
+        Call KosongkanForm()
+    End Sub
 End Class
