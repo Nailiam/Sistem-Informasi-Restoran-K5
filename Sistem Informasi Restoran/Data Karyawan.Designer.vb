@@ -56,6 +56,7 @@ Partial Class Data_Karyawan
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.btn_cari = New System.Windows.Forms.Button()
         Me.txt_cari = New System.Windows.Forms.TextBox()
+        Me.btn_edit = New System.Windows.Forms.Button()
         CType(Me.DGV2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -367,11 +368,21 @@ Partial Class Data_Karyawan
         Me.txt_cari.Size = New System.Drawing.Size(173, 20)
         Me.txt_cari.TabIndex = 33
         '
+        'btn_edit
+        '
+        Me.btn_edit.Location = New System.Drawing.Point(603, 20)
+        Me.btn_edit.Name = "btn_edit"
+        Me.btn_edit.Size = New System.Drawing.Size(75, 23)
+        Me.btn_edit.TabIndex = 34
+        Me.btn_edit.Text = "Edit"
+        Me.btn_edit.UseVisualStyleBackColor = True
+        '
         'Data_Karyawan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(719, 577)
+        Me.Controls.Add(Me.btn_edit)
         Me.Controls.Add(Me.txt_cari)
         Me.Controls.Add(Me.btn_cari)
         Me.Controls.Add(Me.lblselamat)
@@ -429,4 +440,5 @@ Partial Class Data_Karyawan
     Friend WithEvents Label12 As Label
     Friend WithEvents btn_cari As Button
     Friend WithEvents txt_cari As TextBox
+    Friend WithEvents btn_edit As Button
 End Class

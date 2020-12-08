@@ -161,4 +161,25 @@ Public Class Data_Karyawan
         DGV2.DataSource = SRT
 
     End Sub
+
+    Private Sub btn_edit_Click(sender As Object, e As EventArgs) Handles btn_edit.Click
+        If txt_id_karyawan.Text = "" Or txt_nama_karyawan.Text = "" Or cmb_jk.Text = "" Or
+           txt_lahir.Text = "" Or cmb_agama.Text = "" Or txt_hp.Text = "" Or txt_alamat.Text = "" Or
+           cmb_status.Text = "" Or txt_foto.Text = "" Then
+            MsgBox("Data Karyawan Belum Lengkap")
+            Exit Sub
+        Else
+            Call koneksiDB()
+            CMD = New OleDb.OleDbCommand("update Kasir set Id_Kasir = '" &
+           txt_id_karyawan.Text & "', Nama_Kasir = '" & txt_nama_karyawan.Text & "', Jenis_Kelamin = '" &
+           cmb_jk.Text & "', Tempat_Lahir = '" & txt_lahir.Text & "', Agama = '" & cmb_agama.Text & "', No_Telepon = '" &
+           txt_hp.Text & "', Alamat = '" & txt_alamat.Text & "', Status = '" & cmb_status.Text & "', Photo = '" & txt_foto.Text & "'", Conn)
+            DM = CMD.ExecuteReader
+            MsgBox("Update Data Berhasil")
+        End If
+        Call KosongkanForm()
+        Call MatikanForm()
+        Call TampilkanData()
+
+    End Sub
 End Class
