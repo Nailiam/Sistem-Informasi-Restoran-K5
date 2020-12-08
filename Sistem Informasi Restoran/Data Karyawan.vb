@@ -187,4 +187,13 @@ Public Class Data_Karyawan
         Call HidupkanForm()
         Call KosongkanForm()
     End Sub
+
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Me.Close()
+    End Sub
+
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        Call MatikanForm()
+        Call KosongkanForm()
+    End Sub
 End Class

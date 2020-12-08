@@ -58,6 +58,8 @@ Partial Class Data_Karyawan
         Me.txt_cari = New System.Windows.Forms.TextBox()
         Me.btn_edit = New System.Windows.Forms.Button()
         Me.btn_input = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
+        Me.btnExit = New System.Windows.Forms.Button()
         CType(Me.DGV2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -67,92 +69,85 @@ Partial Class Data_Karyawan
         '
         Me.lblselamat.AutoSize = True
         Me.lblselamat.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblselamat.Location = New System.Drawing.Point(324, 25)
-        Me.lblselamat.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblselamat.Location = New System.Drawing.Point(226, 9)
         Me.lblselamat.Name = "lblselamat"
-        Me.lblselamat.Size = New System.Drawing.Size(0, 39)
+        Me.lblselamat.Size = New System.Drawing.Size(0, 31)
         Me.lblselamat.TabIndex = 31
         '
         'DGV2
         '
         Me.DGV2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGV2.Location = New System.Drawing.Point(51, 583)
-        Me.DGV2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DGV2.Location = New System.Drawing.Point(17, 436)
         Me.DGV2.Name = "DGV2"
         Me.DGV2.RowHeadersWidth = 51
-        Me.DGV2.Size = New System.Drawing.Size(853, 112)
+        Me.DGV2.Size = New System.Drawing.Size(661, 91)
         Me.DGV2.TabIndex = 30
         '
         'btn_simpan
         '
-        Me.btn_simpan.Location = New System.Drawing.Point(689, 478)
-        Me.btn_simpan.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_simpan.Location = New System.Drawing.Point(424, 355)
         Me.btn_simpan.Name = "btn_simpan"
-        Me.btn_simpan.Size = New System.Drawing.Size(101, 39)
+        Me.btn_simpan.Size = New System.Drawing.Size(76, 32)
         Me.btn_simpan.TabIndex = 29
         Me.btn_simpan.Text = "Simpan"
         Me.btn_simpan.UseVisualStyleBackColor = True
         '
         'btn_caridata
         '
-        Me.btn_caridata.Location = New System.Drawing.Point(353, 31)
-        Me.btn_caridata.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_caridata.Location = New System.Drawing.Point(265, 25)
         Me.btn_caridata.Name = "btn_caridata"
-        Me.btn_caridata.Size = New System.Drawing.Size(104, 33)
+        Me.btn_caridata.Size = New System.Drawing.Size(78, 27)
         Me.btn_caridata.TabIndex = 28
         Me.btn_caridata.Text = "Cari Data"
         Me.btn_caridata.UseVisualStyleBackColor = True
         '
         'btn_delete
         '
-        Me.btn_delete.Location = New System.Drawing.Point(803, 478)
-        Me.btn_delete.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_delete.Location = New System.Drawing.Point(602, 355)
         Me.btn_delete.Name = "btn_delete"
-        Me.btn_delete.Size = New System.Drawing.Size(101, 39)
+        Me.btn_delete.Size = New System.Drawing.Size(76, 32)
         Me.btn_delete.TabIndex = 27
         Me.btn_delete.Text = "Delete"
         Me.btn_delete.UseVisualStyleBackColor = True
         '
         'txt_foto
         '
-        Me.txt_foto.Location = New System.Drawing.Point(689, 439)
-        Me.txt_foto.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_foto.Location = New System.Drawing.Point(521, 324)
         Me.txt_foto.Name = "txt_foto"
-        Me.txt_foto.Size = New System.Drawing.Size(213, 22)
+        Me.txt_foto.Size = New System.Drawing.Size(161, 20)
         Me.txt_foto.TabIndex = 26
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(561, 448)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label11.Location = New System.Drawing.Point(421, 324)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(69, 17)
+        Me.Label11.Size = New System.Drawing.Size(52, 13)
         Me.Label11.TabIndex = 25
         Me.Label11.Text = "Foto Diri :"
         '
         'btn_browse
         '
-        Me.btn_browse.Location = New System.Drawing.Point(803, 385)
-        Me.btn_browse.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_browse.Location = New System.Drawing.Point(606, 287)
         Me.btn_browse.Name = "btn_browse"
-        Me.btn_browse.Size = New System.Drawing.Size(101, 38)
+        Me.btn_browse.Size = New System.Drawing.Size(76, 31)
         Me.btn_browse.TabIndex = 24
         Me.btn_browse.Text = "Browse"
         Me.btn_browse.UseVisualStyleBackColor = True
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(565, 66)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Location = New System.Drawing.Point(424, 43)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(339, 311)
+        Me.PictureBox1.Size = New System.Drawing.Size(254, 237)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.PictureBox1.TabIndex = 23
         Me.PictureBox1.TabStop = False
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.btn_edit)
+        Me.GroupBox1.Controls.Add(Me.btn_input)
         Me.GroupBox1.Controls.Add(Me.txtumur)
         Me.GroupBox1.Controls.Add(Me.Label12)
         Me.GroupBox1.Controls.Add(Me.cmb_status)
@@ -174,30 +169,26 @@ Partial Class Data_Karyawan
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Location = New System.Drawing.Point(51, 66)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Location = New System.Drawing.Point(17, 43)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GroupBox1.Size = New System.Drawing.Size(481, 495)
+        Me.GroupBox1.Size = New System.Drawing.Size(361, 385)
         Me.GroupBox1.TabIndex = 22
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Data Karyawan"
         '
         'txtumur
         '
-        Me.txtumur.Location = New System.Drawing.Point(137, 166)
-        Me.txtumur.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtumur.Location = New System.Drawing.Point(103, 135)
         Me.txtumur.Name = "txtumur"
-        Me.txtumur.Size = New System.Drawing.Size(187, 22)
+        Me.txtumur.Size = New System.Drawing.Size(141, 20)
         Me.txtumur.TabIndex = 30
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(8, 175)
-        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label12.Location = New System.Drawing.Point(6, 142)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(50, 17)
+        Me.Label12.Size = New System.Drawing.Size(38, 13)
         Me.Label12.TabIndex = 29
         Me.Label12.Text = "Umur :"
         '
@@ -205,179 +196,160 @@ Partial Class Data_Karyawan
         '
         Me.cmb_status.FormattingEnabled = True
         Me.cmb_status.Items.AddRange(New Object() {"Karyawan Tetap", "Karyawan Kontrak"})
-        Me.cmb_status.Location = New System.Drawing.Point(139, 431)
-        Me.cmb_status.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmb_status.Location = New System.Drawing.Point(104, 350)
         Me.cmb_status.Name = "cmb_status"
-        Me.cmb_status.Size = New System.Drawing.Size(187, 24)
+        Me.cmb_status.Size = New System.Drawing.Size(141, 21)
         Me.cmb_status.TabIndex = 17
         '
         'txt_alamat
         '
-        Me.txt_alamat.Location = New System.Drawing.Point(139, 308)
-        Me.txt_alamat.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_alamat.Location = New System.Drawing.Point(104, 250)
         Me.txt_alamat.Name = "txt_alamat"
-        Me.txt_alamat.Size = New System.Drawing.Size(244, 115)
+        Me.txt_alamat.Size = New System.Drawing.Size(184, 94)
         Me.txt_alamat.TabIndex = 16
         Me.txt_alamat.Text = ""
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(137, 134)
-        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(103, 109)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(187, 22)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(141, 20)
         Me.DateTimePicker1.TabIndex = 15
         '
         'cmb_agama
         '
         Me.cmb_agama.FormattingEnabled = True
         Me.cmb_agama.Items.AddRange(New Object() {"Islam", "Budha", "Hindhu", "Kristen"})
-        Me.cmb_agama.Location = New System.Drawing.Point(139, 234)
-        Me.cmb_agama.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmb_agama.Location = New System.Drawing.Point(104, 190)
         Me.cmb_agama.Name = "cmb_agama"
-        Me.cmb_agama.Size = New System.Drawing.Size(187, 24)
+        Me.cmb_agama.Size = New System.Drawing.Size(141, 21)
         Me.cmb_agama.TabIndex = 14
         '
         'cmb_jk
         '
         Me.cmb_jk.FormattingEnabled = True
         Me.cmb_jk.Items.AddRange(New Object() {"Perempuan", "Laki-Laki"})
-        Me.cmb_jk.Location = New System.Drawing.Point(139, 201)
-        Me.cmb_jk.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmb_jk.Location = New System.Drawing.Point(104, 163)
         Me.cmb_jk.Name = "cmb_jk"
-        Me.cmb_jk.Size = New System.Drawing.Size(187, 24)
+        Me.cmb_jk.Size = New System.Drawing.Size(141, 21)
         Me.cmb_jk.TabIndex = 13
         '
         'txt_lahir
         '
-        Me.txt_lahir.Location = New System.Drawing.Point(137, 102)
-        Me.txt_lahir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_lahir.Location = New System.Drawing.Point(103, 83)
         Me.txt_lahir.Name = "txt_lahir"
-        Me.txt_lahir.Size = New System.Drawing.Size(187, 22)
+        Me.txt_lahir.Size = New System.Drawing.Size(141, 20)
         Me.txt_lahir.TabIndex = 12
         '
         'txt_hp
         '
-        Me.txt_hp.Location = New System.Drawing.Point(139, 267)
-        Me.txt_hp.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_hp.Location = New System.Drawing.Point(104, 217)
         Me.txt_hp.Name = "txt_hp"
-        Me.txt_hp.Size = New System.Drawing.Size(187, 22)
+        Me.txt_hp.Size = New System.Drawing.Size(141, 20)
         Me.txt_hp.TabIndex = 11
         '
         'txt_nama_karyawan
         '
-        Me.txt_nama_karyawan.Location = New System.Drawing.Point(137, 69)
-        Me.txt_nama_karyawan.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_nama_karyawan.Location = New System.Drawing.Point(103, 56)
         Me.txt_nama_karyawan.Name = "txt_nama_karyawan"
-        Me.txt_nama_karyawan.Size = New System.Drawing.Size(187, 22)
+        Me.txt_nama_karyawan.Size = New System.Drawing.Size(141, 20)
         Me.txt_nama_karyawan.TabIndex = 10
         '
         'txt_id_karyawan
         '
-        Me.txt_id_karyawan.Location = New System.Drawing.Point(137, 36)
-        Me.txt_id_karyawan.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_id_karyawan.Location = New System.Drawing.Point(103, 29)
         Me.txt_id_karyawan.Name = "txt_id_karyawan"
-        Me.txt_id_karyawan.Size = New System.Drawing.Size(187, 22)
+        Me.txt_id_karyawan.Size = New System.Drawing.Size(141, 20)
         Me.txt_id_karyawan.TabIndex = 9
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(17, 434)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label10.Location = New System.Drawing.Point(13, 353)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(56, 17)
+        Me.Label10.Size = New System.Drawing.Size(43, 13)
         Me.Label10.TabIndex = 8
         Me.Label10.Text = "Status :"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(13, 308)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label9.Location = New System.Drawing.Point(10, 250)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(59, 17)
+        Me.Label9.Size = New System.Drawing.Size(45, 13)
         Me.Label9.TabIndex = 7
         Me.Label9.Text = "Alamat :"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(13, 271)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Location = New System.Drawing.Point(10, 220)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(57, 17)
+        Me.Label8.Size = New System.Drawing.Size(45, 13)
         Me.Label8.TabIndex = 6
         Me.Label8.Text = "No HP :"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(13, 238)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(10, 193)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(60, 17)
+        Me.Label7.Size = New System.Drawing.Size(46, 13)
         Me.Label7.TabIndex = 5
         Me.Label7.Text = "Agama :"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(9, 204)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(7, 166)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(103, 17)
+        Me.Label6.Size = New System.Drawing.Size(77, 13)
         Me.Label6.TabIndex = 4
         Me.Label6.Text = "Jenis Kelamin :"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(8, 142)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(6, 115)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(104, 17)
+        Me.Label5.Size = New System.Drawing.Size(78, 13)
         Me.Label5.TabIndex = 3
         Me.Label5.Text = "Tanggal Lahir :"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(8, 111)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(6, 90)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(100, 17)
+        Me.Label4.Size = New System.Drawing.Size(75, 13)
         Me.Label4.TabIndex = 2
         Me.Label4.Text = "Tempat Lahir :"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(8, 73)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(6, 59)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(119, 17)
+        Me.Label3.Size = New System.Drawing.Size(91, 13)
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "Nama Karyawan :"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(8, 39)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(6, 32)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(95, 17)
+        Me.Label2.Size = New System.Drawing.Size(74, 13)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "ID Karyawan :"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(55, 25)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Font = New System.Drawing.Font("Modern No. 20", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(261, 39)
+        Me.Label1.Size = New System.Drawing.Size(191, 29)
         Me.Label1.TabIndex = 21
         Me.Label1.Text = "Selamat Datang"
         '
@@ -387,48 +359,64 @@ Partial Class Data_Karyawan
         '
         'btn_cari
         '
-        Me.btn_cari.Location = New System.Drawing.Point(804, 534)
-        Me.btn_cari.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_cari.Location = New System.Drawing.Point(606, 408)
         Me.btn_cari.Name = "btn_cari"
-        Me.btn_cari.Size = New System.Drawing.Size(100, 27)
+        Me.btn_cari.Size = New System.Drawing.Size(75, 22)
         Me.btn_cari.TabIndex = 32
         Me.btn_cari.Text = "Cari"
         Me.btn_cari.UseVisualStyleBackColor = True
         '
         'txt_cari
         '
-        Me.txt_cari.Location = New System.Drawing.Point(565, 537)
-        Me.txt_cari.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_cari.Location = New System.Drawing.Point(423, 408)
         Me.txt_cari.Name = "txt_cari"
-        Me.txt_cari.Size = New System.Drawing.Size(229, 22)
+        Me.txt_cari.Size = New System.Drawing.Size(173, 20)
         Me.txt_cari.TabIndex = 33
         '
         'btn_edit
         '
-        Me.btn_edit.Location = New System.Drawing.Point(804, 25)
-        Me.btn_edit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_edit.Location = New System.Drawing.Point(265, 109)
         Me.btn_edit.Name = "btn_edit"
-        Me.btn_edit.Size = New System.Drawing.Size(100, 28)
+        Me.btn_edit.Size = New System.Drawing.Size(75, 28)
         Me.btn_edit.TabIndex = 34
         Me.btn_edit.Text = "Edit"
         Me.btn_edit.UseVisualStyleBackColor = True
         '
         'btn_input
         '
-        Me.btn_input.Location = New System.Drawing.Point(564, 25)
+        Me.btn_input.Location = New System.Drawing.Point(265, 68)
+        Me.btn_input.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btn_input.Name = "btn_input"
-        Me.btn_input.Size = New System.Drawing.Size(100, 28)
+        Me.btn_input.Size = New System.Drawing.Size(75, 24)
         Me.btn_input.TabIndex = 35
         Me.btn_input.Text = "Input"
         Me.btn_input.UseVisualStyleBackColor = True
         '
+        'btnCancel
+        '
+        Me.btnCancel.Location = New System.Drawing.Point(520, 355)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(76, 32)
+        Me.btnCancel.TabIndex = 34
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = True
+        '
+        'btnExit
+        '
+        Me.btnExit.Location = New System.Drawing.Point(593, 534)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(85, 31)
+        Me.btnExit.TabIndex = 35
+        Me.btnExit.Text = "Exit"
+        Me.btnExit.UseVisualStyleBackColor = True
+        '
         'Data_Karyawan
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(959, 710)
-        Me.Controls.Add(Me.btn_input)
-        Me.Controls.Add(Me.btn_edit)
+        Me.ClientSize = New System.Drawing.Size(694, 577)
+        Me.Controls.Add(Me.btnExit)
+        Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.txt_cari)
         Me.Controls.Add(Me.btn_cari)
         Me.Controls.Add(Me.lblselamat)
@@ -441,7 +429,6 @@ Partial Class Data_Karyawan
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Data_Karyawan"
         Me.Text = "Data_Karyawan"
         CType(Me.DGV2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -489,4 +476,6 @@ Partial Class Data_Karyawan
     Friend WithEvents txt_cari As TextBox
     Friend WithEvents btn_edit As Button
     Friend WithEvents btn_input As Button
+    Friend WithEvents btnCancel As Button
+    Friend WithEvents btnExit As Button
 End Class
