@@ -53,7 +53,7 @@
             If Not DM.HasRows Then
                 Call koneksiDB()
                 Dim simpan As String
-                simpan = "insert into Menu_Minuman values ('" & txt_id_minuman.Text &
+                simpan = "insert into Menu_Minuman values ('" & txt_id_minuman.Text & "', '" & txtnamaminuman.Text &
                "', '" & cmb_jenis_minuman.Text & "', '" & txt_harga_minuman.Text & "')"
                 CMD = New OleDb.OleDbCommand(simpan, Conn)
                 CMD.ExecuteNonQuery()

@@ -3,17 +3,20 @@
 
     Sub KosongkanForm()
         txtIdMakanan.Text = ""
+        txtNamamakanan.Text = ""
         cmbJenismakanan.Text = ""
         txtHargamakan.Text = ""
         txtIdMakanan.Focus()
     End Sub
     Sub MatikanForm()
         txtIdMakanan.Enabled = False
+        txtNamamakanan.Enabled = False
         cmbJenismakanan.Enabled = False
         txtHargamakan.Enabled = False
     End Sub
     Sub HidupkanForm()
         txtIdMakanan.Enabled = True
+        txtNamamakanan.Text = True
         cmbJenismakanan.Enabled = True
         txtHargamakan.Enabled = True
     End Sub
@@ -48,7 +51,7 @@
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        If txtIdMakanan.Text = "" Or cmbJenismakanan.Text = "" Or txtHargamakan.Text = "" Then
+        If txtIdMakanan.Text = "" Or txtNamamakanan.Text = "" Or cmbJenismakanan.Text = "" Or txtHargamakan.Text = "" Then
             MsgBox("Data Menu Makanan Belum Lengkap")
             Exit Sub
 
@@ -61,8 +64,9 @@
             If Not DM.HasRows Then
                 Call koneksiDB()
                 Dim simpan As String
-                simpan = "insert into Menu_Makanan values ('" & txtIdMakanan.Text &
-               "', '" & cmbJenismakanan.Text & "', '" & txtHargamakan.Text & "')"
+                simpan = "insert into Menu_Makanan values ('" & txtIdMakanan.Text & "', '" & txtNamamakanan.Text & "', '" &
+                cmbJenismakanan.Text & "', '" & txtHargamakan.Text & "')"
+
                 CMD = New OleDb.OleDbCommand(simpan, Conn)
                 CMD.ExecuteNonQuery()
                 MsgBox("Input Data Sukses")

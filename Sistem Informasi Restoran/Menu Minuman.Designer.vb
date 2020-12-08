@@ -31,12 +31,14 @@ Partial Class Menu_Minuman
         Me.btn_save = New System.Windows.Forms.Button()
         Me.btn_input = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtnamaminuman = New System.Windows.Forms.TextBox()
+        Me.cmb_jenis_minuman = New System.Windows.Forms.ComboBox()
         Me.txt_harga_minuman = New System.Windows.Forms.TextBox()
         Me.txt_id_minuman = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.cmb_jenis_minuman = New System.Windows.Forms.ComboBox()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -62,7 +64,7 @@ Partial Class Menu_Minuman
         '
         'btn_exit
         '
-        Me.btn_exit.Location = New System.Drawing.Point(181, 239)
+        Me.btn_exit.Location = New System.Drawing.Point(181, 293)
         Me.btn_exit.Name = "btn_exit"
         Me.btn_exit.Size = New System.Drawing.Size(77, 28)
         Me.btn_exit.TabIndex = 38
@@ -71,7 +73,7 @@ Partial Class Menu_Minuman
         '
         'btn_cancel
         '
-        Me.btn_cancel.Location = New System.Drawing.Point(102, 239)
+        Me.btn_cancel.Location = New System.Drawing.Point(95, 293)
         Me.btn_cancel.Name = "btn_cancel"
         Me.btn_cancel.Size = New System.Drawing.Size(77, 28)
         Me.btn_cancel.TabIndex = 37
@@ -80,7 +82,7 @@ Partial Class Menu_Minuman
         '
         'btn_delete
         '
-        Me.btn_delete.Location = New System.Drawing.Point(21, 239)
+        Me.btn_delete.Location = New System.Drawing.Point(12, 293)
         Me.btn_delete.Name = "btn_delete"
         Me.btn_delete.Size = New System.Drawing.Size(77, 28)
         Me.btn_delete.TabIndex = 36
@@ -89,7 +91,7 @@ Partial Class Menu_Minuman
         '
         'btn_edit
         '
-        Me.btn_edit.Location = New System.Drawing.Point(181, 192)
+        Me.btn_edit.Location = New System.Drawing.Point(181, 238)
         Me.btn_edit.Name = "btn_edit"
         Me.btn_edit.Size = New System.Drawing.Size(77, 28)
         Me.btn_edit.TabIndex = 35
@@ -98,7 +100,7 @@ Partial Class Menu_Minuman
         '
         'btn_save
         '
-        Me.btn_save.Location = New System.Drawing.Point(102, 192)
+        Me.btn_save.Location = New System.Drawing.Point(95, 238)
         Me.btn_save.Name = "btn_save"
         Me.btn_save.Size = New System.Drawing.Size(77, 28)
         Me.btn_save.TabIndex = 34
@@ -107,7 +109,7 @@ Partial Class Menu_Minuman
         '
         'btn_input
         '
-        Me.btn_input.Location = New System.Drawing.Point(21, 192)
+        Me.btn_input.Location = New System.Drawing.Point(12, 238)
         Me.btn_input.Name = "btn_input"
         Me.btn_input.Size = New System.Drawing.Size(77, 28)
         Me.btn_input.TabIndex = 33
@@ -116,6 +118,8 @@ Partial Class Menu_Minuman
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.txtnamaminuman)
         Me.GroupBox1.Controls.Add(Me.cmb_jenis_minuman)
         Me.GroupBox1.Controls.Add(Me.txt_harga_minuman)
         Me.GroupBox1.Controls.Add(Me.txt_id_minuman)
@@ -124,14 +128,39 @@ Partial Class Menu_Minuman
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(22, 23)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(236, 148)
+        Me.GroupBox1.Size = New System.Drawing.Size(236, 197)
         Me.GroupBox1.TabIndex = 32
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Input Data Minuman"
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(2, 80)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(87, 13)
+        Me.Label4.TabIndex = 8
+        Me.Label4.Text = "Nama Minuman :"
+        '
+        'txtnamaminuman
+        '
+        Me.txtnamaminuman.Location = New System.Drawing.Point(109, 80)
+        Me.txtnamaminuman.Name = "txtnamaminuman"
+        Me.txtnamaminuman.Size = New System.Drawing.Size(106, 20)
+        Me.txtnamaminuman.TabIndex = 7
+        '
+        'cmb_jenis_minuman
+        '
+        Me.cmb_jenis_minuman.FormattingEnabled = True
+        Me.cmb_jenis_minuman.Items.AddRange(New Object() {"Hot", "Cold", "Smoothies", "Juice"})
+        Me.cmb_jenis_minuman.Location = New System.Drawing.Point(109, 117)
+        Me.cmb_jenis_minuman.Name = "cmb_jenis_minuman"
+        Me.cmb_jenis_minuman.Size = New System.Drawing.Size(106, 21)
+        Me.cmb_jenis_minuman.TabIndex = 6
+        '
         'txt_harga_minuman
         '
-        Me.txt_harga_minuman.Location = New System.Drawing.Point(109, 105)
+        Me.txt_harga_minuman.Location = New System.Drawing.Point(109, 157)
         Me.txt_harga_minuman.Name = "txt_harga_minuman"
         Me.txt_harga_minuman.Size = New System.Drawing.Size(106, 20)
         Me.txt_harga_minuman.TabIndex = 5
@@ -146,7 +175,7 @@ Partial Class Menu_Minuman
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 108)
+        Me.Label3.Location = New System.Drawing.Point(6, 164)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(88, 13)
         Me.Label3.TabIndex = 2
@@ -155,7 +184,7 @@ Partial Class Menu_Minuman
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(6, 72)
+        Me.Label2.Location = New System.Drawing.Point(2, 117)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(83, 13)
         Me.Label2.TabIndex = 1
@@ -170,20 +199,11 @@ Partial Class Menu_Minuman
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ID Minuman :"
         '
-        'cmb_jenis_minuman
-        '
-        Me.cmb_jenis_minuman.FormattingEnabled = True
-        Me.cmb_jenis_minuman.Items.AddRange(New Object() {"Milk Tea", "Jasmine Tea", "Lemon Tea", "Coffee", "Soda", "Mineral", "Juice", "Milkshake"})
-        Me.cmb_jenis_minuman.Location = New System.Drawing.Point(109, 67)
-        Me.cmb_jenis_minuman.Name = "cmb_jenis_minuman"
-        Me.cmb_jenis_minuman.Size = New System.Drawing.Size(106, 21)
-        Me.cmb_jenis_minuman.TabIndex = 6
-        '
         'Menu_Minuman
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(617, 291)
+        Me.ClientSize = New System.Drawing.Size(617, 333)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.btn_exit)
         Me.Controls.Add(Me.btn_cancel)
@@ -217,4 +237,6 @@ Partial Class Menu_Minuman
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents cmb_jenis_minuman As ComboBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents txtnamaminuman As TextBox
 End Class
