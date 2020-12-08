@@ -161,6 +161,7 @@
     <Compile Include="Pesan.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Windows\Forms.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Bayar.resx">
@@ -215,7 +216,9 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />

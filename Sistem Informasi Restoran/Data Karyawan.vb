@@ -77,7 +77,7 @@ Public Class Data_Karyawan
     Private Sub btn_browse_Click(sender As Object, e As EventArgs) Handles btn_browse.Click
         Try
             OpenFileDialog1.Filter = " Image File 
-(*.jpeg;*jpg;*.png;*.bmp;*.gif)| *.jpeg;*jpg;*.png;*.bmp;*.gif"
+            (*.jpeg;*jpg;*.png;*.bmp;*.gif)| *.jpeg;*jpg;*.png;*.bmp;*.gif"
             If OpenFileDialog1.ShowDialog() = Windows.Forms.DialogResult.OK Then
                 PictureBox1.Image = New Bitmap(OpenFileDialog1.FileName)
                 txt_foto.Text = OpenFileDialog1.FileName
