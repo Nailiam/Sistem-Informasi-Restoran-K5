@@ -141,15 +141,13 @@ Public Class Data_Karyawan
         TL = Year(DateTimePicker1.Value)
         TS = Year(Now)
         Umur = TS - TL
-        Bulan = DateDiff(DateInterval.Month, CDate(DateTimePicker1.Value), CDate(Now))
-        Hari = DateDiff(DateInterval.Day, CDate(DateTimePicker1.Value), CDate(Now))
         txtumur.Text = (Umur & " Tahun " & Bulan & " Bulan " & Hari & "Hari")
     End Sub
 
     Private Sub btn_cari_Click(sender As Object, e As EventArgs) Handles btn_cari.Click
         Call koneksiDB()
 
-        DA = New OleDb.OleDbDataAdapter("SELECT * form Kasir where
+        DA = New OleDb.OleDbDataAdapter("SELECT * from Kasir where
         Id_Kasir like '%" & txt_cari.Text.Replace("'", "''") & "%' or Nama_Kasir 
         like '%" & txt_cari.Text.Replace("'", "''") & "%' or Alamat like '%" &
         txt_cari.Text.Replace("'", "''") & "%' ", Conn)
@@ -160,5 +158,22 @@ Public Class Data_Karyawan
         DA.Fill(SRT)
         DGV2.DataSource = SRT
 
+    End Sub
+    Private Sub DGV2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV2.CellContentClick
+        On Error Resume Next
+        txt_id_karyawan.Text = DGV2.Rows(e.RowIndex).Cells(0).Value
+        txt_nama_karyawan.Text = DGV2.Rows(e.RowIndex).Cells(1).Value
+        txt_lahir.Text = DGV2.Rows(e.RowIndex).Cells(2).Value
+        DateTimePicker1.Format = DateTimePickerFormat.Custom
+        DateTimePicker1.CustomFormat = "dddd, dd/MM/yyyy"
+        DateTimePicker1.Value = Format(DGV2.Rows(e.RowIndex).Cells(3).Value)
+        cmb_jk.Text = DGV2.Rows(e.RowIndex).Cells(4).Value
+        cmb_agama.Text = DGV2.Rows(e.RowIndex).Cells(5).Value
+        txt_hp.Text = DGV2.Rows(e.RowIndex).Cells(6).Value
+        txt_alamat.Text = DGV2.Rows(e.RowIndex).Cells(7).Value
+        cmb_status.Text = DGV2.Rows(e.RowIndex).Cells(8).Value
+        txt_foto.Text = DGV2.Rows(e.RowIndex).Cells(9).Value
+        Call HidupkanForm()
+        txt_id_karyawan.Enabled = False
     End Sub
 End Class
