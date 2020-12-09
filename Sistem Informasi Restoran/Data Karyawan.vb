@@ -194,4 +194,31 @@ Public Class Data_Karyawan
         Call MatikanForm()
         Call KosongkanForm()
     End Sub
+    Private Sub txt_id_karyawan_TextChanged(sender As Object, e As EventArgs) Handles txt_id_karyawan.TextChanged
+        Try
+            Call koneksiDB()
+            CMD = New OleDb.OleDbCommand(" select * from Karyawan where
+id_karyawan ='" & txt_id_karyawan.Text & "'", Conn)
+            DM = CMD.ExecuteReader
+            'DM.Read()
+            If DM.HasRows = True Then
+                DM.Read()
+                'Dim row As DataRow
+                'row = DS.Tables(0).Rows.Find(pegawai)
+                txt_id_karyawan.Text = DM.Item("id_karyawan")
+                txt_nama_karyawan.Text = DM.Item("nama_karyawan")
+                txt_lahir.Text = DM.Item("tempat_lahir")
+                DateTimePicker1.Text = DM.Item("tgl_lahir")
+                cmb_jk.Text = DM.Item("Jenis_Kelamin")
+                cmb_agama.Text = DM.Item("agama")
+                txt_hp.Text = DM.Item("no_telp")
+                txt_alamat.Text = DM.Item("alamat")
+                cmb_status.Text = DM.Item("status")
+                txt_foto.Text = DM.Item("photo")
+                PictureBox1.ImageLocation = Replace((DM("photo")), ";", "\")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.ToString())
+        End Try
+    End Sub
 End Class
