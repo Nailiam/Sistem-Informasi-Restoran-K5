@@ -77,7 +77,7 @@ Public Class Data_Karyawan
     Private Sub btn_browse_Click(sender As Object, e As EventArgs) Handles btn_browse.Click
         Try
             OpenFileDialog1.Filter = " Image File 
-(*.jpeg;*jpg;*.png;*.bmp;*.gif)| *.jpeg;*jpg;*.png;*.bmp;*.gif"
+            (*.jpeg;*jpg;*.png;*.bmp;*.gif)| *.jpeg;*jpg;*.png;*.bmp;*.gif"
             If OpenFileDialog1.ShowDialog() = Windows.Forms.DialogResult.OK Then
                 PictureBox1.Image = New Bitmap(OpenFileDialog1.FileName)
                 txt_foto.Text = OpenFileDialog1.FileName
@@ -141,13 +141,15 @@ Public Class Data_Karyawan
         TL = Year(DateTimePicker1.Value)
         TS = Year(Now)
         Umur = TS - TL
+        Bulan = DateDiff(DateInterval.Month, CDate(DateTimePicker1.Value), CDate(Now))
+        Hari = DateDiff(DateInterval.Day, CDate(DateTimePicker1.Value), CDate(Now))
         txtumur.Text = (Umur & " Tahun " & Bulan & " Bulan " & Hari & "Hari")
     End Sub
 
     Private Sub btn_cari_Click(sender As Object, e As EventArgs) Handles btn_cari.Click
         Call koneksiDB()
 
-        DA = New OleDb.OleDbDataAdapter("SELECT * from Kasir where
+        DA = New OleDb.OleDbDataAdapter("SELECT * form Kasir where
         Id_Kasir like '%" & txt_cari.Text.Replace("'", "''") & "%' or Nama_Kasir 
         like '%" & txt_cari.Text.Replace("'", "''") & "%' or Alamat like '%" &
         txt_cari.Text.Replace("'", "''") & "%' ", Conn)
@@ -159,21 +161,39 @@ Public Class Data_Karyawan
         DGV2.DataSource = SRT
 
     End Sub
-    Private Sub DGV2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV2.CellContentClick
-        On Error Resume Next
-        txt_id_karyawan.Text = DGV2.Rows(e.RowIndex).Cells(0).Value
-        txt_nama_karyawan.Text = DGV2.Rows(e.RowIndex).Cells(1).Value
-        txt_lahir.Text = DGV2.Rows(e.RowIndex).Cells(2).Value
-        DateTimePicker1.Format = DateTimePickerFormat.Custom
-        DateTimePicker1.CustomFormat = "dddd, dd/MM/yyyy"
-        DateTimePicker1.Value = Format(DGV2.Rows(e.RowIndex).Cells(3).Value)
-        cmb_jk.Text = DGV2.Rows(e.RowIndex).Cells(4).Value
-        cmb_agama.Text = DGV2.Rows(e.RowIndex).Cells(5).Value
-        txt_hp.Text = DGV2.Rows(e.RowIndex).Cells(6).Value
-        txt_alamat.Text = DGV2.Rows(e.RowIndex).Cells(7).Value
-        cmb_status.Text = DGV2.Rows(e.RowIndex).Cells(8).Value
-        txt_foto.Text = DGV2.Rows(e.RowIndex).Cells(9).Value
+
+    Private Sub btn_edit_Click(sender As Object, e As EventArgs) Handles btn_edit.Click
+        If txt_id_karyawan.Text = "" Or txt_nama_karyawan.Text = "" Or cmb_jk.Text = "" Or
+           txt_lahir.Text = "" Or cmb_agama.Text = "" Or txt_hp.Text = "" Or txt_alamat.Text = "" Or
+           cmb_status.Text = "" Or txt_foto.Text = "" Then
+            MsgBox("Data Karyawan Belum Lengkap")
+            Exit Sub
+        Else
+            Call koneksiDB()
+            CMD = New OleDb.OleDbCommand("update Kasir set Id_Kasir = '" &
+           txt_id_karyawan.Text & "', Nama_Kasir = '" & txt_nama_karyawan.Text & "', Jenis_Kelamin = '" &
+           cmb_jk.Text & "', Tempat_Lahir = '" & txt_lahir.Text & "', Agama = '" & cmb_agama.Text & "', No_Telepon = '" &
+           txt_hp.Text & "', Alamat = '" & txt_alamat.Text & "', Status = '" & cmb_status.Text & "', Photo = '" & txt_foto.Text & "'", Conn)
+            DM = CMD.ExecuteReader
+            MsgBox("Update Data Berhasil")
+        End If
+        Call KosongkanForm()
+        Call MatikanForm()
+        Call TampilkanData()
+
+    End Sub
+
+    Private Sub btn_input_Click(sender As Object, e As EventArgs) Handles btn_input.Click
         Call HidupkanForm()
-        txt_id_karyawan.Enabled = False
+        Call KosongkanForm()
+    End Sub
+
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Me.Close()
+    End Sub
+
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        Call MatikanForm()
+        Call KosongkanForm()
     End Sub
 End Class

@@ -31,6 +31,8 @@ Partial Class Menu_Makanan
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnInput = New System.Windows.Forms.Button()
         Me.lblwelcome = New System.Windows.Forms.GroupBox()
+        Me.txtNamamakanan = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.cmbJenismakanan = New System.Windows.Forms.ComboBox()
         Me.txtHargamakan = New System.Windows.Forms.TextBox()
         Me.txtIdMakanan = New System.Windows.Forms.TextBox()
@@ -62,7 +64,7 @@ Partial Class Menu_Makanan
         '
         'btnExit
         '
-        Me.btnExit.Location = New System.Drawing.Point(206, 220)
+        Me.btnExit.Location = New System.Drawing.Point(206, 292)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(75, 23)
         Me.btnExit.TabIndex = 18
@@ -71,7 +73,7 @@ Partial Class Menu_Makanan
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(110, 220)
+        Me.btnCancel.Location = New System.Drawing.Point(111, 292)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(75, 23)
         Me.btnCancel.TabIndex = 17
@@ -80,7 +82,7 @@ Partial Class Menu_Makanan
         '
         'btndelete
         '
-        Me.btndelete.Location = New System.Drawing.Point(12, 220)
+        Me.btndelete.Location = New System.Drawing.Point(12, 292)
         Me.btndelete.Name = "btndelete"
         Me.btndelete.Size = New System.Drawing.Size(75, 23)
         Me.btndelete.TabIndex = 16
@@ -89,7 +91,7 @@ Partial Class Menu_Makanan
         '
         'btnedit
         '
-        Me.btnedit.Location = New System.Drawing.Point(206, 181)
+        Me.btnedit.Location = New System.Drawing.Point(206, 231)
         Me.btnedit.Name = "btnedit"
         Me.btnedit.Size = New System.Drawing.Size(75, 23)
         Me.btnedit.TabIndex = 15
@@ -98,7 +100,7 @@ Partial Class Menu_Makanan
         '
         'btnSave
         '
-        Me.btnSave.Location = New System.Drawing.Point(111, 181)
+        Me.btnSave.Location = New System.Drawing.Point(111, 231)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(75, 23)
         Me.btnSave.TabIndex = 14
@@ -107,7 +109,7 @@ Partial Class Menu_Makanan
         '
         'btnInput
         '
-        Me.btnInput.Location = New System.Drawing.Point(12, 181)
+        Me.btnInput.Location = New System.Drawing.Point(12, 231)
         Me.btnInput.Name = "btnInput"
         Me.btnInput.Size = New System.Drawing.Size(75, 23)
         Me.btnInput.TabIndex = 13
@@ -116,6 +118,8 @@ Partial Class Menu_Makanan
         '
         'lblwelcome
         '
+        Me.lblwelcome.Controls.Add(Me.txtNamamakanan)
+        Me.lblwelcome.Controls.Add(Me.Label3)
         Me.lblwelcome.Controls.Add(Me.cmbJenismakanan)
         Me.lblwelcome.Controls.Add(Me.txtHargamakan)
         Me.lblwelcome.Controls.Add(Me.txtIdMakanan)
@@ -124,23 +128,39 @@ Partial Class Menu_Makanan
         Me.lblwelcome.Controls.Add(Me.Label1)
         Me.lblwelcome.Location = New System.Drawing.Point(12, 31)
         Me.lblwelcome.Name = "lblwelcome"
-        Me.lblwelcome.Size = New System.Drawing.Size(269, 144)
+        Me.lblwelcome.Size = New System.Drawing.Size(269, 172)
         Me.lblwelcome.TabIndex = 12
         Me.lblwelcome.TabStop = False
         Me.lblwelcome.Text = "Input Menu Makanan"
         '
+        'txtNamamakanan
+        '
+        Me.txtNamamakanan.Location = New System.Drawing.Point(125, 61)
+        Me.txtNamamakanan.Name = "txtNamamakanan"
+        Me.txtNamamakanan.Size = New System.Drawing.Size(121, 20)
+        Me.txtNamamakanan.TabIndex = 12
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(6, 68)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(89, 13)
+        Me.Label3.TabIndex = 11
+        Me.Label3.Text = "Nama Makanan :"
+        '
         'cmbJenismakanan
         '
         Me.cmbJenismakanan.FormattingEnabled = True
-        Me.cmbJenismakanan.Items.AddRange(New Object() {"Nasi Goreng", "Nasi Goreng Ati", "Nasi Goreng Spesial", "Bakso", "Bakso Telur", "Nasi Putih", "Ayam Bakar", "Chitato", "Taro", "Happy Tos"})
-        Me.cmbJenismakanan.Location = New System.Drawing.Point(125, 56)
+        Me.cmbJenismakanan.Items.AddRange(New Object() {"Appetizer", "Main Course", "Dessert"})
+        Me.cmbJenismakanan.Location = New System.Drawing.Point(125, 91)
         Me.cmbJenismakanan.Name = "cmbJenismakanan"
         Me.cmbJenismakanan.Size = New System.Drawing.Size(121, 21)
         Me.cmbJenismakanan.TabIndex = 10
         '
         'txtHargamakan
         '
-        Me.txtHargamakan.Location = New System.Drawing.Point(125, 87)
+        Me.txtHargamakan.Location = New System.Drawing.Point(125, 125)
         Me.txtHargamakan.Name = "txtHargamakan"
         Me.txtHargamakan.Size = New System.Drawing.Size(121, 20)
         Me.txtHargamakan.TabIndex = 9
@@ -155,7 +175,7 @@ Partial Class Menu_Makanan
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(16, 94)
+        Me.Label5.Location = New System.Drawing.Point(6, 128)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(90, 13)
         Me.Label5.TabIndex = 4
@@ -164,7 +184,7 @@ Partial Class Menu_Makanan
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(16, 64)
+        Me.Label2.Location = New System.Drawing.Point(6, 99)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(85, 13)
         Me.Label2.TabIndex = 1
@@ -173,7 +193,7 @@ Partial Class Menu_Makanan
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(16, 35)
+        Me.Label1.Location = New System.Drawing.Point(6, 35)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(72, 13)
         Me.Label1.TabIndex = 0
@@ -183,7 +203,7 @@ Partial Class Menu_Makanan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(677, 285)
+        Me.ClientSize = New System.Drawing.Size(677, 337)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnCancel)
@@ -217,4 +237,6 @@ Partial Class Menu_Makanan
     Friend WithEvents Label5 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents txtNamamakanan As TextBox
+    Friend WithEvents Label3 As Label
 End Class
