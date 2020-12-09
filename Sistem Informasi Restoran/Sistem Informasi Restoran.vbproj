@@ -83,6 +83,12 @@
     <Compile Include="Bayar.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Crystal Report Makanan.Designer.vb">
+      <DependentUpon>Crystal Report Makanan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Crystal Report Makanan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CrystalReport1.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -166,6 +172,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Bayar.resx">
       <DependentUpon>Bayar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crystal Report Makanan.resx">
+      <DependentUpon>Crystal Report Makanan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CrystalReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
