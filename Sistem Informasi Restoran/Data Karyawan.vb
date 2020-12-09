@@ -137,13 +137,11 @@ Public Class Data_Karyawan
     End Sub
 
     Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
-        Dim Umur, Bulan, Hari, TL, TS As Integer
+        Dim Umur, TL, TS As Integer
         TL = Year(DateTimePicker1.Value)
         TS = Year(Now)
         Umur = TS - TL
-        Bulan = DateDiff(DateInterval.Month, CDate(DateTimePicker1.Value), CDate(Now))
-        Hari = DateDiff(DateInterval.Day, CDate(DateTimePicker1.Value), CDate(Now))
-        txtumur.Text = (Umur & " Tahun " & Bulan & " Bulan " & Hari & "Hari")
+        txtumur.Text = (Umur & " Tahun ")
     End Sub
 
     Private Sub btn_cari_Click(sender As Object, e As EventArgs) Handles btn_cari.Click
