@@ -4,7 +4,7 @@
     End Sub
 
     Private Sub btn_open_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_open.Click
-        With CrystalReport1.reportfilename = App.Path&"\Report Data Makanan.rpt".connect=app.path & "dbpegawai.mdb".discardsaveddata = True
-
+        With CrystalReport1.reportfilename = App.Path & "\Report Data Makanan.rpt".connect = app.path & "dbpegawai.mdb".discardsaveddata = True
+        End With
     End Sub
 End Class

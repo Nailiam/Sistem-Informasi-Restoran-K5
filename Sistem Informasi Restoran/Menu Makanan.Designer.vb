@@ -152,7 +152,7 @@ Partial Class Menu_Makanan
         'cmbJenismakanan
         '
         Me.cmbJenismakanan.FormattingEnabled = True
-        Me.cmbJenismakanan.Items.AddRange(New Object() {"Appetizer", "Main Course", "Dessert"})
+        Me.cmbJenismakanan.Items.AddRange(New Object() {"Appetizer", "Main Course", "Dessert", "Snack"})
         Me.cmbJenismakanan.Location = New System.Drawing.Point(125, 91)
         Me.cmbJenismakanan.Name = "cmbJenismakanan"
         Me.cmbJenismakanan.Size = New System.Drawing.Size(121, 21)
