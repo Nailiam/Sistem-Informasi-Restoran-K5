@@ -18,7 +18,7 @@ Imports System
 Imports System.ComponentModel
 
 
-Public Class CrystalReport1
+Public Class CrystalReport3
     Inherits ReportClass
     
     Public Sub New()
@@ -27,7 +27,7 @@ Public Class CrystalReport1
     
     Public Overrides Property ResourceName() As String
         Get
-            Return "CrystalReport1.rpt"
+            Return "CrystalReport3.rpt"
         End Get
         Set
             'Do nothing
@@ -45,7 +45,7 @@ Public Class CrystalReport1
     
     Public Overrides Property FullResourceName() As String
         Get
-            Return "Sistem_Informasi_Restoran.CrystalReport1.rpt"
+            Return "Sistem_Informasi_Restoran.CrystalReport3.rpt"
         End Get
         Set
             'Do nothing
@@ -91,26 +91,10 @@ Public Class CrystalReport1
             Return Me.ReportDefinition.Sections(4)
         End Get
     End Property
-    
-    <Browsable(false),  _
-     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
-    Public ReadOnly Property Parameter_Tanggal_Awal() As CrystalDecisions.[Shared].IParameterField
-        Get
-            Return Me.DataDefinition.ParameterFields(0)
-        End Get
-    End Property
-    
-    <Browsable(false),  _
-     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
-    Public ReadOnly Property Parameter_Tanggal_Akhir() As CrystalDecisions.[Shared].IParameterField
-        Get
-            Return Me.DataDefinition.ParameterFields(1)
-        End Get
-    End Property
 End Class
 
 <System.Drawing.ToolboxBitmapAttribute(GetType(CrystalDecisions.[Shared].ExportOptions), "report.bmp")>  _
-Public Class CachedCrystalReport1
+Public Class CachedCrystalReport3
     Inherits Component
     Implements ICachedReport
     
@@ -152,7 +136,7 @@ Public Class CachedCrystalReport1
     End Property
     
     Public Overridable Function CreateReport() As CrystalDecisions.CrystalReports.Engine.ReportDocument Implements CrystalDecisions.ReportSource.ICachedReport.CreateReport
-        Dim rpt As CrystalReport1 = New CrystalReport1()
+        Dim rpt As CrystalReport3 = New CrystalReport3()
         rpt.Site = Me.Site
         Return rpt
     End Function

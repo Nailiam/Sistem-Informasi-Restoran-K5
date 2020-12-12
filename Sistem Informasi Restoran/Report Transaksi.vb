@@ -18,7 +18,7 @@ Imports System
 Imports System.ComponentModel
 
 
-Public Class CrystalReport1
+Public Class Report_Transaksi
     Inherits ReportClass
     
     Public Sub New()
@@ -27,7 +27,7 @@ Public Class CrystalReport1
     
     Public Overrides Property ResourceName() As String
         Get
-            Return "CrystalReport1.rpt"
+            Return "Report Transaksi.rpt"
         End Get
         Set
             'Do nothing
@@ -45,7 +45,7 @@ Public Class CrystalReport1
     
     Public Overrides Property FullResourceName() As String
         Get
-            Return "Sistem_Informasi_Restoran.CrystalReport1.rpt"
+            Return "Sistem_Informasi_Restoran.Report Transaksi.rpt"
         End Get
         Set
             'Do nothing
@@ -110,7 +110,7 @@ Public Class CrystalReport1
 End Class
 
 <System.Drawing.ToolboxBitmapAttribute(GetType(CrystalDecisions.[Shared].ExportOptions), "report.bmp")>  _
-Public Class CachedCrystalReport1
+Public Class CachedReport_Transaksi
     Inherits Component
     Implements ICachedReport
     
@@ -152,7 +152,7 @@ Public Class CachedCrystalReport1
     End Property
     
     Public Overridable Function CreateReport() As CrystalDecisions.CrystalReports.Engine.ReportDocument Implements CrystalDecisions.ReportSource.ICachedReport.CreateReport
-        Dim rpt As CrystalReport1 = New CrystalReport1()
+        Dim rpt As Report_Transaksi = New Report_Transaksi()
         rpt.Site = Me.Site
         Return rpt
     End Function

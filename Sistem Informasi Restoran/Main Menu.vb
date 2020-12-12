@@ -30,4 +30,20 @@
     Private Sub btnexit_Click(sender As Object, e As EventArgs) Handles btnexit.Click
         Me.Close()
     End Sub
+
+    Private Sub ReportPeriodikTransaksiToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportPeriodikTransaksiToolStripMenuItem.Click
+        Report_Data_Pelanggan.Show()
+    End Sub
+
+    Private Sub ReportTransaksiToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportTransaksiToolStripMenuItem.Click
+        Report_Data_Makanan.Show()
+    End Sub
+
+    Private Sub ReportDataMinumanToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportDataMinumanToolStripMenuItem.Click
+        Report_Data_Minuman.Show()
+    End Sub
+
+    Private Sub ReportPeriodikTransaksiToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ReportPeriodikTransaksiToolStripMenuItem1.Click
+        Cetak_Laporan_Periodik.Show()
+    End Sub
 End Class
