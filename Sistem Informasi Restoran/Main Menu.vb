@@ -46,4 +46,8 @@
     Private Sub ReportPeriodikTransaksiToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ReportPeriodikTransaksiToolStripMenuItem1.Click
         Cetak_Laporan_Periodik.Show()
     End Sub
+
+    Private Sub ReportPerHargaMakananToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportPerHargaMakananToolStripMenuItem.Click
+        Per_Harga_Makanan.Show()
+    End Sub
 End Class

@@ -177,6 +177,12 @@
     <Compile Include="Pelanggan.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Per Harga Makanan.Designer.vb">
+      <DependentUpon>Per Harga Makanan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Per Harga Makanan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Pesan.Designer.vb">
       <DependentUpon>Pesan.vb</DependentUpon>
     </Compile>
@@ -200,6 +206,12 @@
     </Compile>
     <Compile Include="Report Data Pelanggan.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report Per Harga Makanan.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report Per Harga Makanan.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report Transaksi.vb">
       <AutoGen>True</AutoGen>
@@ -258,6 +270,9 @@
     <EmbeddedResource Include="Pelanggan.resx">
       <DependentUpon>Pelanggan.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Per Harga Makanan.resx">
+      <DependentUpon>Per Harga Makanan.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pesan.resx">
       <DependentUpon>Pesan.vb</DependentUpon>
     </EmbeddedResource>
@@ -269,6 +284,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report Data Pelanggan.resx">
       <DependentUpon>Report Data Pelanggan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Per Harga Makanan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report Per Harga Makanan.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report Transaksi.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
