@@ -32,6 +32,8 @@ Partial Class Data_Karyawan
         Me.btn_browse = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btn_edit = New System.Windows.Forms.Button()
+        Me.btn_input = New System.Windows.Forms.Button()
         Me.txtumur = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.cmb_status = New System.Windows.Forms.ComboBox()
@@ -56,8 +58,6 @@ Partial Class Data_Karyawan
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.btn_cari = New System.Windows.Forms.Button()
         Me.txt_cari = New System.Windows.Forms.TextBox()
-        Me.btn_edit = New System.Windows.Forms.Button()
-        Me.btn_input = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         CType(Me.DGV2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -175,6 +175,25 @@ Partial Class Data_Karyawan
         Me.GroupBox1.TabIndex = 22
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Data Karyawan"
+        '
+        'btn_edit
+        '
+        Me.btn_edit.Location = New System.Drawing.Point(265, 109)
+        Me.btn_edit.Name = "btn_edit"
+        Me.btn_edit.Size = New System.Drawing.Size(75, 28)
+        Me.btn_edit.TabIndex = 34
+        Me.btn_edit.Text = "Edit"
+        Me.btn_edit.UseVisualStyleBackColor = True
+        '
+        'btn_input
+        '
+        Me.btn_input.Location = New System.Drawing.Point(265, 68)
+        Me.btn_input.Margin = New System.Windows.Forms.Padding(2)
+        Me.btn_input.Name = "btn_input"
+        Me.btn_input.Size = New System.Drawing.Size(75, 24)
+        Me.btn_input.TabIndex = 35
+        Me.btn_input.Text = "Input"
+        Me.btn_input.UseVisualStyleBackColor = True
         '
         'txtumur
         '
@@ -372,25 +391,6 @@ Partial Class Data_Karyawan
         Me.txt_cari.Name = "txt_cari"
         Me.txt_cari.Size = New System.Drawing.Size(173, 20)
         Me.txt_cari.TabIndex = 33
-        '
-        'btn_edit
-        '
-        Me.btn_edit.Location = New System.Drawing.Point(265, 109)
-        Me.btn_edit.Name = "btn_edit"
-        Me.btn_edit.Size = New System.Drawing.Size(75, 28)
-        Me.btn_edit.TabIndex = 34
-        Me.btn_edit.Text = "Edit"
-        Me.btn_edit.UseVisualStyleBackColor = True
-        '
-        'btn_input
-        '
-        Me.btn_input.Location = New System.Drawing.Point(265, 68)
-        Me.btn_input.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.btn_input.Name = "btn_input"
-        Me.btn_input.Size = New System.Drawing.Size(75, 24)
-        Me.btn_input.TabIndex = 35
-        Me.btn_input.Text = "Input"
-        Me.btn_input.UseVisualStyleBackColor = True
         '
         'btnCancel
         '
