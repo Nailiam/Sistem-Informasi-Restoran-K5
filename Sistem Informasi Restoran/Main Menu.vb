@@ -24,7 +24,7 @@
     End Sub
 
     Private Sub DataPembayaranToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DataPembayaranToolStripMenuItem.Click
-        Bayar.Show()
+        Transaksi.Show()
     End Sub
 
     Private Sub btnexit_Click(sender As Object, e As EventArgs) Handles btnexit.Click
