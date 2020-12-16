@@ -197,46 +197,27 @@ Public Class Data_Karyawan
     Private Sub txt_id_karyawan_TextChanged(sender As Object, e As EventArgs) Handles txt_id_karyawan.TextChanged
         Try
             Call koneksiDB()
-            CMD = New OleDb.OleDbCommand(" select * from Karyawan where
-id_karyawan ='" & txt_id_karyawan.Text & "'", Conn)
+            CMD = New OleDb.OleDbCommand(" select * from Kasir where Id_Kasir ='" & txt_id_karyawan.Text & "'", Conn)
             DM = CMD.ExecuteReader
             'DM.Read()
             If DM.HasRows = True Then
                 DM.Read()
                 'Dim row As DataRow
                 'row = DS.Tables(0).Rows.Find(pegawai)
-                txt_id_karyawan.Text = DM.Item("id_karyawan")
-                txt_nama_karyawan.Text = DM.Item("nama_karyawan")
-                txt_lahir.Text = DM.Item("tempat_lahir")
-                DateTimePicker1.Text = DM.Item("tgl_lahir")
+                txt_id_karyawan.Text = DM.Item("Id_Kasir")
+                txt_nama_karyawan.Text = DM.Item("Nama_Kasir")
+                txt_lahir.Text = DM.Item("Tempat_Lahir")
+                DateTimePicker1.Text = DM.Item("Tanggal_Lahir")
                 cmb_jk.Text = DM.Item("Jenis_Kelamin")
-                cmb_agama.Text = DM.Item("agama")
-                txt_hp.Text = DM.Item("no_telp")
-                txt_alamat.Text = DM.Item("alamat")
-                cmb_status.Text = DM.Item("status")
-                txt_foto.Text = DM.Item("photo")
-                PictureBox1.ImageLocation = Replace((DM("photo")), ";", "\")
+                cmb_agama.Text = DM.Item("Agama")
+                txt_hp.Text = DM.Item("No_Telepon")
+                txt_alamat.Text = DM.Item("Alamat")
+                cmb_status.Text = DM.Item("Status")
+                txt_foto.Text = DM.Item("Photo")
+                PictureBox1.ImageLocation = Replace((DM("Photo")), ";", "\")
             End If
         Catch ex As Exception
             MsgBox(ex.ToString())
         End Try
-    End Sub
-
-    Private Sub DGV2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV2.CellContentClick
-        On Error Resume Next
-        txt_id_karyawan.Text = DGV2.Rows(e.RowIndex).Cells(0).Value
-        txt_nama_karyawan.Text = DGV2.Rows(e.RowIndex).Cells(1).Value
-        txt_lahir.Text = DGV2.Rows(e.RowIndex).Cells(2).Value
-        DateTimePicker1.Format = DateTimePickerFormat.Custom
-        DateTimePicker1.CustomFormat = "dddd, dd/MM/yyyy"
-        DateTimePicker1.Value = DGV2.Rows(e.RowIndex).Cells(3).Value
-        cmb_jk.Text = DGV2.Rows(e.RowIndex).Cells(4).Value
-        cmb_agama.Text = DGV2.Rows(e.RowIndex).Cells(5).Value
-        txt_hp.Text = DGV2.Rows(e.RowIndex).Cells(6).Value
-        txt_alamat.Text = DGV2.Rows(e.RowIndex).Cells(7).Value
-        cmb_status.Text = DGV2.Rows(e.RowIndex).Cells(8).Value
-        txt_foto.Text = DGV2.Rows(e.RowIndex).Cells(9).Value
-        Call HidupkanForm()
-        txt_id_karyawan.Enabled = False
     End Sub
 End Class

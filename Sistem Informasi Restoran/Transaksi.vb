@@ -93,6 +93,11 @@ DataGridView1.Rows(baris).Cells(0).Value & "'"
         txtnamapelanggan.Text = ""
         txtnomeja.Text = ""
     End Sub
+    Sub kondisiawal()
+        txttgltransaksi.Text = Today
+        txtjamtransaksi.Text = TimeOfDay
+        txtkasir.Text = Login.txtUN.Text
+    End Sub
     Private Sub txtjumlah_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtjumlah.KeyPress
         If e.KeyChar = Chr(13) Then
             If txtnama.Text = "" Or txtharga.Text = "" Then
@@ -111,6 +116,22 @@ Val(txtjumlah.Text)})
     Private Sub TransaksiPenjualan_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Call kondisiawal()
         Call Nomorfakturotomatis()
+    End Sub
+    Sub Nomorfakturotomatis()
+        Call koneksiDB()
+        CMD = New OleDb.OleDbCommand("Select * from Penjualan where No_faktur in (select max(No_faktur) from Penjualan)", Conn)
+        Dim urutankode As String
+        Dim hitung As Long
+        DM = CMD.ExecuteReader
+        DM.Read()
+        If Not DM.HasRows Then
+            urutankode = "J" + Format(Now, "yyMMdd") + "001"
+        Else
+            hitung = Microsoft.VisualBasic.Right(DM.GetString(0), 9) + 1
+            urutankode = "J" + Format(Now, "yyMMdd") +
+           Microsoft.VisualBasic.Right("000" & hitung, 3)
+        End If
+        txtkodestruk.Text = urutankode
     End Sub
 End Class
 
