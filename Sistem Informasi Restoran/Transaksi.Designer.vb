@@ -23,7 +23,7 @@ Partial Class Transaksi
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.txtGrandtotal = New System.Windows.Forms.TextBox()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
@@ -40,10 +40,10 @@ Partial Class Transaksi
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.txtjumlah = New System.Windows.Forms.TextBox()
+        Me.txtharga = New System.Windows.Forms.TextBox()
+        Me.txtnama = New System.Windows.Forms.TextBox()
+        Me.txt_Kode = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -60,13 +60,16 @@ Partial Class Transaksi
         Me.TextBox15 = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.TextBox16 = New System.Windows.Forms.TextBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.TextBox8)
+        Me.GroupBox1.Controls.Add(Me.txtGrandtotal)
         Me.GroupBox1.Controls.Add(Me.TextBox7)
         Me.GroupBox1.Controls.Add(Me.TextBox6)
         Me.GroupBox1.Controls.Add(Me.TextBox5)
@@ -89,13 +92,13 @@ Partial Class Transaksi
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Transaksi"
         '
-        'TextBox8
+        'txtGrandtotal
         '
-        Me.TextBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox8.Location = New System.Drawing.Point(529, 15)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(255, 47)
-        Me.TextBox8.TabIndex = 15
+        Me.txtGrandtotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtGrandtotal.Location = New System.Drawing.Point(529, 15)
+        Me.txtGrandtotal.Name = "txtGrandtotal"
+        Me.txtGrandtotal.Size = New System.Drawing.Size(255, 47)
+        Me.txtGrandtotal.TabIndex = 15
         '
         'TextBox7
         '
@@ -221,10 +224,10 @@ Partial Class Transaksi
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.TextBox12)
-        Me.GroupBox2.Controls.Add(Me.TextBox11)
-        Me.GroupBox2.Controls.Add(Me.TextBox10)
-        Me.GroupBox2.Controls.Add(Me.TextBox9)
+        Me.GroupBox2.Controls.Add(Me.txtjumlah)
+        Me.GroupBox2.Controls.Add(Me.txtharga)
+        Me.GroupBox2.Controls.Add(Me.txtnama)
+        Me.GroupBox2.Controls.Add(Me.txt_Kode)
         Me.GroupBox2.Controls.Add(Me.Label12)
         Me.GroupBox2.Controls.Add(Me.Label11)
         Me.GroupBox2.Controls.Add(Me.Label10)
@@ -236,33 +239,33 @@ Partial Class Transaksi
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Item Pembelian"
         '
-        'TextBox12
+        'txtjumlah
         '
-        Me.TextBox12.Location = New System.Drawing.Point(715, 27)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(69, 20)
-        Me.TextBox12.TabIndex = 12
+        Me.txtjumlah.Location = New System.Drawing.Point(715, 27)
+        Me.txtjumlah.Name = "txtjumlah"
+        Me.txtjumlah.Size = New System.Drawing.Size(69, 20)
+        Me.txtjumlah.TabIndex = 12
         '
-        'TextBox11
+        'txtharga
         '
-        Me.TextBox11.Location = New System.Drawing.Point(512, 24)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(114, 20)
-        Me.TextBox11.TabIndex = 11
+        Me.txtharga.Location = New System.Drawing.Point(512, 24)
+        Me.txtharga.Name = "txtharga"
+        Me.txtharga.Size = New System.Drawing.Size(114, 20)
+        Me.txtharga.TabIndex = 11
         '
-        'TextBox10
+        'txtnama
         '
-        Me.TextBox10.Location = New System.Drawing.Point(276, 25)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(151, 20)
-        Me.TextBox10.TabIndex = 10
+        Me.txtnama.Location = New System.Drawing.Point(276, 25)
+        Me.txtnama.Name = "txtnama"
+        Me.txtnama.Size = New System.Drawing.Size(151, 20)
+        Me.txtnama.TabIndex = 10
         '
-        'TextBox9
+        'txt_Kode
         '
-        Me.TextBox9.Location = New System.Drawing.Point(74, 28)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(124, 20)
-        Me.TextBox9.TabIndex = 9
+        Me.txt_Kode.Location = New System.Drawing.Point(74, 28)
+        Me.txt_Kode.Name = "txt_Kode"
+        Me.txt_Kode.Size = New System.Drawing.Size(124, 20)
+        Me.txt_Kode.TabIndex = 9
         '
         'Label12
         '
@@ -306,6 +309,7 @@ Partial Class Transaksi
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.DataGridView1)
         Me.GroupBox3.Location = New System.Drawing.Point(4, 243)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(807, 118)
@@ -408,6 +412,14 @@ Partial Class Transaksi
         Me.TextBox16.Size = New System.Drawing.Size(138, 20)
         Me.TextBox16.TabIndex = 17
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 19)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(772, 81)
+        Me.DataGridView1.TabIndex = 16
+        '
         'Transaksi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -433,6 +445,8 @@ Partial Class Transaksi
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -443,7 +457,7 @@ Partial Class Transaksi
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents txtGrandtotal As TextBox
     Friend WithEvents TextBox7 As TextBox
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents TextBox5 As TextBox
@@ -456,10 +470,10 @@ Partial Class Transaksi
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents TextBox12 As TextBox
-    Friend WithEvents TextBox11 As TextBox
-    Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents txtjumlah As TextBox
+    Friend WithEvents txtharga As TextBox
+    Friend WithEvents txtnama As TextBox
+    Friend WithEvents txt_Kode As TextBox
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
@@ -476,4 +490,5 @@ Partial Class Transaksi
     Friend WithEvents TextBox15 As TextBox
     Friend WithEvents Label16 As Label
     Friend WithEvents TextBox16 As TextBox
+    Friend WithEvents DataGridView1 As DataGridView
 End Class
