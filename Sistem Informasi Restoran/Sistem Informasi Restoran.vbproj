@@ -84,9 +84,7 @@
     <Compile Include="Bayar Transaksi.Designer.vb">
       <DependentUpon>Bayar Transaksi.vb</DependentUpon>
     </Compile>
-    <Compile Include="Bayar Transaksi.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Bayar Transaksi.vb" />
     <Compile Include="Bayar.Designer.vb">
       <DependentUpon>Bayar.vb</DependentUpon>
     </Compile>

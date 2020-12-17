@@ -24,13 +24,13 @@ Partial Class Transaksi
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtGrandtotal = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtkasir = New System.Windows.Forms.TextBox()
+        Me.txtjamtransaksi = New System.Windows.Forms.TextBox()
+        Me.txttgltransaksi = New System.Windows.Forms.TextBox()
+        Me.txtnomeja = New System.Windows.Forms.TextBox()
+        Me.txtnamapelanggan = New System.Windows.Forms.TextBox()
+        Me.txtidpelanggan = New System.Windows.Forms.TextBox()
+        Me.txtkodestruk = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -43,24 +43,29 @@ Partial Class Transaksi
         Me.txtjumlah = New System.Windows.Forms.TextBox()
         Me.txtharga = New System.Windows.Forms.TextBox()
         Me.txtnama = New System.Windows.Forms.TextBox()
-        Me.txt_Kode = New System.Windows.Forms.TextBox()
+        Me.txt_Kodepesanan = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btn_save = New System.Windows.Forms.Button()
+        Me.btn_simpan = New System.Windows.Forms.Button()
+        Me.btn_tutup = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
-        Me.TextBox14 = New System.Windows.Forms.TextBox()
-        Me.TextBox15 = New System.Windows.Forms.TextBox()
+        Me.txtitems = New System.Windows.Forms.TextBox()
+        Me.txtbayar = New System.Windows.Forms.TextBox()
+        Me.txtkembali = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.TextBox16 = New System.Windows.Forms.TextBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.txtpajak = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -70,13 +75,13 @@ Partial Class Transaksi
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.txtGrandtotal)
-        Me.GroupBox1.Controls.Add(Me.TextBox7)
-        Me.GroupBox1.Controls.Add(Me.TextBox6)
-        Me.GroupBox1.Controls.Add(Me.TextBox5)
-        Me.GroupBox1.Controls.Add(Me.TextBox4)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.txtkasir)
+        Me.GroupBox1.Controls.Add(Me.txtjamtransaksi)
+        Me.GroupBox1.Controls.Add(Me.txttgltransaksi)
+        Me.GroupBox1.Controls.Add(Me.txtnomeja)
+        Me.GroupBox1.Controls.Add(Me.txtnamapelanggan)
+        Me.GroupBox1.Controls.Add(Me.txtidpelanggan)
+        Me.GroupBox1.Controls.Add(Me.txtkodestruk)
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Label6)
@@ -100,54 +105,54 @@ Partial Class Transaksi
         Me.txtGrandtotal.Size = New System.Drawing.Size(255, 47)
         Me.txtGrandtotal.TabIndex = 15
         '
-        'TextBox7
+        'txtkasir
         '
-        Me.TextBox7.Location = New System.Drawing.Point(633, 128)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(151, 20)
-        Me.TextBox7.TabIndex = 14
+        Me.txtkasir.Location = New System.Drawing.Point(633, 128)
+        Me.txtkasir.Name = "txtkasir"
+        Me.txtkasir.Size = New System.Drawing.Size(151, 20)
+        Me.txtkasir.TabIndex = 14
         '
-        'TextBox6
+        'txtjamtransaksi
         '
-        Me.TextBox6.Location = New System.Drawing.Point(633, 102)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(151, 20)
-        Me.TextBox6.TabIndex = 13
+        Me.txtjamtransaksi.Location = New System.Drawing.Point(633, 102)
+        Me.txtjamtransaksi.Name = "txtjamtransaksi"
+        Me.txtjamtransaksi.Size = New System.Drawing.Size(151, 20)
+        Me.txtjamtransaksi.TabIndex = 13
         '
-        'TextBox5
+        'txttgltransaksi
         '
-        Me.TextBox5.Location = New System.Drawing.Point(633, 72)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(151, 20)
-        Me.TextBox5.TabIndex = 12
+        Me.txttgltransaksi.Location = New System.Drawing.Point(633, 72)
+        Me.txttgltransaksi.Name = "txttgltransaksi"
+        Me.txttgltransaksi.Size = New System.Drawing.Size(151, 20)
+        Me.txttgltransaksi.TabIndex = 12
         '
-        'TextBox4
+        'txtnomeja
         '
-        Me.TextBox4.Location = New System.Drawing.Point(119, 125)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(151, 20)
-        Me.TextBox4.TabIndex = 11
+        Me.txtnomeja.Location = New System.Drawing.Point(119, 125)
+        Me.txtnomeja.Name = "txtnomeja"
+        Me.txtnomeja.Size = New System.Drawing.Size(151, 20)
+        Me.txtnomeja.TabIndex = 11
         '
-        'TextBox3
+        'txtnamapelanggan
         '
-        Me.TextBox3.Location = New System.Drawing.Point(119, 94)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(151, 20)
-        Me.TextBox3.TabIndex = 10
+        Me.txtnamapelanggan.Location = New System.Drawing.Point(119, 94)
+        Me.txtnamapelanggan.Name = "txtnamapelanggan"
+        Me.txtnamapelanggan.Size = New System.Drawing.Size(151, 20)
+        Me.txtnamapelanggan.TabIndex = 10
         '
-        'TextBox2
+        'txtidpelanggan
         '
-        Me.TextBox2.Location = New System.Drawing.Point(119, 60)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(151, 20)
-        Me.TextBox2.TabIndex = 9
+        Me.txtidpelanggan.Location = New System.Drawing.Point(119, 60)
+        Me.txtidpelanggan.Name = "txtidpelanggan"
+        Me.txtidpelanggan.Size = New System.Drawing.Size(151, 20)
+        Me.txtidpelanggan.TabIndex = 9
         '
-        'TextBox1
+        'txtkodestruk
         '
-        Me.TextBox1.Location = New System.Drawing.Point(119, 25)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(151, 20)
-        Me.TextBox1.TabIndex = 8
+        Me.txtkodestruk.Location = New System.Drawing.Point(119, 25)
+        Me.txtkodestruk.Name = "txtkodestruk"
+        Me.txtkodestruk.Size = New System.Drawing.Size(151, 20)
+        Me.txtkodestruk.TabIndex = 8
         '
         'Label8
         '
@@ -227,7 +232,7 @@ Partial Class Transaksi
         Me.GroupBox2.Controls.Add(Me.txtjumlah)
         Me.GroupBox2.Controls.Add(Me.txtharga)
         Me.GroupBox2.Controls.Add(Me.txtnama)
-        Me.GroupBox2.Controls.Add(Me.txt_Kode)
+        Me.GroupBox2.Controls.Add(Me.txt_Kodepesanan)
         Me.GroupBox2.Controls.Add(Me.Label12)
         Me.GroupBox2.Controls.Add(Me.Label11)
         Me.GroupBox2.Controls.Add(Me.Label10)
@@ -255,17 +260,17 @@ Partial Class Transaksi
         '
         'txtnama
         '
-        Me.txtnama.Location = New System.Drawing.Point(276, 25)
+        Me.txtnama.Location = New System.Drawing.Point(308, 24)
         Me.txtnama.Name = "txtnama"
-        Me.txtnama.Size = New System.Drawing.Size(151, 20)
+        Me.txtnama.Size = New System.Drawing.Size(128, 20)
         Me.txtnama.TabIndex = 10
         '
-        'txt_Kode
+        'txt_Kodepesanan
         '
-        Me.txt_Kode.Location = New System.Drawing.Point(74, 28)
-        Me.txt_Kode.Name = "txt_Kode"
-        Me.txt_Kode.Size = New System.Drawing.Size(124, 20)
-        Me.txt_Kode.TabIndex = 9
+        Me.txt_Kodepesanan.Location = New System.Drawing.Point(136, 26)
+        Me.txt_Kodepesanan.Name = "txt_Kodepesanan"
+        Me.txt_Kodepesanan.Size = New System.Drawing.Size(107, 20)
+        Me.txt_Kodepesanan.TabIndex = 9
         '
         'Label12
         '
@@ -291,7 +296,7 @@ Partial Class Transaksi
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(213, 28)
+        Me.Label10.Location = New System.Drawing.Point(249, 24)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(57, 19)
         Me.Label10.TabIndex = 1
@@ -301,11 +306,11 @@ Partial Class Transaksi
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(8, 28)
+        Me.Label9.Location = New System.Drawing.Point(2, 26)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(57, 19)
+        Me.Label9.Size = New System.Drawing.Size(128, 19)
         Me.Label9.TabIndex = 0
-        Me.Label9.Text = "Kode "
+        Me.Label9.Text = "Kode Pesanan"
         '
         'GroupBox3
         '
@@ -317,32 +322,66 @@ Partial Class Transaksi
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Detail Pembelian"
         '
-        'Button1
+        'DataGridView1
         '
-        Me.Button1.Location = New System.Drawing.Point(16, 394)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 33)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Simpan"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5})
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 19)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(772, 81)
+        Me.DataGridView1.TabIndex = 16
         '
-        'Button2
+        'Column1
         '
-        Me.Button2.Location = New System.Drawing.Point(140, 394)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 33)
-        Me.Button2.TabIndex = 14
-        Me.Button2.Text = "Batal"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Column1.HeaderText = "Kode Pesanan"
+        Me.Column1.Name = "Column1"
         '
-        'Button3
+        'Column2
         '
-        Me.Button3.Location = New System.Drawing.Point(264, 394)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 33)
-        Me.Button3.TabIndex = 15
-        Me.Button3.Text = "Tutup"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Column2.HeaderText = "Nama Pelanggan"
+        Me.Column2.Name = "Column2"
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Harga"
+        Me.Column3.Name = "Column3"
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Jumlah "
+        Me.Column4.Name = "Column4"
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Subtotal"
+        Me.Column5.Name = "Column5"
+        '
+        'btn_save
+        '
+        Me.btn_save.Location = New System.Drawing.Point(16, 394)
+        Me.btn_save.Name = "btn_save"
+        Me.btn_save.Size = New System.Drawing.Size(75, 33)
+        Me.btn_save.TabIndex = 0
+        Me.btn_save.Text = "Simpan"
+        Me.btn_save.UseVisualStyleBackColor = True
+        '
+        'btn_simpan
+        '
+        Me.btn_simpan.Location = New System.Drawing.Point(140, 394)
+        Me.btn_simpan.Name = "btn_simpan"
+        Me.btn_simpan.Size = New System.Drawing.Size(75, 33)
+        Me.btn_simpan.TabIndex = 14
+        Me.btn_simpan.Text = "Batal"
+        Me.btn_simpan.UseVisualStyleBackColor = True
+        '
+        'btn_tutup
+        '
+        Me.btn_tutup.Location = New System.Drawing.Point(264, 394)
+        Me.btn_tutup.Name = "btn_tutup"
+        Me.btn_tutup.Size = New System.Drawing.Size(75, 33)
+        Me.btn_tutup.TabIndex = 15
+        Me.btn_tutup.Text = "Tutup"
+        Me.btn_tutup.UseVisualStyleBackColor = True
         '
         'Label13
         '
@@ -374,26 +413,26 @@ Partial Class Transaksi
         Me.Label15.TabIndex = 15
         Me.Label15.Text = "Kembali"
         '
-        'TextBox13
+        'txtitems
         '
-        Me.TextBox13.Location = New System.Drawing.Point(430, 391)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(114, 20)
-        Me.TextBox13.TabIndex = 13
+        Me.txtitems.Location = New System.Drawing.Point(430, 391)
+        Me.txtitems.Name = "txtitems"
+        Me.txtitems.Size = New System.Drawing.Size(114, 20)
+        Me.txtitems.TabIndex = 13
         '
-        'TextBox14
+        'txtbayar
         '
-        Me.TextBox14.Location = New System.Drawing.Point(673, 390)
-        Me.TextBox14.Name = "TextBox14"
-        Me.TextBox14.Size = New System.Drawing.Size(138, 20)
-        Me.TextBox14.TabIndex = 14
+        Me.txtbayar.Location = New System.Drawing.Point(673, 390)
+        Me.txtbayar.Name = "txtbayar"
+        Me.txtbayar.Size = New System.Drawing.Size(138, 20)
+        Me.txtbayar.TabIndex = 14
         '
-        'TextBox15
+        'txtkembali
         '
-        Me.TextBox15.Location = New System.Drawing.Point(674, 417)
-        Me.TextBox15.Name = "TextBox15"
-        Me.TextBox15.Size = New System.Drawing.Size(137, 20)
-        Me.TextBox15.TabIndex = 15
+        Me.txtkembali.Location = New System.Drawing.Point(674, 417)
+        Me.txtkembali.Name = "txtkembali"
+        Me.txtkembali.Size = New System.Drawing.Size(137, 20)
+        Me.txtkembali.TabIndex = 15
         '
         'Label16
         '
@@ -405,37 +444,29 @@ Partial Class Transaksi
         Me.Label16.TabIndex = 16
         Me.Label16.Text = "Pajak"
         '
-        'TextBox16
+        'txtpajak
         '
-        Me.TextBox16.Location = New System.Drawing.Point(673, 366)
-        Me.TextBox16.Name = "TextBox16"
-        Me.TextBox16.Size = New System.Drawing.Size(138, 20)
-        Me.TextBox16.TabIndex = 17
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 19)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(772, 81)
-        Me.DataGridView1.TabIndex = 16
+        Me.txtpajak.Location = New System.Drawing.Point(673, 366)
+        Me.txtpajak.Name = "txtpajak"
+        Me.txtpajak.Size = New System.Drawing.Size(138, 20)
+        Me.txtpajak.TabIndex = 17
         '
         'Transaksi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(838, 449)
-        Me.Controls.Add(Me.TextBox16)
+        Me.Controls.Add(Me.txtpajak)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Label15)
-        Me.Controls.Add(Me.TextBox15)
-        Me.Controls.Add(Me.TextBox14)
-        Me.Controls.Add(Me.TextBox13)
+        Me.Controls.Add(Me.txtkembali)
+        Me.Controls.Add(Me.txtbayar)
+        Me.Controls.Add(Me.txtitems)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btn_tutup)
+        Me.Controls.Add(Me.btn_simpan)
+        Me.Controls.Add(Me.btn_save)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -458,13 +489,13 @@ Partial Class Transaksi
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents txtGrandtotal As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtkasir As TextBox
+    Friend WithEvents txtjamtransaksi As TextBox
+    Friend WithEvents txttgltransaksi As TextBox
+    Friend WithEvents txtnomeja As TextBox
+    Friend WithEvents txtnamapelanggan As TextBox
+    Friend WithEvents txtidpelanggan As TextBox
+    Friend WithEvents txtkodestruk As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
@@ -473,22 +504,27 @@ Partial Class Transaksi
     Friend WithEvents txtjumlah As TextBox
     Friend WithEvents txtharga As TextBox
     Friend WithEvents txtnama As TextBox
-    Friend WithEvents txt_Kode As TextBox
+    Friend WithEvents txt_Kodepesanan As TextBox
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents btn_save As Button
+    Friend WithEvents btn_simpan As Button
+    Friend WithEvents btn_tutup As Button
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents Label15 As Label
-    Friend WithEvents TextBox13 As TextBox
-    Friend WithEvents TextBox14 As TextBox
-    Friend WithEvents TextBox15 As TextBox
+    Friend WithEvents txtitems As TextBox
+    Friend WithEvents txtbayar As TextBox
+    Friend WithEvents txtkembali As TextBox
     Friend WithEvents Label16 As Label
-    Friend WithEvents TextBox16 As TextBox
+    Friend WithEvents txtpajak As TextBox
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
 End Class
