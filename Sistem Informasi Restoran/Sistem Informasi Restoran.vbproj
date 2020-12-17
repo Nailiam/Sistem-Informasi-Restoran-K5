@@ -81,10 +81,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bayar Transaksi.Designer.vb">
-      <DependentUpon>Bayar Transaksi.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Bayar Transaksi.vb" />
     <Compile Include="Bayar.Designer.vb">
       <DependentUpon>Bayar.vb</DependentUpon>
     </Compile>
@@ -232,9 +228,6 @@
     <Compile Include="Windows\Forms.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Bayar Transaksi.resx">
-      <DependentUpon>Bayar Transaksi.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Bayar.resx">
       <DependentUpon>Bayar.vb</DependentUpon>
     </EmbeddedResource>
