@@ -26,9 +26,9 @@ Partial Class Per_Harga_Makanan
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.btn_tampilkan = New System.Windows.Forms.Button()
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
-        Me.Report_Per_Harga_Makanan1 = New Sistem_Informasi_Restoran.Report_Per_Harga_Makanan()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.CrystalReport11 = New Sistem_Informasi_Restoran.CrystalReport1()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Report_Per_Harga_Makanan1 = New Sistem_Informasi_Restoran.Report_Per_Harga_Makanan()
         Me.SuspendLayout()
         '
         'Label1
@@ -64,7 +64,7 @@ Partial Class Per_Harga_Makanan
         Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
         Me.CrystalReportViewer1.Location = New System.Drawing.Point(12, 93)
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
-        Me.CrystalReportViewer1.ReportSource = Me.CrystalReport11
+        Me.CrystalReportViewer1.ReportSource = Me.Report_Per_Harga_Makanan1
         Me.CrystalReportViewer1.Size = New System.Drawing.Size(689, 272)
         Me.CrystalReportViewer1.TabIndex = 4
         '
