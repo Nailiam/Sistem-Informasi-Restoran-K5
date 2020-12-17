@@ -117,7 +117,7 @@ Partial Class Bayar
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.DataGridView1)
-        Me.GroupBox2.Location = New System.Drawing.Point(356, 30)
+        Me.GroupBox2.Location = New System.Drawing.Point(363, 30)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(439, 297)
         Me.GroupBox2.TabIndex = 9
@@ -158,7 +158,7 @@ Partial Class Bayar
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(19, 22)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 30)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(321, 426)
         Me.GroupBox1.TabIndex = 8
