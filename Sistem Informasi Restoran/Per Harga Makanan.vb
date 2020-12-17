@@ -3,7 +3,7 @@
         CrystalReportViewer1.SelectionFormula = "totext ({Menu_Makanan.Harga_Makanan})= ' " & TextBox1.Text & "'"
         CrystalReportViewer1.ReportSource = Nothing
         CrystalReportViewer1.RefreshReport()
-        CrystalReportViewer1.ReportSource = Report_Per_Harga_Makanan1
+        CrystalReportViewer1.ReportSource = CrystalReport11
         CrystalReportViewer1.RefreshReport()
     End Sub
 
