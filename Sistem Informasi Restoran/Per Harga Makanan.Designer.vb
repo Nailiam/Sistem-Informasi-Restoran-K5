@@ -26,8 +26,9 @@ Partial Class Per_Harga_Makanan
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.btn_tampilkan = New System.Windows.Forms.Button()
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
-        Me.Report_Per_Harga_Makanan1 = New Sistem_Informasi_Restoran.Report_Per_Harga_Makanan()
+        Me.CrystalReport11 = New Sistem_Informasi_Restoran.CrystalReport1()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Report_Per_Harga_Makanan1 = New Sistem_Informasi_Restoran.Report_Per_Harga_Makanan()
         Me.SuspendLayout()
         '
         'Label1
@@ -99,4 +100,5 @@ Partial Class Per_Harga_Makanan
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents Report_Per_Harga_Makanan1 As Report_Per_Harga_Makanan
     Friend WithEvents Button1 As Button
+    Friend WithEvents CrystalReport11 As CrystalReport1
 End Class

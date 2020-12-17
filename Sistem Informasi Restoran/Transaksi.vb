@@ -98,6 +98,9 @@ DataGridView1.Rows(baris).Cells(0).Value & "'"
         txtjamtransaksi.Text = TimeOfDay
         txtkasir.Text = Login.txtUN.Text
     End Sub
+    Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
+        txtjamtransaksi.Text = TimeOfDay
+    End Sub
     Private Sub txtjumlah_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtjumlah.KeyPress
         If e.KeyChar = Chr(13) Then
             If txtnama.Text = "" Or txtharga.Text = "" Then
