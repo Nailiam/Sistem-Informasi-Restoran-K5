@@ -9,5 +9,6 @@
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Report_Per_Harga_Makanan1.SetParameterValue("Harga Mulai Dari", TextBox1.Text)
+        CrystalReportViewer1.RefreshReport()
     End Sub
 End Class
