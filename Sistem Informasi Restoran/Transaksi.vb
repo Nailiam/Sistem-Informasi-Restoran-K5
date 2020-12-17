@@ -136,6 +136,24 @@ Val(txtjumlah.Text)})
         End If
         txtkodestruk.Text = urutankode
     End Sub
+
+    Private Sub txtidpelanggan_TextChanged(sender As Object, e As EventArgs) Handles txtidpelanggan.TextChanged
+        Try
+            Call koneksiDB()
+            CMD = New OleDb.OleDbCommand(" select * from Karyawan where id_Kasir ='" & txtkodestruk.Text & "'", Conn)
+            DM = CMD.ExecuteReader
+
+            If DM.HasRows = True Then
+                DM.Read()
+                txtkodestruk.Text = DM.Item("id_Kasir")
+                txtnamapelanggan.Text = DM.Item("Nama_Pelanggan")
+                txtnomeja.Text = DM.Item("Nomer_Meja")
+                txt_Kodepesanan.Focus()
+            End If
+        Catch ex As Exception
+            MsgBox("Data member tidak ada")
+        End Try
+    End Sub
 End Class
 
 
