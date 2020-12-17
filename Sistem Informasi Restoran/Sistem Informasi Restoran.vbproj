@@ -225,6 +225,12 @@
       <DependentUpon>Report Transaksi.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Transaksi.Designer.vb">
+      <DependentUpon>Transaksi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Windows\Forms.vb" />
   </ItemGroup>
   <ItemGroup>
@@ -301,6 +307,9 @@
     <EmbeddedResource Include="Report Transaksi.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Report Transaksi.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi.resx">
+      <DependentUpon>Transaksi.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
