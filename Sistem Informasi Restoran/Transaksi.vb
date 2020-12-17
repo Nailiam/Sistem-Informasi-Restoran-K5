@@ -122,16 +122,16 @@ Val(txtjumlah.Text)})
     End Sub
     Sub Nomorfakturotomatis()
         Call koneksiDB()
-        CMD = New OleDb.OleDbCommand("Select * from Penjualan where No_faktur in (select max(No_faktur) from Penjualan)", Conn)
+        CMD = New OleDb.OleDbCommand("Select * from Transaksi where Kode_Struk in (select max(Kode_Struk) from Transaksi)", Conn)
         Dim urutankode As String
         Dim hitung As Long
         DM = CMD.ExecuteReader
         DM.Read()
         If Not DM.HasRows Then
-            urutankode = "J" + Format(Now, "yyMMdd") + "001"
+            urutankode = "T" + Format(Now, "yyMMdd") + "001"
         Else
             hitung = Microsoft.VisualBasic.Right(DM.GetString(0), 9) + 1
-            urutankode = "J" + Format(Now, "yyMMdd") +
+            urutankode = "T" + Format(Now, "yyMMdd") +
            Microsoft.VisualBasic.Right("000" & hitung, 3)
         End If
         txtkodestruk.Text = urutankode

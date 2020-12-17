@@ -50,4 +50,8 @@
     Private Sub ReportPerHargaMakananToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportPerHargaMakananToolStripMenuItem.Click
         Per_Harga_Makanan.Show()
     End Sub
+
+    Private Sub TransaksiToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles TransaksiToolStripMenuItem1.Click
+        Transaksi.Show()
+    End Sub
 End Class
