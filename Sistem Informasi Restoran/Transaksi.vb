@@ -62,12 +62,12 @@ DataGridView1.Rows(baris).Cells(3).Value & "', '" &
 DataGridView1.Rows(baris).Cells(4).Value & "')"
                 CMD = New OleDb.OleDbCommand(Simpandetail, Conn)
                 CMD.ExecuteNonQuery()
-                CMD = New OleDb.OleDbCommand("select * from Buku where Kode_pesanan = '" &
+                CMD = New OleDb.OleDbCommand("select * from Trasaksi where Kode_struk = '" &
 DataGridView1.Rows(baris).Cells(0).Value & "'", Conn)
                 DM = CMD.ExecuteReader
                 DM.Read()
-                Dim kurangistok As String = "Update Buku set Stok = '" &
-DM.Item("Stok") - DataGridView1.Rows(baris).Cells(3).Value & "' where Kode_pesanan = '" &
+                Dim kurangistok As String = "Update Transaksi set Stok = '" &
+DM.Item("Stok") - DataGridView1.Rows(baris).Cells(3).Value & "' where Kode_struk = '" &
 DataGridView1.Rows(baris).Cells(0).Value & "'"
                 CMD = New OleDb.OleDbCommand(kurangistok, Conn)
                 CMD.ExecuteNonQuery()
@@ -122,16 +122,16 @@ Val(txtjumlah.Text)})
     End Sub
     Sub Nomorfakturotomatis()
         Call koneksiDB()
-        CMD = New OleDb.OleDbCommand("Select * from Transaksi where Kode_Struk in (select max(Kode_Struk) from Transaksi)", Conn)
+        CMD = New OleDb.OleDbCommand("Select * from Penjualan where No_faktur in (select max(No_faktur) from Penjualan)", Conn)
         Dim urutankode As String
         Dim hitung As Long
         DM = CMD.ExecuteReader
         DM.Read()
         If Not DM.HasRows Then
-            urutankode = "T" + Format(Now, "yyMMdd") + "001"
+            urutankode = "J" + Format(Now, "yyMMdd") + "001"
         Else
             hitung = Microsoft.VisualBasic.Right(DM.GetString(0), 9) + 1
-            urutankode = "T" + Format(Now, "yyMMdd") +
+            urutankode = "J" + Format(Now, "yyMMdd") +
            Microsoft.VisualBasic.Right("000" & hitung, 3)
         End If
         txtkodestruk.Text = urutankode
