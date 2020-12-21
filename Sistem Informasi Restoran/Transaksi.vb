@@ -62,12 +62,12 @@ DataGridView1.Rows(baris).Cells(3).Value & "', '" &
 DataGridView1.Rows(baris).Cells(4).Value & "')"
                 CMD = New OleDb.OleDbCommand(Simpandetail, Conn)
                 CMD.ExecuteNonQuery()
-                CMD = New OleDb.OleDbCommand("select * from Buku where Kode_pesanan = '" &
+                CMD = New OleDb.OleDbCommand("select * from Trasaksi where Kode_struk = '" &
 DataGridView1.Rows(baris).Cells(0).Value & "'", Conn)
                 DM = CMD.ExecuteReader
                 DM.Read()
-                Dim kurangistok As String = "Update Buku set Stok = '" &
-DM.Item("Stok") - DataGridView1.Rows(baris).Cells(3).Value & "' where Kode_pesanan = '" &
+                Dim kurangistok As String = "Update Transaksi set Stok = '" &
+DM.Item("Stok") - DataGridView1.Rows(baris).Cells(3).Value & "' where Kode_struk = '" &
 DataGridView1.Rows(baris).Cells(0).Value & "'"
                 CMD = New OleDb.OleDbCommand(kurangistok, Conn)
                 CMD.ExecuteNonQuery()
@@ -135,6 +135,24 @@ Val(txtjumlah.Text)})
            Microsoft.VisualBasic.Right("000" & hitung, 3)
         End If
         txtkodestruk.Text = urutankode
+    End Sub
+
+    Private Sub txtidpelanggan_TextChanged(sender As Object, e As EventArgs) Handles txtidpelanggan.TextChanged
+        Try
+            Call koneksiDB()
+            CMD = New OleDb.OleDbCommand(" select * from Karyawan where id_Kasir ='" & txtkodestruk.Text & "'", Conn)
+            DM = CMD.ExecuteReader
+
+            If DM.HasRows = True Then
+                DM.Read()
+                txtkodestruk.Text = DM.Item("id_Kasir")
+                txtnamapelanggan.Text = DM.Item("Nama_Pelanggan")
+                txtnomeja.Text = DM.Item("Nomer_Meja")
+                txt_Kodepesanan.Focus()
+            End If
+        Catch ex As Exception
+            MsgBox("Data member tidak ada")
+        End Try
     End Sub
 End Class
 

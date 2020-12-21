@@ -44,6 +44,7 @@ Partial Class Main_Menu
         Me.ReportPeriodikTransaksiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportPeriodikTransaksiToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportPerHargaMakananToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TransaksiToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip2.SuspendLayout()
         Me.SuspendLayout()
@@ -143,7 +144,7 @@ Partial Class Main_Menu
         '
         'TransaksiToolStripMenuItem
         '
-        Me.TransaksiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DataKasirToolStripMenuItem, Me.DataPembayaranToolStripMenuItem})
+        Me.TransaksiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DataKasirToolStripMenuItem, Me.DataPembayaranToolStripMenuItem, Me.TransaksiToolStripMenuItem1})
         Me.TransaksiToolStripMenuItem.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TransaksiToolStripMenuItem.Name = "TransaksiToolStripMenuItem"
         Me.TransaksiToolStripMenuItem.Size = New System.Drawing.Size(99, 24)
@@ -199,6 +200,12 @@ Partial Class Main_Menu
         Me.ReportPerHargaMakananToolStripMenuItem.Size = New System.Drawing.Size(284, 24)
         Me.ReportPerHargaMakananToolStripMenuItem.Text = "Report Per Harga Makanan"
         '
+        'TransaksiToolStripMenuItem1
+        '
+        Me.TransaksiToolStripMenuItem1.Name = "TransaksiToolStripMenuItem1"
+        Me.TransaksiToolStripMenuItem1.Size = New System.Drawing.Size(213, 24)
+        Me.TransaksiToolStripMenuItem1.Text = "Transaksi"
+        '
         'Main_Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -240,4 +247,5 @@ Partial Class Main_Menu
     Friend WithEvents ReportPeriodikTransaksiToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportPeriodikTransaksiToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents ReportPerHargaMakananToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TransaksiToolStripMenuItem1 As ToolStripMenuItem
 End Class

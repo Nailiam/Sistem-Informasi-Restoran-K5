@@ -453,6 +453,9 @@ Partial Class Transaksi
         Me.txtpajak.Size = New System.Drawing.Size(138, 20)
         Me.txtpajak.TabIndex = 17
         '
+        'Timer1
+        '
+        '
         'Transaksi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
