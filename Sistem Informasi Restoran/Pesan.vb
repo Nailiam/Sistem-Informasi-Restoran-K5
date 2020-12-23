@@ -5,19 +5,25 @@
     End Sub
     Sub KosongkanForm()
         kode_pemesanan.Text = ""
-        ID_Pelanggan.Text = ""
+        Kode_Struk.Text = ""
+        ID_Makanan.Text = ""
+        ID_Minuman.Text = ""
         jumlah_pemesanan.Text = ""
     End Sub
     Sub MatikanForm()
         kode_pemesanan.Enabled = False
-        ID_Pelanggan.Enabled = False
+        Kode_Struk.Enabled = False
         DateTimePicker1.Enabled = False
+        ID_Makanan.Enabled = False
+        ID_Minuman.Enabled = False
         jumlah_pemesanan.Enabled = False
     End Sub
     Sub HidupkanForm()
         kode_pemesanan.Enabled = True
-        ID_Pelanggan.Enabled = True
+        Kode_Struk.Enabled = True
         DateTimePicker1.Enabled = True
+        ID_Makanan.Enabled = True
+        ID_Minuman.Enabled = True
         jumlah_pemesanan.Enabled = True
     End Sub
     Sub TampilkanData()
@@ -44,7 +50,7 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles save.Click
-        If kode_pemesanan.Text = "" Or ID_Pelanggan.Text = "" Or jumlah_pemesanan.Text = "" Then
+        If kode_pemesanan.Text = "" Or Kode_Struk.Text = "" Or ID_Makanan.Text = "" Or ID_Minuman.Text = "" Or jumlah_pemesanan.Text = "" Then
             MsgBox("Data Pesanan Belum Lengkap")
             Exit Sub
         Else
@@ -55,7 +61,7 @@
             If Not DM.HasRows Then
                 Call koneksiDB()
                 Dim simpan As String
-                simpan = "insert into Pesan values ('" & kode_pemesanan.Text & "', '" & ID_Pelanggan.Text & "', '" & DateTimePicker1.Value & "','" & jumlah_pemesanan.Text & "')"
+                simpan = "insert into Pesan values ('" & kode_pemesanan.Text & "', '" & Kode_Struk.Text & "', '" & DateTimePicker1.Value & "','" & ID_Makanan.Text & "','" & ID_Minuman.Text & "','" & jumlah_pemesanan.Text & "')"
                 CMD = New OleDb.OleDbCommand(simpan, Conn)
                 CMD.ExecuteNonQuery()
                 MsgBox("Input Data Sukses")
@@ -69,12 +75,12 @@
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles edit.Click
-        If kode_pemesanan.Text = "" Or ID_Pelanggan.Text = "" Or jumlah_pemesanan.Text = "" Then
+        If kode_pemesanan.Text = "" Or Kode_Struk.Text = "" Or ID_Makanan.Text = "" Or ID_Minuman.Text = "" Or jumlah_pemesanan.Text = "" Then
             MsgBox("Data Pesanan Belum Lengkap")
             Exit Sub
         Else
             Call koneksiDB()
-            CMD = New OleDb.OleDbCommand("update Pesan set ID_Pelanggan = '" & ID_Pelanggan.Text & "', Tanggal_Pesanan = '" & DateTimePicker1.Value & "',Jumlah_Pesanan = '" & jumlah_pemesanan.Text & "' where kode_Pesanan ='" & kode_pemesanan.Text & "'", Conn)
+            CMD = New OleDb.OleDbCommand("update Pesan set Kode_Struk = '" & Kode_Struk.Text & "', Tanggal_Pesanan = '" & DateTimePicker1.Value & "', ID_Makanan = '" & ID_Makanan.Text & "', ID_Minuman = '" & ID_Minuman.Text & "',Jumlah_Pesanan = '" & jumlah_pemesanan.Text & "' where kode_Pesanan ='" & kode_pemesanan.Text & "'", Conn)
             DM = CMD.ExecuteReader
             MsgBox("Update Data Berhasil")
         End If
@@ -106,11 +112,13 @@
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
         On Error Resume Next
         kode_pemesanan.Text = DataGridView1.Rows(e.RowIndex).Cells(0).Value
-        ID_Pelanggan.Text = DataGridView1.Rows(e.RowIndex).Cells(1).Value
+        Kode_Struk.Text = DataGridView1.Rows(e.RowIndex).Cells(1).Value
         DateTimePicker1.Format = DateTimePickerFormat.Custom
         DateTimePicker1.CustomFormat = "dddd, dd/MM/yyyy"
         DateTimePicker1.Value = Format(DataGridView1.Rows(e.RowIndex).Cells(2).Value)
-        jumlah_pemesanan.Text = DataGridView1.Rows(e.RowIndex).Cells(3).Value
+        ID_Makanan.Text = DataGridView1.Rows(e.RowIndex).Cells(3).Value
+        ID_Minuman.Text = DataGridView1.Rows(e.RowIndex).Cells(4).Value
+        jumlah_pemesanan.Text = DataGridView1.Rows(e.RowIndex).Cells(5).Value
         Call HidupkanForm()
         kode_pemesanan.Enabled = False
     End Sub

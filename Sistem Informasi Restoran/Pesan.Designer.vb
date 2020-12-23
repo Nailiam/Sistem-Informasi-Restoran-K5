@@ -33,12 +33,16 @@ Partial Class Pesan
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.jumlah_pemesanan = New System.Windows.Forms.TextBox()
-        Me.ID_Pelanggan = New System.Windows.Forms.TextBox()
+        Me.Kode_Struk = New System.Windows.Forms.TextBox()
         Me.kode_pemesanan = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.ID_Makanan = New System.Windows.Forms.TextBox()
+        Me.ID_Minuman = New System.Windows.Forms.TextBox()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -46,7 +50,7 @@ Partial Class Pesan
         '
         'btnexit
         '
-        Me.btnexit.Location = New System.Drawing.Point(224, 265)
+        Me.btnexit.Location = New System.Drawing.Point(224, 280)
         Me.btnexit.Name = "btnexit"
         Me.btnexit.Size = New System.Drawing.Size(73, 36)
         Me.btnexit.TabIndex = 23
@@ -55,7 +59,7 @@ Partial Class Pesan
         '
         'cancel
         '
-        Me.cancel.Location = New System.Drawing.Point(140, 265)
+        Me.cancel.Location = New System.Drawing.Point(140, 280)
         Me.cancel.Name = "cancel"
         Me.cancel.Size = New System.Drawing.Size(73, 36)
         Me.cancel.TabIndex = 22
@@ -64,7 +68,7 @@ Partial Class Pesan
         '
         'delete
         '
-        Me.delete.Location = New System.Drawing.Point(55, 265)
+        Me.delete.Location = New System.Drawing.Point(55, 280)
         Me.delete.Name = "delete"
         Me.delete.Size = New System.Drawing.Size(73, 36)
         Me.delete.TabIndex = 21
@@ -73,7 +77,7 @@ Partial Class Pesan
         '
         'edit
         '
-        Me.edit.Location = New System.Drawing.Point(224, 215)
+        Me.edit.Location = New System.Drawing.Point(224, 238)
         Me.edit.Name = "edit"
         Me.edit.Size = New System.Drawing.Size(73, 36)
         Me.edit.TabIndex = 20
@@ -82,7 +86,7 @@ Partial Class Pesan
         '
         'save
         '
-        Me.save.Location = New System.Drawing.Point(140, 215)
+        Me.save.Location = New System.Drawing.Point(140, 238)
         Me.save.Name = "save"
         Me.save.Size = New System.Drawing.Size(73, 36)
         Me.save.TabIndex = 19
@@ -91,7 +95,7 @@ Partial Class Pesan
         '
         'input
         '
-        Me.input.Location = New System.Drawing.Point(55, 215)
+        Me.input.Location = New System.Drawing.Point(55, 238)
         Me.input.Name = "input"
         Me.input.Size = New System.Drawing.Size(73, 36)
         Me.input.TabIndex = 18
@@ -118,9 +122,13 @@ Partial Class Pesan
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.ID_Minuman)
+        Me.GroupBox1.Controls.Add(Me.ID_Makanan)
+        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
         Me.GroupBox1.Controls.Add(Me.jumlah_pemesanan)
-        Me.GroupBox1.Controls.Add(Me.ID_Pelanggan)
+        Me.GroupBox1.Controls.Add(Me.Kode_Struk)
         Me.GroupBox1.Controls.Add(Me.kode_pemesanan)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
@@ -128,31 +136,31 @@ Partial Class Pesan
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(22, 24)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(311, 185)
+        Me.GroupBox1.Size = New System.Drawing.Size(299, 208)
         Me.GroupBox1.TabIndex = 16
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Input Data Pesanan"
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(151, 86)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(151, 87)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(117, 20)
         Me.DateTimePicker1.TabIndex = 11
         '
         'jumlah_pemesanan
         '
-        Me.jumlah_pemesanan.Location = New System.Drawing.Point(151, 117)
+        Me.jumlah_pemesanan.Location = New System.Drawing.Point(151, 172)
         Me.jumlah_pemesanan.Name = "jumlah_pemesanan"
         Me.jumlah_pemesanan.Size = New System.Drawing.Size(117, 20)
         Me.jumlah_pemesanan.TabIndex = 8
         '
-        'ID_Pelanggan
+        'Kode_Struk
         '
-        Me.ID_Pelanggan.Location = New System.Drawing.Point(151, 56)
-        Me.ID_Pelanggan.Name = "ID_Pelanggan"
-        Me.ID_Pelanggan.Size = New System.Drawing.Size(117, 20)
-        Me.ID_Pelanggan.TabIndex = 7
+        Me.Kode_Struk.Location = New System.Drawing.Point(151, 56)
+        Me.Kode_Struk.Name = "Kode_Struk"
+        Me.Kode_Struk.Size = New System.Drawing.Size(117, 20)
+        Me.Kode_Struk.TabIndex = 7
         '
         'kode_pemesanan
         '
@@ -164,7 +172,7 @@ Partial Class Pesan
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(23, 124)
+        Me.Label4.Location = New System.Drawing.Point(23, 175)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(85, 13)
         Me.Label4.TabIndex = 3
@@ -184,9 +192,9 @@ Partial Class Pesan
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(23, 63)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(72, 13)
+        Me.Label2.Size = New System.Drawing.Size(60, 13)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "ID Pelanggan"
+        Me.Label2.Text = "Kode Struk"
         '
         'Label1
         '
@@ -196,6 +204,38 @@ Partial Class Pesan
         Me.Label1.Size = New System.Drawing.Size(77, 13)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Kode Pesanan"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(23, 123)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(69, 13)
+        Me.Label5.TabIndex = 12
+        Me.Label5.Text = "ID_Makanan"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(23, 150)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(67, 13)
+        Me.Label6.TabIndex = 13
+        Me.Label6.Text = "ID_Minuman"
+        '
+        'ID_Makanan
+        '
+        Me.ID_Makanan.Location = New System.Drawing.Point(151, 120)
+        Me.ID_Makanan.Name = "ID_Makanan"
+        Me.ID_Makanan.Size = New System.Drawing.Size(117, 20)
+        Me.ID_Makanan.TabIndex = 14
+        '
+        'ID_Minuman
+        '
+        Me.ID_Minuman.Location = New System.Drawing.Point(151, 147)
+        Me.ID_Minuman.Name = "ID_Minuman"
+        Me.ID_Minuman.Size = New System.Drawing.Size(117, 20)
+        Me.ID_Minuman.TabIndex = 15
         '
         'Pesan
         '
@@ -231,10 +271,14 @@ Partial Class Pesan
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents jumlah_pemesanan As TextBox
-    Friend WithEvents ID_Pelanggan As TextBox
+    Friend WithEvents Kode_Struk As TextBox
     Friend WithEvents kode_pemesanan As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents ID_Minuman As TextBox
+    Friend WithEvents ID_Makanan As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Label
 End Class

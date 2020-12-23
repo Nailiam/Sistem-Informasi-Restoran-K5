@@ -122,7 +122,7 @@ Val(txtjumlah.Text)})
     End Sub
     Sub Nomorfakturotomatis()
         Call koneksiDB()
-        CMD = New OleDb.OleDbCommand("Select * from Penjualan where No_faktur in (select max(No_faktur) from Penjualan)", Conn)
+        CMD = New OleDb.OleDbCommand("Select * from Transaksi where Kode_Struk in (select max(Kode_Struk) from Transaksi)", Conn)
         Dim urutankode As String
         Dim hitung As Long
         DM = CMD.ExecuteReader
