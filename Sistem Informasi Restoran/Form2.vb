@@ -1,6 +1,5 @@
 ﻿Imports MessagingToolkit.Barcode.BarcodeDecoder
 Imports MessagingToolkit.QRCode.Codec
-
 Public Class Form2
     Dim QR_Generator1 As New MessagingToolkit.QRCode.Codec.QRCodeEncoder
     Dim BR_Generator1 As New MessagingToolkit.Barcode.BarcodeEncoder
