@@ -154,6 +154,10 @@ Val(txtjumlah.Text)})
             MsgBox("Data member tidak ada")
         End Try
     End Sub
+
+    Private Sub btn_save_Click(sender As Object, e As EventArgs) Handles btn_save.Click
+
+    End Sub
 End Class
 
 
