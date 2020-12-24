@@ -127,12 +127,13 @@ Val(txtjumlah.Text)})
         Dim hitung As Long
         DM = CMD.ExecuteReader
         DM.Read()
+
         If Not DM.HasRows Then
             urutankode = "J" + Format(Now, "yyMMdd") + "001"
         Else
-            hitung = Microsoft.VisualBasic.Right(DM.GetString(0), 9) + 1
+            hitung = Microsoft.VisualBasic.Right(DM.GetString(0), 3)
             urutankode = "J" + Format(Now, "yyMMdd") +
-           Microsoft.VisualBasic.Right("000" & hitung, 3)
+           Microsoft.VisualBasic.Right("000" & hitung.ToString, 3)
         End If
         txtkodestruk.Text = urutankode
     End Sub
@@ -153,6 +154,10 @@ Val(txtjumlah.Text)})
         Catch ex As Exception
             MsgBox("Data member tidak ada")
         End Try
+    End Sub
+
+    Private Sub btn_save_Click(sender As Object, e As EventArgs) Handles btn_save.Click
+
     End Sub
 End Class
 

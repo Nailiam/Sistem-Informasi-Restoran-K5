@@ -75,16 +75,12 @@ Public Class Data_Karyawan
     End Sub
 
     Private Sub btn_browse_Click(sender As Object, e As EventArgs) Handles btn_browse.Click
-        Try
-            OpenFileDialog1.Filter = " Image File 
-            (*.jpeg;*jpg;*.png;*.bmp;*.gif)| *.jpeg;*jpg;*.png;*.bmp;*.gif"
-            If OpenFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
-                PictureBox1.Image = New Bitmap(OpenFileDialog1.FileName)
-                txt_foto.Text = OpenFileDialog1.FileName
-            End If
-        Catch ex As Exception
-            Throw New ApplicationException("Gambar Gagal Masuk")
-        End Try
+        OpenFileDialog1.Filter = " Image File (.jpeg;*jpg;.png;.bmp;.gif)| .jpeg;*jpg;.png;.bmp;.gif"
+        OpenFileDialog1.RestoreDirectory = True
+        OpenFileDialog1.ShowDialog()
+        If OpenFileDialog1.FileName = "" Then Exit Sub
+        PictureBox1.ImageLocation = OpenFileDialog1.FileName
+        txt_foto.Text = OpenFileDialog1.FileName
     End Sub
 
     Private Sub btn_caridata_Click(sender As Object, e As EventArgs) Handles btn_caridata.Click
@@ -147,7 +143,7 @@ Public Class Data_Karyawan
     Private Sub btn_cari_Click(sender As Object, e As EventArgs) Handles btn_cari.Click
         Call koneksiDB()
 
-        DA = New OleDb.OleDbDataAdapter("SELECT * form Kasir where
+        DA = New OleDb.OleDbDataAdapter("SELECT * from Kasir where
         Id_Kasir like '%" & txt_cari.Text.Replace("'", "''") & "%' or Nama_Kasir 
         like '%" & txt_cari.Text.Replace("'", "''") & "%' or Alamat like '%" &
         txt_cari.Text.Replace("'", "''") & "%' ", Conn)
@@ -214,7 +210,10 @@ Public Class Data_Karyawan
                 txt_alamat.Text = DM.Item("Alamat")
                 cmb_status.Text = DM.Item("Status")
                 txt_foto.Text = DM.Item("Photo")
-                PictureBox1.ImageLocation = Replace((DM("Photo")), ";", "\")
+                Dim nas As String
+                nas = txt_foto.Text
+                'PictureBox1.ImageLocation = Replace((DM("Photo")), ";", "\")
+                PictureBox1.Image = New Bitmap(nas)
             End If
         Catch ex As Exception
             MsgBox(ex.ToString())
