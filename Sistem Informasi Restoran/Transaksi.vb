@@ -130,9 +130,9 @@ Val(txtjumlah.Text)})
         If Not DM.HasRows Then
             urutankode = "J" + Format(Now, "yyMMdd") + "001"
         Else
-            hitung = Microsoft.VisualBasic.Right(DM.GetString(0), 9) + 1
+            hitung = Microsoft.VisualBasic.Right(DM.GetString(0), 3)
             urutankode = "J" + Format(Now, "yyMMdd") +
-           Microsoft.VisualBasic.Right("000" & hitung, 3)
+           Microsoft.VisualBasic.Right("000" & hitung.ToString, 3)
         End If
         txtkodestruk.Text = urutankode
     End Sub

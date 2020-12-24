@@ -214,7 +214,10 @@ Public Class Data_Karyawan
                 txt_alamat.Text = DM.Item("Alamat")
                 cmb_status.Text = DM.Item("Status")
                 txt_foto.Text = DM.Item("Photo")
-                PictureBox1.ImageLocation = Replace((DM("Photo")), ";", "\")
+                Dim nas As String
+                nas = txt_foto.Text
+                'PictureBox1.ImageLocation = Replace((DM("Photo")), ";", "\")
+                PictureBox1.Image = New Bitmap(nas)
             End If
         Catch ex As Exception
             MsgBox(ex.ToString())
