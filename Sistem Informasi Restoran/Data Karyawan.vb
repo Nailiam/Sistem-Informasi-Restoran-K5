@@ -78,7 +78,7 @@ Public Class Data_Karyawan
         Try
             OpenFileDialog1.Filter = " Image File 
             (*.jpeg;*jpg;*.png;*.bmp;*.gif)| *.jpeg;*jpg;*.png;*.bmp;*.gif"
-            If OpenFileDialog1.ShowDialog() = Windows.Forms.DialogResult.OK Then
+            If OpenFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
                 PictureBox1.Image = New Bitmap(OpenFileDialog1.FileName)
                 txt_foto.Text = OpenFileDialog1.FileName
             End If
