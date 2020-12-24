@@ -204,12 +204,6 @@
     <Compile Include="Per Harga Makanan.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pesan.Designer.vb">
-      <DependentUpon>Pesan.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Pesan.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Report Data Makanan.Designer.vb">
       <DependentUpon>Report Data Makanan.vb</DependentUpon>
     </Compile>
@@ -305,9 +299,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Per Harga Makanan.resx">
       <DependentUpon>Per Harga Makanan.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pesan.resx">
-      <DependentUpon>Pesan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report Data Makanan.resx">
       <DependentUpon>Report Data Makanan.vb</DependentUpon>
