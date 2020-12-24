@@ -127,6 +127,7 @@ Val(txtjumlah.Text)})
         Dim hitung As Long
         DM = CMD.ExecuteReader
         DM.Read()
+
         If Not DM.HasRows Then
             urutankode = "J" + Format(Now, "yyMMdd") + "001"
         Else
