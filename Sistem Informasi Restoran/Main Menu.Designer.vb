@@ -30,6 +30,7 @@ Partial Class Main_Menu
         Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataKaryawanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DataMenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LaporanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataPelangganToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataPemesananBaruToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -43,7 +44,6 @@ Partial Class Main_Menu
         Me.ReportPeriodikTransaksiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportPeriodikTransaksiToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportPerHargaMakananToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DataMenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip2.SuspendLayout()
         Me.SuspendLayout()
@@ -108,6 +108,12 @@ Partial Class Main_Menu
         Me.DataKaryawanToolStripMenuItem.Name = "DataKaryawanToolStripMenuItem"
         Me.DataKaryawanToolStripMenuItem.Size = New System.Drawing.Size(198, 24)
         Me.DataKaryawanToolStripMenuItem.Text = "Data Karyawan "
+        '
+        'DataMenuToolStripMenuItem
+        '
+        Me.DataMenuToolStripMenuItem.Name = "DataMenuToolStripMenuItem"
+        Me.DataMenuToolStripMenuItem.Size = New System.Drawing.Size(198, 24)
+        Me.DataMenuToolStripMenuItem.Text = "Data Menu"
         '
         'LaporanToolStripMenuItem
         '
@@ -192,12 +198,6 @@ Partial Class Main_Menu
         Me.ReportPerHargaMakananToolStripMenuItem.Name = "ReportPerHargaMakananToolStripMenuItem"
         Me.ReportPerHargaMakananToolStripMenuItem.Size = New System.Drawing.Size(284, 24)
         Me.ReportPerHargaMakananToolStripMenuItem.Text = "Report Per Harga Makanan"
-        '
-        'DataMenuToolStripMenuItem
-        '
-        Me.DataMenuToolStripMenuItem.Name = "DataMenuToolStripMenuItem"
-        Me.DataMenuToolStripMenuItem.Size = New System.Drawing.Size(198, 24)
-        Me.DataMenuToolStripMenuItem.Text = "Data Menu"
         '
         'Main_Menu
         '

@@ -77,9 +77,6 @@ DataGridView1.Rows(baris).Cells(0).Value & "'"
         End If
     End Sub
 
-    Private Sub txtbayar_TextChanged(sender As Object, e As EventArgs) Handles txtbayar.TextChanged
-
-    End Sub
     Sub carijumlahitem()
         Dim hitungitem As Integer = 0
         For i As Integer = 0 To DataGridView1.Rows.Count - 1
@@ -157,6 +154,14 @@ Val(txtjumlah.Text)})
     End Sub
 
     Private Sub btn_save_Click(sender As Object, e As EventArgs) Handles btn_save.Click
+
+    End Sub
+
+    Private Sub txtkembali_TextChanged(sender As Object, e As EventArgs) Handles txtkembali.TextChanged
+        Kembali.Text = Val(Bayar.Text) - Val(Total.Text)
+    End Sub
+
+    Private Sub txtpajak_TextChanged(sender As Object, e As EventArgs) Handles txtpajak.TextChanged
 
     End Sub
 End Class

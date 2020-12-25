@@ -32,7 +32,7 @@ Partial Class Transaksi
         Me.txtnamapelanggan = New System.Windows.Forms.TextBox()
         Me.txtidpelanggan = New System.Windows.Forms.TextBox()
         Me.txtkodestruk = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Total = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -60,12 +60,12 @@ Partial Class Transaksi
         Me.btn_simpan = New System.Windows.Forms.Button()
         Me.btn_tutup = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Bayar = New System.Windows.Forms.Label()
+        Me.Kembali = New System.Windows.Forms.Label()
         Me.txtitems = New System.Windows.Forms.TextBox()
         Me.txtbayar = New System.Windows.Forms.TextBox()
         Me.txtkembali = New System.Windows.Forms.TextBox()
-        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Pajak = New System.Windows.Forms.Label()
         Me.txtpajak = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.GroupBox1.SuspendLayout()
@@ -84,7 +84,7 @@ Partial Class Transaksi
         Me.GroupBox1.Controls.Add(Me.txtnamapelanggan)
         Me.GroupBox1.Controls.Add(Me.txtidpelanggan)
         Me.GroupBox1.Controls.Add(Me.txtkodestruk)
-        Me.GroupBox1.Controls.Add(Me.Label8)
+        Me.GroupBox1.Controls.Add(Me.Total)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.Label5)
@@ -156,15 +156,15 @@ Partial Class Transaksi
         Me.txtkodestruk.Size = New System.Drawing.Size(151, 20)
         Me.txtkodestruk.TabIndex = 8
         '
-        'Label8
+        'Total
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Century Schoolbook", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(361, 27)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(155, 32)
-        Me.Label8.TabIndex = 7
-        Me.Label8.Text = "Total Rp. "
+        Me.Total.AutoSize = True
+        Me.Total.Font = New System.Drawing.Font("Century Schoolbook", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Total.Location = New System.Drawing.Point(361, 27)
+        Me.Total.Name = "Total"
+        Me.Total.Size = New System.Drawing.Size(155, 32)
+        Me.Total.TabIndex = 7
+        Me.Total.Text = "Total Rp. "
         '
         'Label7
         '
@@ -395,25 +395,25 @@ Partial Class Transaksi
         Me.Label13.TabIndex = 13
         Me.Label13.Text = "Items"
         '
-        'Label14
+        'Bayar
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(597, 392)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(59, 19)
-        Me.Label14.TabIndex = 14
-        Me.Label14.Text = "Bayar"
+        Me.Bayar.AutoSize = True
+        Me.Bayar.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Bayar.Location = New System.Drawing.Point(597, 392)
+        Me.Bayar.Name = "Bayar"
+        Me.Bayar.Size = New System.Drawing.Size(59, 19)
+        Me.Bayar.TabIndex = 14
+        Me.Bayar.Text = "Bayar"
         '
-        'Label15
+        'Kembali
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(597, 417)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(78, 19)
-        Me.Label15.TabIndex = 15
-        Me.Label15.Text = "Kembali"
+        Me.Kembali.AutoSize = True
+        Me.Kembali.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Kembali.Location = New System.Drawing.Point(597, 417)
+        Me.Kembali.Name = "Kembali"
+        Me.Kembali.Size = New System.Drawing.Size(78, 19)
+        Me.Kembali.TabIndex = 15
+        Me.Kembali.Text = "Kembali"
         '
         'txtitems
         '
@@ -436,15 +436,15 @@ Partial Class Transaksi
         Me.txtkembali.Size = New System.Drawing.Size(137, 20)
         Me.txtkembali.TabIndex = 15
         '
-        'Label16
+        'Pajak
         '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(597, 364)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(58, 19)
-        Me.Label16.TabIndex = 16
-        Me.Label16.Text = "Pajak"
+        Me.Pajak.AutoSize = True
+        Me.Pajak.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Pajak.Location = New System.Drawing.Point(597, 364)
+        Me.Pajak.Name = "Pajak"
+        Me.Pajak.Size = New System.Drawing.Size(58, 19)
+        Me.Pajak.TabIndex = 16
+        Me.Pajak.Text = "Pajak"
         '
         'txtpajak
         '
@@ -462,13 +462,13 @@ Partial Class Transaksi
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(838, 449)
         Me.Controls.Add(Me.txtpajak)
-        Me.Controls.Add(Me.Label16)
-        Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.Pajak)
+        Me.Controls.Add(Me.Kembali)
         Me.Controls.Add(Me.txtkembali)
         Me.Controls.Add(Me.txtbayar)
         Me.Controls.Add(Me.txtitems)
         Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.Bayar)
         Me.Controls.Add(Me.btn_tutup)
         Me.Controls.Add(Me.btn_simpan)
         Me.Controls.Add(Me.btn_save)
@@ -501,7 +501,7 @@ Partial Class Transaksi
     Friend WithEvents txtnamapelanggan As TextBox
     Friend WithEvents txtidpelanggan As TextBox
     Friend WithEvents txtkodestruk As TextBox
-    Friend WithEvents Label8 As Label
+    Friend WithEvents Total As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
@@ -519,12 +519,12 @@ Partial Class Transaksi
     Friend WithEvents btn_simpan As Button
     Friend WithEvents btn_tutup As Button
     Friend WithEvents Label13 As Label
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label15 As Label
+    Friend WithEvents Bayar As Label
+    Friend WithEvents Kembali As Label
     Friend WithEvents txtitems As TextBox
     Friend WithEvents txtbayar As TextBox
     Friend WithEvents txtkembali As TextBox
-    Friend WithEvents Label16 As Label
+    Friend WithEvents Pajak As Label
     Friend WithEvents txtpajak As TextBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
