@@ -3,20 +3,12 @@
         Data_Karyawan.Show()
     End Sub
 
-    Private Sub MenuMakananToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MenuMakananToolStripMenuItem.Click
-        Menu_Makanan.Show()
-    End Sub
-
-    Private Sub MenuMinumanToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles MenuMinumanToolStripMenuItem1.Click
-        Menu_Minuman.Show()
+    Private Sub DataMenuToolStripMenuItem_Click(sender As Object, e As EventArgs)
+        Data_Menu.Show()
     End Sub
 
     Private Sub DataPelangganToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DataPelangganToolStripMenuItem.Click
         Pelanggan.Show()
-    End Sub
-
-    Private Sub DataPemesananBaruToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DataPemesananBaruToolStripMenuItem.Click
-        Pesan.Show()
     End Sub
 
     Private Sub DataKasirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DataKasirToolStripMenuItem.Click

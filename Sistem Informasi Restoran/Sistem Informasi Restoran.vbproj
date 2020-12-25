@@ -126,6 +126,12 @@
     <Compile Include="Data Karyawan.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Data_Menuvb.Designer.vb">
+      <DependentUpon>Data_Menuvb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Data_Menuvb.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
@@ -262,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Data Karyawan.resx">
       <DependentUpon>Data Karyawan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data_Menuvb.resx">
+      <DependentUpon>Data_Menuvb.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>

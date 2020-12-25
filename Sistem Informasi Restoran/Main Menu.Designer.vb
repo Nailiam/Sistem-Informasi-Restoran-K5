@@ -30,21 +30,20 @@ Partial Class Main_Menu
         Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataKaryawanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuMakananToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuMinumanToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.LaporanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataPelangganToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataPemesananBaruToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TransaksiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataKasirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataPembayaranToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TransaksiToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportTransaksiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportDataMinumanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportPeriodikTransaksiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportPeriodikTransaksiToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportPerHargaMakananToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TransaksiToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DataMenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip2.SuspendLayout()
         Me.SuspendLayout()
@@ -98,7 +97,7 @@ Partial Class Main_Menu
         '
         'ToolStripMenuItem1
         '
-        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DataKaryawanToolStripMenuItem, Me.MenuMakananToolStripMenuItem, Me.MenuMinumanToolStripMenuItem1})
+        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DataKaryawanToolStripMenuItem, Me.DataMenuToolStripMenuItem})
         Me.ToolStripMenuItem1.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
         Me.ToolStripMenuItem1.Size = New System.Drawing.Size(107, 24)
@@ -107,20 +106,8 @@ Partial Class Main_Menu
         'DataKaryawanToolStripMenuItem
         '
         Me.DataKaryawanToolStripMenuItem.Name = "DataKaryawanToolStripMenuItem"
-        Me.DataKaryawanToolStripMenuItem.Size = New System.Drawing.Size(202, 24)
+        Me.DataKaryawanToolStripMenuItem.Size = New System.Drawing.Size(198, 24)
         Me.DataKaryawanToolStripMenuItem.Text = "Data Karyawan "
-        '
-        'MenuMakananToolStripMenuItem
-        '
-        Me.MenuMakananToolStripMenuItem.Name = "MenuMakananToolStripMenuItem"
-        Me.MenuMakananToolStripMenuItem.Size = New System.Drawing.Size(202, 24)
-        Me.MenuMakananToolStripMenuItem.Text = "Menu Makanan"
-        '
-        'MenuMinumanToolStripMenuItem1
-        '
-        Me.MenuMinumanToolStripMenuItem1.Name = "MenuMinumanToolStripMenuItem1"
-        Me.MenuMinumanToolStripMenuItem1.Size = New System.Drawing.Size(202, 24)
-        Me.MenuMinumanToolStripMenuItem1.Text = "Menu Minuman "
         '
         'LaporanToolStripMenuItem
         '
@@ -162,6 +149,12 @@ Partial Class Main_Menu
         Me.DataPembayaranToolStripMenuItem.Size = New System.Drawing.Size(213, 24)
         Me.DataPembayaranToolStripMenuItem.Text = "Data Pembayaran"
         '
+        'TransaksiToolStripMenuItem1
+        '
+        Me.TransaksiToolStripMenuItem1.Name = "TransaksiToolStripMenuItem1"
+        Me.TransaksiToolStripMenuItem1.Size = New System.Drawing.Size(213, 24)
+        Me.TransaksiToolStripMenuItem1.Text = "Transaksi"
+        '
         'ReportToolStripMenuItem
         '
         Me.ReportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportTransaksiToolStripMenuItem, Me.ReportDataMinumanToolStripMenuItem, Me.ReportPeriodikTransaksiToolStripMenuItem, Me.ReportPeriodikTransaksiToolStripMenuItem1, Me.ReportPerHargaMakananToolStripMenuItem})
@@ -200,11 +193,11 @@ Partial Class Main_Menu
         Me.ReportPerHargaMakananToolStripMenuItem.Size = New System.Drawing.Size(284, 24)
         Me.ReportPerHargaMakananToolStripMenuItem.Text = "Report Per Harga Makanan"
         '
-        'TransaksiToolStripMenuItem1
+        'DataMenuToolStripMenuItem
         '
-        Me.TransaksiToolStripMenuItem1.Name = "TransaksiToolStripMenuItem1"
-        Me.TransaksiToolStripMenuItem1.Size = New System.Drawing.Size(213, 24)
-        Me.TransaksiToolStripMenuItem1.Text = "Transaksi"
+        Me.DataMenuToolStripMenuItem.Name = "DataMenuToolStripMenuItem"
+        Me.DataMenuToolStripMenuItem.Size = New System.Drawing.Size(198, 24)
+        Me.DataMenuToolStripMenuItem.Text = "Data Menu"
         '
         'Main_Menu
         '
@@ -233,8 +226,6 @@ Partial Class Main_Menu
     Friend WithEvents MenuStrip2 As MenuStrip
     Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents DataKaryawanToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents MenuMakananToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents MenuMinumanToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents LaporanToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DataPelangganToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DataPemesananBaruToolStripMenuItem As ToolStripMenuItem
@@ -248,4 +239,5 @@ Partial Class Main_Menu
     Friend WithEvents ReportPeriodikTransaksiToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents ReportPerHargaMakananToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TransaksiToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents DataMenuToolStripMenuItem As ToolStripMenuItem
 End Class
