@@ -64,7 +64,7 @@ Partial Class Data_Menu
         '
         'btnExit
         '
-        Me.btnExit.Location = New System.Drawing.Point(206, 285)
+        Me.btnExit.Location = New System.Drawing.Point(206, 253)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(75, 23)
         Me.btnExit.TabIndex = 26
@@ -73,7 +73,7 @@ Partial Class Data_Menu
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(111, 285)
+        Me.btnCancel.Location = New System.Drawing.Point(111, 253)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(75, 23)
         Me.btnCancel.TabIndex = 25
@@ -82,7 +82,7 @@ Partial Class Data_Menu
         '
         'btndelete
         '
-        Me.btndelete.Location = New System.Drawing.Point(12, 285)
+        Me.btndelete.Location = New System.Drawing.Point(12, 253)
         Me.btndelete.Name = "btndelete"
         Me.btndelete.Size = New System.Drawing.Size(75, 23)
         Me.btndelete.TabIndex = 24
@@ -213,7 +213,7 @@ Partial Class Data_Menu
         Me.Controls.Add(Me.btnInput)
         Me.Controls.Add(Me.lblwelcome)
         Me.Name = "Data_Menu"
-        Me.Text = "Data_Menu"
+        Me.Text = "Data Menu"
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.DGV, System.ComponentModel.ISupportInitialize).EndInit()
         Me.lblwelcome.ResumeLayout(False)
