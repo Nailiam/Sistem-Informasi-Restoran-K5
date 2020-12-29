@@ -126,6 +126,12 @@
     <Compile Include="Form Report Data Pelanggan.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form Report Periodik Transaksi.Designer.vb">
+      <DependentUpon>Form Report Periodik Transaksi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Report Periodik Transaksi.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
@@ -142,6 +148,12 @@
       <DependentUpon>Form3.vb</DependentUpon>
     </Compile>
     <Compile Include="Form3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interval Tanggal.Designer.vb">
+      <DependentUpon>Interval Tanggal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Interval Tanggal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Kasir.Designer.vb">
@@ -210,6 +222,12 @@
       <DependentUpon>Report Data Pelanggan.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Report Transaksi New.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report Transaksi New.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Report Transaksi.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -242,6 +260,9 @@
     <EmbeddedResource Include="Form Report Data Pelanggan.resx">
       <DependentUpon>Form Report Data Pelanggan.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form Report Periodik Transaksi.resx">
+      <DependentUpon>Form Report Periodik Transaksi.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -250,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interval Tanggal.resx">
+      <DependentUpon>Interval Tanggal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kasir.resx">
       <DependentUpon>Kasir.vb</DependentUpon>
@@ -282,6 +306,10 @@
     <EmbeddedResource Include="Report Data Pelanggan.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Report Data Pelanggan.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Transaksi New.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report Transaksi New.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report Transaksi.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
