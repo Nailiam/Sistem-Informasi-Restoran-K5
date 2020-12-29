@@ -7,7 +7,7 @@
         If e.KeyChar = Chr(13) Then
             'Chr(13) itu Tombol ENTER
             Call koneksiDB()
-            CMD = New OleDb.OleDbCommand("Select * from Makanan & Minuman where Kode ='" & txt_Kodepesanan.Text & "'", Conn)
+            CMD = New OleDb.OleDbCommand("Select * from Menu where Kode ='" & txt_Kodepesanan.Text & "'", Conn)
             DM = CMD.ExecuteReader
             DM.Read()
             If Not DM.HasRows Then
@@ -41,7 +41,7 @@
                 txtkembali.Text = 0
             ElseIf Val(txtbayar.Text) > Val(txtGrandtotal.Text) Then
                 txtkembali.Text = Val(txtbayar.Text) - Val(txtGrandtotal.Text)
-                btn_batal.Focus()
+                btnCancel.Focus()
             End If
         End If
     End Sub
@@ -65,8 +65,7 @@
                 MsgBox("Masukkan Kode Kode Barang dan tekan enter ")
             Else
                 DataGridView1.Rows.Add(New String() {txt_Kodepesanan.Text,
-txtnama.Text, txtharga.Text, txtjumlah.Text, Val(txtharga.Text) *
-Val(txtjumlah.Text)})
+                 txtnama.Text, txtharga.Text, txtjumlah.Text, Val(txtharga.Text) * Val(txtjumlah.Text)})
                 Call RumusGrandTotal()
                 Call kosongkanitem()
                 txt_Kodepesanan.Focus()
@@ -110,9 +109,8 @@ Val(txtjumlah.Text)})
         End Try
     End Sub
 
-    Private Sub btn_batal_Click(sender As Object, e As EventArgs) Handles btn_batal.Click
-        Call MatikanForm()
-        Call KosongkanForm()
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        Call kosongkanitem()
     End Sub
 
 
@@ -121,7 +119,7 @@ Val(txtjumlah.Text)})
     End Sub
 
     Private Sub txtpajak_TextChanged(sender As Object, e As EventArgs) Handles txtpajak.TextChanged
-        Pajak.Text = Val(txtpajak.Text)
+        Pajak.Text = Val(txtpajak.Text) + Val(txtharga.Text) * 0.1
     End Sub
 
     Private Sub txtbayar_TextChanged(sender As Object, e As EventArgs) Handles txtbayar.TextChanged
@@ -181,6 +179,8 @@ DataGridView1.Rows(baris).Cells(0).Value & "'"
             txtitems.Text = hitungitem
         Next
     End Sub
+
+
 End Class
 
 

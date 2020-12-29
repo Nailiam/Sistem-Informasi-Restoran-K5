@@ -68,10 +68,10 @@ Partial Class Data_Karyawan
         'lblselamat
         '
         Me.lblselamat.AutoSize = True
-        Me.lblselamat.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblselamat.Location = New System.Drawing.Point(226, 9)
+        Me.lblselamat.Font = New System.Drawing.Font("Modern No. 20", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblselamat.Location = New System.Drawing.Point(209, 9)
         Me.lblselamat.Name = "lblselamat"
-        Me.lblselamat.Size = New System.Drawing.Size(0, 31)
+        Me.lblselamat.Size = New System.Drawing.Size(0, 29)
         Me.lblselamat.TabIndex = 31
         '
         'DGV2
