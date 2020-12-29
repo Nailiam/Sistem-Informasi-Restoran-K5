@@ -23,28 +23,15 @@
         Me.Close()
     End Sub
 
-    Private Sub ReportPeriodikTransaksiToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportPeriodikTransaksiToolStripMenuItem.Click
-        Report_Data_Pelanggan.Show()
-    End Sub
-
-    Private Sub ReportTransaksiToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportTransaksiToolStripMenuItem.Click
-        Report_Data_Makanan.Show()
-    End Sub
-
-    Private Sub ReportDataMinumanToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportDataMinumanToolStripMenuItem.Click
-        Report_Data_Minuman.Show()
-    End Sub
-
-    Private Sub ReportPeriodikTransaksiToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ReportPeriodikTransaksiToolStripMenuItem1.Click
-        Cetak_Laporan_Periodik.Show()
-    End Sub
-
-    Private Sub ReportPerHargaMakananToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportPerHargaMakananToolStripMenuItem.Click
-        Per_Harga_Makanan.Show()
-    End Sub
-
     Private Sub TransaksiToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles TransaksiToolStripMenuItem1.Click
         Transaksi.Show()
     End Sub
 
+    Private Sub ReportDataMenuToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportDataMenuToolStripMenuItem.Click
+        Form_Report_Data_Menu.Show()
+    End Sub
+
+    Private Sub ReportDataPelanToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportDataPelanToolStripMenuItem.Click
+        Form_Report_Data_Pelanggan.Show()
+    End Sub
 End Class

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Report_Data_Minuman
+Partial Class Form_Report_Data_Pelanggan
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,7 +23,7 @@ Partial Class Report_Data_Minuman
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
-        Me.CrystalReport21 = New Sistem_Informasi_Restoran.CrystalReport2()
+        Me.Report_Data_Pelanggan1 = New Sistem_Informasi_Restoran.Report_Data_Pelanggan()
         Me.SuspendLayout()
         '
         'CrystalReportViewer1
@@ -34,22 +34,22 @@ Partial Class Report_Data_Minuman
         Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 0)
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
-        Me.CrystalReportViewer1.ReportSource = Me.CrystalReport21
+        Me.CrystalReportViewer1.ReportSource = Me.Report_Data_Pelanggan1
         Me.CrystalReportViewer1.Size = New System.Drawing.Size(800, 450)
         Me.CrystalReportViewer1.TabIndex = 0
         '
-        'Report_Data_Minuman
+        'Form_Report_Data_Pelanggan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.CrystalReportViewer1)
-        Me.Name = "Report_Data_Minuman"
-        Me.Text = "Report Data Minuman"
+        Me.Name = "Form_Report_Data_Pelanggan"
+        Me.Text = "Form Report Data Pelanggan"
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
-    Friend WithEvents CrystalReport21 As CrystalReport2
+    Friend WithEvents Report_Data_Pelanggan1 As Report_Data_Pelanggan
 End Class
