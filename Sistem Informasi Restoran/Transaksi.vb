@@ -115,7 +115,7 @@
 
 
     Private Sub txtkembali_TextChanged(sender As Object, e As EventArgs) Handles txtkembali.TextChanged
-        Kembali.Text = Val(Bayar.Text) - Val(Total.Text)
+        Kembali.Text = Val(txtGrandtotal.Text) - Val(txtbayar.Text)
     End Sub
 
     Private Sub txtpajak_TextChanged(sender As Object, e As EventArgs) Handles txtpajak.TextChanged
