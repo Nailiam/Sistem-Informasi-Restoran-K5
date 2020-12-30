@@ -102,24 +102,6 @@
     <Compile Include="Cetak Laporan Periodik.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CrystalReport1.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport1.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="CrystalReport2.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport2.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="CrystalReport3.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport3.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Data Karyawan.Designer.vb">
       <DependentUpon>Data Karyawan.vb</DependentUpon>
     </Compile>
@@ -130,6 +112,18 @@
       <DependentUpon>Data Menu.vb</DependentUpon>
     </Compile>
     <Compile Include="Data Menu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Report Data Menu.Designer.vb">
+      <DependentUpon>Form Report Data Menu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Report Data Menu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Report Data Pelanggan.Designer.vb">
+      <DependentUpon>Form Report Data Pelanggan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Report Data Pelanggan.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.vb">
@@ -204,34 +198,16 @@
     <Compile Include="Pelanggan.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Per Harga Makanan.Designer.vb">
-      <DependentUpon>Per Harga Makanan.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Per Harga Makanan.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Report Data Makanan.Designer.vb">
-      <DependentUpon>Report Data Makanan.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Report Data Makanan.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Report Data Minuman.Designer.vb">
-      <DependentUpon>Report Data Minuman.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Report Data Minuman.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Report Data Pelanggan.Designer.vb">
-      <DependentUpon>Report Data Pelanggan.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Report Data Pelanggan.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Report Per Harga Makanan.vb">
+    <Compile Include="Report Data Menu.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Report Per Harga Makanan.rpt</DependentUpon>
+      <DependentUpon>Report Data Menu.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report Data Pelanggan.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report Data Pelanggan.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report Transaksi.vb">
@@ -254,23 +230,17 @@
     <EmbeddedResource Include="Cetak Laporan Periodik.resx">
       <DependentUpon>Cetak Laporan Periodik.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReport1.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport1.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReport2.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport2.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReport3.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport3.vb</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Data Karyawan.resx">
       <DependentUpon>Data Karyawan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Data Menu.resx">
       <DependentUpon>Data Menu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Report Data Menu.resx">
+      <DependentUpon>Form Report Data Menu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Report Data Pelanggan.resx">
+      <DependentUpon>Form Report Data Pelanggan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
@@ -305,21 +275,13 @@
     <EmbeddedResource Include="Pelanggan.resx">
       <DependentUpon>Pelanggan.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Per Harga Makanan.resx">
-      <DependentUpon>Per Harga Makanan.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report Data Makanan.resx">
-      <DependentUpon>Report Data Makanan.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report Data Minuman.resx">
-      <DependentUpon>Report Data Minuman.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report Data Pelanggan.resx">
-      <DependentUpon>Report Data Pelanggan.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report Per Harga Makanan.rpt">
+    <EmbeddedResource Include="Report Data Menu.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Report Per Harga Makanan.vb</LastGenOutput>
+      <LastGenOutput>Report Data Menu.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Data Pelanggan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report Data Pelanggan.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report Transaksi.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
