@@ -57,7 +57,7 @@ Partial Class Transaksi
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btn_save = New System.Windows.Forms.Button()
-        Me.btn_simpan = New System.Windows.Forms.Button()
+        Me.btn_batal = New System.Windows.Forms.Button()
         Me.btn_tutup = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Bayar = New System.Windows.Forms.Label()
@@ -367,14 +367,14 @@ Partial Class Transaksi
         Me.btn_save.Text = "Simpan"
         Me.btn_save.UseVisualStyleBackColor = True
         '
-        'btn_simpan
+        'btn_batal
         '
-        Me.btn_simpan.Location = New System.Drawing.Point(140, 394)
-        Me.btn_simpan.Name = "btn_simpan"
-        Me.btn_simpan.Size = New System.Drawing.Size(75, 33)
-        Me.btn_simpan.TabIndex = 14
-        Me.btn_simpan.Text = "Batal"
-        Me.btn_simpan.UseVisualStyleBackColor = True
+        Me.btn_batal.Location = New System.Drawing.Point(140, 394)
+        Me.btn_batal.Name = "btn_batal"
+        Me.btn_batal.Size = New System.Drawing.Size(75, 33)
+        Me.btn_batal.TabIndex = 14
+        Me.btn_batal.Text = "Batal"
+        Me.btn_batal.UseVisualStyleBackColor = True
         '
         'btn_tutup
         '
@@ -470,7 +470,7 @@ Partial Class Transaksi
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Bayar)
         Me.Controls.Add(Me.btn_tutup)
-        Me.Controls.Add(Me.btn_simpan)
+        Me.Controls.Add(Me.btn_batal)
         Me.Controls.Add(Me.btn_save)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
@@ -516,7 +516,7 @@ Partial Class Transaksi
     Friend WithEvents Label9 As Label
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents btn_save As Button
-    Friend WithEvents btn_simpan As Button
+    Friend WithEvents btn_batal As Button
     Friend WithEvents btn_tutup As Button
     Friend WithEvents Label13 As Label
     Friend WithEvents Bayar As Label

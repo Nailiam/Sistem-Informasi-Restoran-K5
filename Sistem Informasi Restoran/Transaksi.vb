@@ -1,4 +1,8 @@
 ﻿Public Class Transaksi
+    Private Sub TransaksiPenjualan_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Call kondisiawal()
+        Call Nomorfakturotomatis()
+    End Sub
     Private Sub txt_Kode_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txt_Kodepesanan.KeyPress
         If e.KeyChar = Chr(13) Then
             'Chr(13) itu Tombol ENTER
@@ -17,6 +21,7 @@
             End If
         End If
     End Sub
+
     Sub RumusGrandTotal()
         Dim hitung As Integer = 0
         For i As Integer = 0 To DataGridView1.Rows.Count - 1
@@ -36,53 +41,9 @@
                 txtkembali.Text = 0
             ElseIf Val(txtbayar.Text) > Val(txtGrandtotal.Text) Then
                 txtkembali.Text = Val(txtbayar.Text) - Val(txtGrandtotal.Text)
-                btn_simpan.Focus()
+                btn_batal.Focus()
             End If
         End If
-    End Sub
-
-    Private Sub btn_simpan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_simpan.Click
-        If txtkembali.Text = "" Or txtGrandtotal.Text = "" Then
-            MsgBox("Data Transaksi Belum Lengkap")
-            'Pengecekan , apabila transaksi belum terjadi maka tidak bisa di ENTER
-        Else
-            Dim Simpantransaksi As String = "Insert into Penjualan values ('" &
-txtkodestruk.Text & "' , '" & txttgltransaksi.Text & "' , '" & txtjamtransaksi.Text &
-"', '" & txtidpelanggan.Text & "', '" & txtnamapelanggan.Text & "', '" & txtitems.Text &
-"','" & txtbayar.Text & "','" & txtkembali.Text & "', '" & txtGrandtotal.Text & "')"
-            CMD = New OleDb.OleDbCommand(Simpantransaksi, Conn)
-            CMD.ExecuteNonQuery()
-            'Data disimpan di tabel Penjualan
-            For baris As Integer = 0 To DataGridView1.Rows.Count - 2
-                Dim Simpandetail As String = "Insert into Detail_jual values ('" &
-txtkodestruk.Text & "', '" & DataGridView1.Rows(baris).Cells(0).Value & "', '" &
-DataGridView1.Rows(baris).Cells(1).Value & "', '" &
-DataGridView1.Rows(baris).Cells(2).Value & "', '" &
-DataGridView1.Rows(baris).Cells(3).Value & "', '" &
-DataGridView1.Rows(baris).Cells(4).Value & "')"
-                CMD = New OleDb.OleDbCommand(Simpandetail, Conn)
-                CMD.ExecuteNonQuery()
-                CMD = New OleDb.OleDbCommand("select * from Trasaksi where Kode_struk = '" &
-DataGridView1.Rows(baris).Cells(0).Value & "'", Conn)
-                DM = CMD.ExecuteReader
-                DM.Read()
-                Dim kurangistok As String = "Update Transaksi set Stok = '" &
-DM.Item("Stok") - DataGridView1.Rows(baris).Cells(3).Value & "' where Kode_struk = '" &
-DataGridView1.Rows(baris).Cells(0).Value & "'"
-                CMD = New OleDb.OleDbCommand(kurangistok, Conn)
-                CMD.ExecuteNonQuery()
-            Next
-            MsgBox("Transaksi Telah Tersimpan")
-            Call kondisiawal()
-        End If
-    End Sub
-
-    Sub carijumlahitem()
-        Dim hitungitem As Integer = 0
-        For i As Integer = 0 To DataGridView1.Rows.Count - 1
-            hitungitem = hitungitem + DataGridView1.Rows(i).Cells(3).Value
-            txtitems.Text = hitungitem
-        Next
     End Sub
     Sub kosongkanitem()
         txtkodestruk.Text = ""
@@ -112,10 +73,6 @@ Val(txtjumlah.Text)})
                 Call carijumlahitem()
             End If
         End If
-    End Sub
-    Private Sub TransaksiPenjualan_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Call kondisiawal()
-        Call Nomorfakturotomatis()
     End Sub
     Sub Nomorfakturotomatis()
         Call koneksiDB()
@@ -153,16 +110,76 @@ Val(txtjumlah.Text)})
         End Try
     End Sub
 
-    Private Sub btn_save_Click(sender As Object, e As EventArgs) Handles btn_save.Click
-
+    Private Sub btn_batal_Click(sender As Object, e As EventArgs) Handles btn_batal.Click
+        Call MatikanForm()
+        Call KosongkanForm()
     End Sub
+
 
     Private Sub txtkembali_TextChanged(sender As Object, e As EventArgs) Handles txtkembali.TextChanged
         Kembali.Text = Val(Bayar.Text) - Val(Total.Text)
     End Sub
 
     Private Sub txtpajak_TextChanged(sender As Object, e As EventArgs) Handles txtpajak.TextChanged
+        Pajak.Text = Val(txtpajak.Text)
+    End Sub
 
+    Private Sub txtbayar_TextChanged(sender As Object, e As EventArgs) Handles txtbayar.TextChanged
+        If Val(txtbayar.Text) < Val(txtGrandtotal.Text) Then
+            MsgBox("Uang Pembayaran Kurang")
+        ElseIf Val(txtbayar.Text) = Val(txtGrandtotal.Text) Then
+            txtkembali.Text = 0
+        ElseIf Val(txtbayar.Text) > Val(txtGrandtotal.Text) Then
+            txtkembali.Text = Val(txtbayar.Text) - Val(txtGrandtotal.Text)
+            btn_save.Focus()
+        End If
+    End Sub
+
+    Private Sub btn_tutup_Click(sender As Object, e As EventArgs) Handles btn_tutup.Click
+        Me.Close()
+    End Sub
+
+    Private Sub btn_save_Click(sender As Object, e As EventArgs) Handles btn_save.Click
+        If txtkembali.Text = "" Or txtGrandtotal.Text = "" Then
+            MsgBox("Data Transaksi Belum Lengkap")
+            'Pengecekan , apabila transaksi belum terjadi maka tidak bisa di ENTER
+        Else
+            Dim Simpantransaksi As String = "Insert into Penjualan values ('" &
+txtkodestruk.Text & "' , '" & txttgltransaksi.Text & "' , '" & txtjamtransaksi.Text &
+"', '" & txtidpelanggan.Text & "', '" & txtnamapelanggan.Text & "', '" & txtitems.Text &
+"','" & txtbayar.Text & "','" & txtkembali.Text & "', '" & txtGrandtotal.Text & "')"
+            CMD = New OleDb.OleDbCommand(Simpantransaksi, Conn)
+            CMD.ExecuteNonQuery()
+            'Data disimpan di tabel Penjualan
+            For baris As Integer = 0 To DataGridView1.Rows.Count - 2
+                Dim Simpandetail As String = "Insert into Detail_jual values ('" &
+txtkodestruk.Text & "', '" & DataGridView1.Rows(baris).Cells(0).Value & "', '" &
+DataGridView1.Rows(baris).Cells(1).Value & "', '" &
+DataGridView1.Rows(baris).Cells(2).Value & "', '" &
+DataGridView1.Rows(baris).Cells(3).Value & "', '" &
+DataGridView1.Rows(baris).Cells(4).Value & "')"
+                CMD = New OleDb.OleDbCommand(Simpandetail, Conn)
+                CMD.ExecuteNonQuery()
+                CMD = New OleDb.OleDbCommand("select * from Trasaksi where Kode_struk = '" &
+DataGridView1.Rows(baris).Cells(0).Value & "'", Conn)
+                DM = CMD.ExecuteReader
+                DM.Read()
+                Dim kurangistok As String = "Update Transaksi set Stok = '" &
+DM.Item("Stok") - DataGridView1.Rows(baris).Cells(3).Value & "' where Kode_struk = '" &
+DataGridView1.Rows(baris).Cells(0).Value & "'"
+                CMD = New OleDb.OleDbCommand(kurangistok, Conn)
+                CMD.ExecuteNonQuery()
+            Next
+            MsgBox("Transaksi Telah Tersimpan")
+            Call kondisiawal()
+        End If
+    End Sub
+    Sub carijumlahitem()
+        Dim hitungitem As Integer = 0
+        For i As Integer = 0 To DataGridView1.Rows.Count - 1
+            hitungitem = hitungitem + DataGridView1.Rows(i).Cells(3).Value
+            txtitems.Text = hitungitem
+        Next
     End Sub
 End Class
 
