@@ -105,7 +105,7 @@
                 txt_Kodepesanan.Focus()
             End If
         Catch ex As Exception
-            MsgBox("Data member tidak ada")
+            MsgBox("Data pelanggan tidak ada")
         End Try
     End Sub
 
