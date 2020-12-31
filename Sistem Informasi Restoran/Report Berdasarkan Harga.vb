@@ -18,7 +18,7 @@ Imports System
 Imports System.ComponentModel
 
 
-Public Class Report_Transaksi
+Public Class Report_Berdasarkan_Harga
     Inherits ReportClass
     
     Public Sub New()
@@ -27,7 +27,7 @@ Public Class Report_Transaksi
     
     Public Overrides Property ResourceName() As String
         Get
-            Return "Report Transaksi.rpt"
+            Return "Report Berdasarkan Harga.rpt"
         End Get
         Set
             'Do nothing
@@ -45,7 +45,7 @@ Public Class Report_Transaksi
     
     Public Overrides Property FullResourceName() As String
         Get
-            Return "Sistem_Informasi_Restoran.Report Transaksi.rpt"
+            Return "Sistem_Informasi_Restoran.Report Berdasarkan Harga.rpt"
         End Get
         Set
             'Do nothing
@@ -94,23 +94,15 @@ Public Class Report_Transaksi
     
     <Browsable(false),  _
      DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
-    Public ReadOnly Property Parameter_Tanggal_Awal() As CrystalDecisions.[Shared].IParameterField
+    Public ReadOnly Property Parameter_Harga_Dimulai_Dari() As CrystalDecisions.[Shared].IParameterField
         Get
             Return Me.DataDefinition.ParameterFields(0)
-        End Get
-    End Property
-    
-    <Browsable(false),  _
-     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
-    Public ReadOnly Property Parameter_Tanggal_Akhir() As CrystalDecisions.[Shared].IParameterField
-        Get
-            Return Me.DataDefinition.ParameterFields(1)
         End Get
     End Property
 End Class
 
 <System.Drawing.ToolboxBitmapAttribute(GetType(CrystalDecisions.[Shared].ExportOptions), "report.bmp")>  _
-Public Class CachedReport_Transaksi
+Public Class CachedReport_Berdasarkan_Harga
     Inherits Component
     Implements ICachedReport
     
@@ -152,7 +144,7 @@ Public Class CachedReport_Transaksi
     End Property
     
     Public Overridable Function CreateReport() As CrystalDecisions.CrystalReports.Engine.ReportDocument Implements CrystalDecisions.ReportSource.ICachedReport.CreateReport
-        Dim rpt As Report_Transaksi = New Report_Transaksi()
+        Dim rpt As Report_Berdasarkan_Harga = New Report_Berdasarkan_Harga()
         rpt.Site = Me.Site
         Return rpt
     End Function

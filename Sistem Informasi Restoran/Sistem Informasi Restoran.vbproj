@@ -90,18 +90,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cetak Laporan 1.Designer.vb">
-      <DependentUpon>Cetak Laporan 1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Cetak Laporan 1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cetak Laporan Periodik.Designer.vb">
-      <DependentUpon>Cetak Laporan Periodik.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Cetak Laporan Periodik.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Data Karyawan.Designer.vb">
       <DependentUpon>Data Karyawan.vb</DependentUpon>
     </Compile>
@@ -112,6 +100,12 @@
       <DependentUpon>Data Menu.vb</DependentUpon>
     </Compile>
     <Compile Include="Data Menu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Report Berdasarkan Harga.Designer.vb">
+      <DependentUpon>Form Report Berdasarkan Harga.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Report Berdasarkan Harga.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form Report Data Menu.Designer.vb">
@@ -148,6 +142,12 @@
       <DependentUpon>Form3.vb</DependentUpon>
     </Compile>
     <Compile Include="Form3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interval Harga.Designer.vb">
+      <DependentUpon>Interval Harga.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Interval Harga.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Interval Tanggal.Designer.vb">
@@ -197,6 +197,12 @@
     <Compile Include="Pelanggan.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Report Berdasarkan Harga.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report Berdasarkan Harga.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Report Data Menu.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -215,12 +221,6 @@
       <DependentUpon>Report Transaksi New.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Report Transaksi.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Report Transaksi.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Transaksi.Designer.vb">
       <DependentUpon>Transaksi.vb</DependentUpon>
     </Compile>
@@ -229,17 +229,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Cetak Laporan 1.resx">
-      <DependentUpon>Cetak Laporan 1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Cetak Laporan Periodik.resx">
-      <DependentUpon>Cetak Laporan Periodik.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Data Karyawan.resx">
       <DependentUpon>Data Karyawan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Data Menu.resx">
       <DependentUpon>Data Menu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Report Berdasarkan Harga.resx">
+      <DependentUpon>Form Report Berdasarkan Harga.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form Report Data Menu.resx">
       <DependentUpon>Form Report Data Menu.vb</DependentUpon>
@@ -258,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interval Harga.resx">
+      <DependentUpon>Interval Harga.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interval Tanggal.resx">
       <DependentUpon>Interval Tanggal.vb</DependentUpon>
@@ -280,6 +280,10 @@
     <EmbeddedResource Include="Pelanggan.resx">
       <DependentUpon>Pelanggan.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report Berdasarkan Harga.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report Berdasarkan Harga.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report Data Menu.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Report Data Menu.vb</LastGenOutput>
@@ -291,10 +295,6 @@
     <EmbeddedResource Include="Report Transaksi New.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Report Transaksi New.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report Transaksi.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Report Transaksi.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Transaksi.resx">
       <DependentUpon>Transaksi.vb</DependentUpon>

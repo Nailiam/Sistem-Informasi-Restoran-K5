@@ -34,4 +34,12 @@
     Private Sub ReportDataPelanToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportDataPelanToolStripMenuItem.Click
         Form_Report_Data_Pelanggan.Show()
     End Sub
+
+    Private Sub ReportPeriodikTransaksiToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportPeriodikTransaksiToolStripMenuItem.Click
+        Interval_Tanggal.Show()
+    End Sub
+
+    Private Sub ReportBerdasarkanHargaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportBerdasarkanHargaToolStripMenuItem.Click
+        Interval_Harga.Show()
+    End Sub
 End Class
