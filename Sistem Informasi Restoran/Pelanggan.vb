@@ -3,22 +3,16 @@
         txt_id.Text = ""
         txt_nama.Text = ""
         txt_nomor.Text = ""
-        txt_idmakanan.Text = ""
-        txt_idminuman.Text = ""
     End Sub
     Sub MatikanForm()
         txt_id.Enabled = False
         txt_nama.Enabled = False
         txt_nomor.Enabled = False
-        txt_idmakanan.Enabled = False
-        txt_idminuman.Enabled = False
     End Sub
     Sub HidupkanForm()
         txt_id.Enabled = True
         txt_nama.Enabled = True
         txt_nomor.Enabled = True
-        txt_idmakanan.Enabled = True
-        txt_idminuman.Enabled = True
     End Sub
     Sub TampilkanData()
         Call koneksiDB()
@@ -48,7 +42,7 @@
     End Sub
 
     Private Sub btn_sv_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_sv.Click
-        If txt_id.Text = "" Or txt_nama.Text = "" Or txt_nomor.Text = "" Or txt_idmakanan.Text = "" Or txt_idminuman.Text = "" Then
+        If txt_id.Text = "" Or txt_nama.Text = "" Or txt_nomor.Text = "" Then
             MsgBox("Data Pelanggan Belum Lengkap")
             Exit Sub
         Else
@@ -60,7 +54,7 @@
                 Call koneksiDB()
                 Dim simpan As String
                 simpan = "insert into Pelanggan values ('" & txt_id.Text &
-               "', '" & txt_nama.Text & "', '" & txt_nomor.Text & "', '" & txt_idmakanan.Text & "', '" & txt_idminuman.Text & "')"
+               "', '" & txt_nama.Text & "', '" & txt_nomor.Text & "')"
                 CMD = New OleDb.OleDbCommand(simpan, Conn)
                 CMD.ExecuteNonQuery()
                 MsgBox("Input Data Sukses")
@@ -78,20 +72,18 @@
         txt_id.Text = DataGridView1.Rows(e.RowIndex).Cells(0).Value
         txt_nama.Text = DataGridView1.Rows(e.RowIndex).Cells(1).Value
         txt_nomor.Text = DataGridView1.Rows(e.RowIndex).Cells(2).Value
-        txt_idmakanan.Text = DataGridView1.Rows(e.RowIndex).Cells(3).Value
-        txt_idminuman.Text = DataGridView1.Rows(e.RowIndex).Cells(4).Value
         Call HidupkanForm()
         txt_id.Enabled = False
     End Sub
 
     Private Sub btn_edit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_edit.Click
-        If txt_id.Text = "" Or txt_nama.Text = "" Or txt_nomor.Text = "" Or txt_idmakanan.Text = "" Or txt_idminuman.Text = "" Then
+        If txt_id.Text = "" Or txt_nama.Text = "" Or txt_nomor.Text = "" Then
             MsgBox("Data Pelanggan Belum Lengkap")
             Exit Sub
         Else
             Call koneksiDB()
             CMD = New OleDb.OleDbCommand("update Pelanggan set Nama_Pelanggan = '" &
-           txt_nama.Text & "', Nomer_Meja = '" & txt_nomor.Text & "', ID_Makanan = '" & txt_idmakanan.Text & "', ID_Minuman = '" & txt_idminuman.Text & "' where ID_Pelanggan ='" & txt_id.Text & "'", Conn)
+           txt_nama.Text & "', Nomer_Meja = '" & txt_nomor.Text & "' where ID_Pelanggan ='" & txt_id.Text & "'", Conn)
             DM = CMD.ExecuteReader
             MsgBox("Update Data Berhasil")
         End If
