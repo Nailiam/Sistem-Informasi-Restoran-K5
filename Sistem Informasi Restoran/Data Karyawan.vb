@@ -164,10 +164,10 @@ Public Class Data_Karyawan
             Exit Sub
         Else
             Call koneksiDB()
-            CMD = New OleDb.OleDbCommand("update Kasir set Id_Kasir = '" &
-           txt_id_karyawan.Text & "', Nama_Kasir = '" & txt_nama_karyawan.Text & "', Jenis_Kelamin = '" &
+            CMD = New OleDb.OleDbCommand("update Kasir set Nama_Kasir = '" & txt_nama_karyawan.Text & "', Jenis_Kelamin = '" &
            cmb_jk.Text & "', Tempat_Lahir = '" & txt_lahir.Text & "', Agama = '" & cmb_agama.Text & "', No_Telepon = '" &
-           txt_hp.Text & "', Alamat = '" & txt_alamat.Text & "', Status = '" & cmb_status.Text & "', Photo = '" & txt_foto.Text & "'", Conn)
+           txt_hp.Text & "', Alamat = '" & txt_alamat.Text & "', Status = '" & cmb_status.Text & "', Photo = '" &
+           txt_foto.Text & "'Where Id_Kasir = '" & txt_id_karyawan.Text & "'", Conn)
             DM = CMD.ExecuteReader
             MsgBox("Update Data Berhasil")
         End If

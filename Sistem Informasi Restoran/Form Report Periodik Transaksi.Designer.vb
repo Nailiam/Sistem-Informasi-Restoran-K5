@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Report_Data_Makanan
+Partial Class Form_Report_Periodik_Transaksi
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,7 +23,7 @@ Partial Class Report_Data_Makanan
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
-        Me.CrystalReport11 = New Sistem_Informasi_Restoran.CrystalReport1()
+        Me.Report_Transaksi_New1 = New Sistem_Informasi_Restoran.Report_Transaksi_New()
         Me.SuspendLayout()
         '
         'CrystalReportViewer1
@@ -34,22 +34,22 @@ Partial Class Report_Data_Makanan
         Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 0)
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
-        Me.CrystalReportViewer1.ReportSource = Me.CrystalReport11
+        Me.CrystalReportViewer1.ReportSource = Me.Report_Transaksi_New1
         Me.CrystalReportViewer1.Size = New System.Drawing.Size(800, 450)
         Me.CrystalReportViewer1.TabIndex = 0
         '
-        'Report_Data_Makanan
+        'Form_Report_Periodik_Transaksi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.CrystalReportViewer1)
-        Me.Name = "Report_Data_Makanan"
-        Me.Text = "Report Data Makanan"
+        Me.Name = "Form_Report_Periodik_Transaksi"
+        Me.Text = "Form Report Periodik Transaksi"
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
-    Friend WithEvents CrystalReport11 As CrystalReport1
+    Friend WithEvents Report_Transaksi_New1 As Report_Transaksi_New
 End Class

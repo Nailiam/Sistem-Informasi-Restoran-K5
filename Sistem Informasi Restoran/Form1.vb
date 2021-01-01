@@ -28,9 +28,21 @@ Public Class Form1
     Private Sub btnsaveqrcode_Click(sender As Object, e As EventArgs) Handles btnsaveqrcode.Click
         Dim SD As New SaveFileDialog
         SD.Filter = "Image File (*.jpeg;*jpg;*.png;*.bmp;)| *.jpeg;*jpg;*.png;*.bmp;"
-        If SD.ShowDialog() = Windows.Forms.DialogResult.OK Then
+        If SD.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
             Try
                 PictureBox1.Image.Save(SD.FileName, Imaging.ImageFormat.Png)
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        End If
+    End Sub
+
+    Private Sub btnsavebarcode_Click(sender As Object, e As EventArgs) Handles btnsavebarcode.Click
+        Dim SD As New SaveFileDialog
+        SD.Filter = "Image File (*.jpeg;*jpg;*.png;*.bmp;)| *.jpeg;*jpg;*.png;*.bmp;"
+        If SD.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
+            Try
+                PictureBox2.Image.Save(SD.FileName, Imaging.ImageFormat.Png)
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try

@@ -7,7 +7,7 @@ Public Class Form2
     Private Sub btnload_Click(sender As Object, e As EventArgs) Handles btnload.Click
         Dim OPD As New OpenFileDialog
         OPD.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments
-        If OPD.ShowDialog() = Windows.Forms.DialogResult.OK Then
+        If OPD.ShowDialog() = True Then
             Try
                 PictureBox1.Load(OPD.FileName)
             Catch ex As Exception
