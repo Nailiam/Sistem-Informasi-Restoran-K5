@@ -33,7 +33,6 @@ Partial Class Main_Menu
         Me.DataMenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LaporanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataPelangganToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DataPemesananBaruToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TransaksiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataKasirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataPembayaranToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -116,7 +115,7 @@ Partial Class Main_Menu
         '
         'LaporanToolStripMenuItem
         '
-        Me.LaporanToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DataPelangganToolStripMenuItem, Me.DataPemesananBaruToolStripMenuItem})
+        Me.LaporanToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DataPelangganToolStripMenuItem})
         Me.LaporanToolStripMenuItem.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LaporanToolStripMenuItem.Name = "LaporanToolStripMenuItem"
         Me.LaporanToolStripMenuItem.Size = New System.Drawing.Size(88, 24)
@@ -125,14 +124,8 @@ Partial Class Main_Menu
         'DataPelangganToolStripMenuItem
         '
         Me.DataPelangganToolStripMenuItem.Name = "DataPelangganToolStripMenuItem"
-        Me.DataPelangganToolStripMenuItem.Size = New System.Drawing.Size(208, 24)
+        Me.DataPelangganToolStripMenuItem.Size = New System.Drawing.Size(202, 24)
         Me.DataPelangganToolStripMenuItem.Text = "Data Pelanggan "
-        '
-        'DataPemesananBaruToolStripMenuItem
-        '
-        Me.DataPemesananBaruToolStripMenuItem.Name = "DataPemesananBaruToolStripMenuItem"
-        Me.DataPemesananBaruToolStripMenuItem.Size = New System.Drawing.Size(208, 24)
-        Me.DataPemesananBaruToolStripMenuItem.Text = "Data Pemesanan "
         '
         'TransaksiToolStripMenuItem
         '
@@ -221,7 +214,6 @@ Partial Class Main_Menu
     Friend WithEvents DataKaryawanToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LaporanToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DataPelangganToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DataPemesananBaruToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TransaksiToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DataKasirToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DataPembayaranToolStripMenuItem As ToolStripMenuItem
