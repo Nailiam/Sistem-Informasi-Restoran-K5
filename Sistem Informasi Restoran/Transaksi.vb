@@ -25,7 +25,7 @@
     Sub RumusGrandTotal()
         Dim hitung As Integer = 0
         For i As Integer = 0 To DataGridView1.Rows.Count - 1
-            hitung = hitung + DataGridView1.Rows(i).Cells(4).Value + txtpajak.Text
+            hitung = hitung + DataGridView1.Rows(i).Cells(5).Value
             txtGrandtotal.Text = hitung
         Next
     End Sub
@@ -61,11 +61,11 @@
     End Sub
     Private Sub txtjumlah_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtjumlah.KeyPress
         If e.KeyChar = Chr(13) Then
-            If txtnama.Text = "" Or txtharga.Text = "" Then
+            If txtnama.Text = "" Or txtharga.Text = "" Or txtpajak.Text = "" Then
                 MsgBox("Masukkan Kode Kode Barang dan tekan enter ")
             Else
                 DataGridView1.Rows.Add(New String() {txt_Kodepesanan.Text,
-                 txtnama.Text, txtharga.Text, txtjumlah.Text, Val(txtharga.Text) * Val(txtjumlah.Text)})
+                 txtnama.Text, txtharga.Text, txtjumlah.Text, Val(txtharga.Text) * Val(txtjumlah.Text) * Val(txtpajak.Text), Val(txtharga.Text) * Val(txtjumlah.Text) + Val(txtharga.Text) * Val(txtjumlah.Text) * Val(txtpajak.Text)})
                 Call RumusGrandTotal()
                 Call kosongkanitem()
                 txt_Kodepesanan.Focus()
@@ -73,6 +73,7 @@
             End If
         End If
     End Sub
+
     Sub Nomorfakturotomatis()
         Call koneksiDB()
         CMD = New OleDb.OleDbCommand("Select * from Transaksi where Kode_Struk in (select max(Kode_Struk) from Transaksi)", Conn)
@@ -112,16 +113,6 @@
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Call kosongkanitem()
     End Sub
-
-
-    Private Sub txtkembali_TextChanged(sender As Object, e As EventArgs) Handles txtkembali.TextChanged
-        txtkembali.Text = Val(txtGrandtotal.Text) - Val(txtbayar.Text)
-    End Sub
-
-    Private Sub txtpajak_TextChanged(sender As Object, e As EventArgs) Handles txtpajak.TextChanged
-        txtpajak.Text = Val(txtpajak.Text) + Val(txtharga.Text) * 0.1
-    End Sub
-
     Private Sub txtbayar_TextChanged(sender As Object, e As EventArgs) Handles txtbayar.TextChanged
         If Val(txtbayar.Text) < Val(txtGrandtotal.Text) Then
             MsgBox("Uang Pembayaran Kurang")
