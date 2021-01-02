@@ -135,7 +135,7 @@ Partial Class Data_Menu
         '
         'txt_NamaMenu
         '
-        Me.txt_NamaMenu.Location = New System.Drawing.Point(125, 61)
+        Me.txt_NamaMenu.Location = New System.Drawing.Point(125, 94)
         Me.txt_NamaMenu.Name = "txt_NamaMenu"
         Me.txt_NamaMenu.Size = New System.Drawing.Size(121, 20)
         Me.txt_NamaMenu.TabIndex = 12
@@ -143,7 +143,7 @@ Partial Class Data_Menu
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 68)
+        Me.Label3.Location = New System.Drawing.Point(7, 97)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(71, 13)
         Me.Label3.TabIndex = 11
@@ -153,7 +153,7 @@ Partial Class Data_Menu
         '
         Me.cmb_JenisMenu.FormattingEnabled = True
         Me.cmb_JenisMenu.Items.AddRange(New Object() {"Appetizer", "Main Course", "Dessert", "Snack", "Cold", "Hot", "Juice"})
-        Me.cmb_JenisMenu.Location = New System.Drawing.Point(125, 91)
+        Me.cmb_JenisMenu.Location = New System.Drawing.Point(125, 63)
         Me.cmb_JenisMenu.Name = "cmb_JenisMenu"
         Me.cmb_JenisMenu.Size = New System.Drawing.Size(121, 21)
         Me.cmb_JenisMenu.TabIndex = 10
@@ -184,7 +184,7 @@ Partial Class Data_Menu
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(6, 99)
+        Me.Label2.Location = New System.Drawing.Point(6, 66)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(67, 13)
         Me.Label2.TabIndex = 1

@@ -25,7 +25,7 @@
     Sub RumusGrandTotal()
         Dim hitung As Integer = 0
         For i As Integer = 0 To DataGridView1.Rows.Count - 1
-            hitung = hitung + DataGridView1.Rows(i).Cells(4).Value
+            hitung = hitung + DataGridView1.Rows(i).Cells(4).Value + txtpajak.Text
             txtGrandtotal.Text = hitung
         Next
     End Sub
@@ -115,11 +115,11 @@
 
 
     Private Sub txtkembali_TextChanged(sender As Object, e As EventArgs) Handles txtkembali.TextChanged
-        Kembali.Text = Val(txtGrandtotal.Text) - Val(txtbayar.Text)
+        txtkembali.Text = Val(txtGrandtotal.Text) - Val(txtbayar.Text)
     End Sub
 
     Private Sub txtpajak_TextChanged(sender As Object, e As EventArgs) Handles txtpajak.TextChanged
-        Pajak.Text = Val(txtpajak.Text) + Val(txtharga.Text) * 0.1
+        txtpajak.Text = Val(txtpajak.Text) + Val(txtharga.Text) * 0.1
     End Sub
 
     Private Sub txtbayar_TextChanged(sender As Object, e As EventArgs) Handles txtbayar.TextChanged
@@ -180,7 +180,11 @@ DataGridView1.Rows(baris).Cells(0).Value & "'"
         Next
     End Sub
 
+ 
 
+    Private Sub txt_Kodepesanan_TextChanged(sender As Object, e As EventArgs) Handles txt_Kodepesanan.TextChanged
+
+    End Sub
 End Class
 
 
