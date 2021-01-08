@@ -42,4 +42,8 @@
     Private Sub ReportBerdasarkanHargaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportBerdasarkanHargaToolStripMenuItem.Click
         Interval_Harga.Show()
     End Sub
+
+    Private Sub ReportCobaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportCobaToolStripMenuItem.Click
+        Form_Report_Coba.Show()
+    End Sub
 End Class

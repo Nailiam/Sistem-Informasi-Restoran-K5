@@ -154,6 +154,12 @@
     <Compile Include="Form Report Berdasarkan Harga.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form Report Coba.Designer.vb">
+      <DependentUpon>Form Report Coba.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Report Coba.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form Report Data Menu.Designer.vb">
       <DependentUpon>Form Report Data Menu.vb</DependentUpon>
     </Compile>
@@ -249,6 +255,12 @@
       <DependentUpon>Report Berdasarkan Harga.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Report Coba.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report Coba.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Report Data Menu.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -283,6 +295,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form Report Berdasarkan Harga.resx">
       <DependentUpon>Form Report Berdasarkan Harga.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Report Coba.resx">
+      <DependentUpon>Form Report Coba.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form Report Data Menu.resx">
       <DependentUpon>Form Report Data Menu.vb</DependentUpon>
@@ -329,6 +344,10 @@
     <EmbeddedResource Include="Report Berdasarkan Harga.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Report Berdasarkan Harga.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Coba.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report Coba.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report Data Menu.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

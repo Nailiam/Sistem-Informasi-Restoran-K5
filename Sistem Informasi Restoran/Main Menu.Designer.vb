@@ -42,6 +42,7 @@ Partial Class Main_Menu
         Me.ReportDataPelanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportPeriodikTransaksiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportBerdasarkanHargaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportCobaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip2.SuspendLayout()
         Me.SuspendLayout()
@@ -155,7 +156,7 @@ Partial Class Main_Menu
         '
         'ReportToolStripMenuItem
         '
-        Me.ReportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportDataMenuToolStripMenuItem, Me.ReportDataPelanToolStripMenuItem, Me.ReportPeriodikTransaksiToolStripMenuItem, Me.ReportBerdasarkanHargaToolStripMenuItem})
+        Me.ReportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportDataMenuToolStripMenuItem, Me.ReportDataPelanToolStripMenuItem, Me.ReportPeriodikTransaksiToolStripMenuItem, Me.ReportBerdasarkanHargaToolStripMenuItem, Me.ReportCobaToolStripMenuItem})
         Me.ReportToolStripMenuItem.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
         Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(71, 24)
@@ -184,6 +185,12 @@ Partial Class Main_Menu
         Me.ReportBerdasarkanHargaToolStripMenuItem.Name = "ReportBerdasarkanHargaToolStripMenuItem"
         Me.ReportBerdasarkanHargaToolStripMenuItem.Size = New System.Drawing.Size(279, 24)
         Me.ReportBerdasarkanHargaToolStripMenuItem.Text = "Report Berdasarkan Harga"
+        '
+        'ReportCobaToolStripMenuItem
+        '
+        Me.ReportCobaToolStripMenuItem.Name = "ReportCobaToolStripMenuItem"
+        Me.ReportCobaToolStripMenuItem.Size = New System.Drawing.Size(279, 24)
+        Me.ReportCobaToolStripMenuItem.Text = "Report Coba"
         '
         'Main_Menu
         '
@@ -224,4 +231,5 @@ Partial Class Main_Menu
     Friend WithEvents ReportDataPelanToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportPeriodikTransaksiToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportBerdasarkanHargaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReportCobaToolStripMenuItem As ToolStripMenuItem
 End Class
