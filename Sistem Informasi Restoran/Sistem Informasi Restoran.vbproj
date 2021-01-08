@@ -101,17 +101,10 @@
     <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="MessagingToolkit.Barcode">
-<<<<<<< Updated upstream
       <HintPath>..\..\MessagingToolkit.Barcode.dll</HintPath>
     </Reference>
     <Reference Include="MessagingToolkit.QRCode">
       <HintPath>..\..\MessagingToolkit.QRCode.dll</HintPath>
-=======
-      <HintPath>..\..\..\300\Downloads\Add Reference\MessagingToolkit.Barcode.dll</HintPath>
-    </Reference>
-    <Reference Include="MessagingToolkit.QRCode %281%29">
-      <HintPath>..\..\..\300\Downloads\Add Reference\MessagingToolkit.QRCode (1).dll</HintPath>
->>>>>>> Stashed changes
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -126,11 +119,7 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
     <Reference Include="WebCam_Capture">
-<<<<<<< Updated upstream
       <HintPath>..\..\WebCam_Capture.dll</HintPath>
-=======
-      <HintPath>..\..\..\300\Downloads\Add Reference\WebCam_Capture.dll</HintPath>
->>>>>>> Stashed changes
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -147,12 +136,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bayar.Designer.vb">
-      <DependentUpon>Bayar.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Bayar.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Data Karyawan.Designer.vb">
       <DependentUpon>Data Karyawan.vb</DependentUpon>
     </Compile>

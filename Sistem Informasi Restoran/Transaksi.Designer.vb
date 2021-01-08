@@ -63,16 +63,12 @@ Partial Class Transaksi
         Me.Pajak = New System.Windows.Forms.Label()
         Me.txtpajak = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-<<<<<<< Updated upstream
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-=======
-        Me.Button1 = New System.Windows.Forms.Button()
->>>>>>> Stashed changes
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -436,7 +432,6 @@ Partial Class Transaksi
         'Timer1
         '
         '
-<<<<<<< Updated upstream
         'Column1
         '
         Me.Column1.HeaderText = "Kode Pesanan"
@@ -466,23 +461,12 @@ Partial Class Transaksi
         '
         Me.Column6.HeaderText = "Sub Total"
         Me.Column6.Name = "Column6"
-=======
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(469, 417)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 33)
-        Me.Button1.TabIndex = 18
-        Me.Button1.Text = "Hitung"
-        Me.Button1.UseVisualStyleBackColor = True
->>>>>>> Stashed changes
         '
         'Transaksi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(838, 468)
-        Me.Controls.Add(Me.Button1)
+        Me.ClientSize = New System.Drawing.Size(838, 449)
         Me.Controls.Add(Me.txtpajak)
         Me.Controls.Add(Me.Pajak)
         Me.Controls.Add(Me.Kembali)
@@ -555,10 +539,5 @@ Partial Class Transaksi
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
-<<<<<<< Updated upstream
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
-=======
-    Friend WithEvents Timer1 As Timer
-    Friend WithEvents Button1 As Button
->>>>>>> Stashed changes
 End Class

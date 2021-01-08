@@ -113,21 +113,7 @@
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Call kosongkanitem()
     End Sub
-<<<<<<< Updated upstream
     Private Sub txtbayar_TextChanged(sender As Object, e As EventArgs) Handles txtbayar.TextChanged
-=======
-
-
-    Private Sub txtkembali_TextChanged(sender As Object, e As EventArgs) Handles txtkembali.TextChanged
-        Kembali.Text = Val(txtGrandtotal.Text) - Val(txtbayar.Text)
-    End Sub
-
-    Private Sub txtpajak_TextChanged(sender As Object, e As EventArgs) Handles txtpajak.TextChanged
-        Pajak.Text = Val(txtpajak.Text) + Val(txtharga.Text) * 0.1
-    End Sub
-
-    Private Sub txtbayar_TextChanged(sender As Object, e As EventArgs) Handles Button1.Click
->>>>>>> Stashed changes
         If Val(txtbayar.Text) < Val(txtGrandtotal.Text) Then
             MsgBox("Uang Pembayaran Kurang")
         ElseIf Val(txtbayar.Text) = Val(txtGrandtotal.Text) Then
