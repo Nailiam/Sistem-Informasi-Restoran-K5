@@ -7,13 +7,13 @@
         If e.KeyChar = Chr(13) Then
             'Chr(13) itu Tombol ENTER
             Call koneksiDB()
-            CMD = New OleDb.OleDbCommand("Select * from Menu where Kode ='" & txt_Kodepesanan.Text & "'", Conn)
+            CMD = New OleDb.OleDbCommand("Select * from Menu where ID_Menu ='" & txt_Kodepesanan.Text & "'", Conn)
             DM = CMD.ExecuteReader
             DM.Read()
             If Not DM.HasRows Then
-                MsgBox("Kode Tidak Ada")
+                MsgBox("Kode Menu Tidak Ada")
             Else
-                txt_Kodepesanan.Text = DM.Item("Kode")
+                txt_Kodepesanan.Text = DM.Item("ID_Menu")
                 txtnama.Text = DM.Item("Nama")
                 txtharga.Text = DM.Item("Harga")
                 txtjumlah.Enabled = True
@@ -95,12 +95,12 @@
     Private Sub txtidpelanggan_TextChanged(sender As Object, e As EventArgs) Handles txtidpelanggan.TextChanged
         Try
             Call koneksiDB()
-            CMD = New OleDb.OleDbCommand(" select * from Karyawan where id_Kasir ='" & txtkodestruk.Text & "'", Conn)
+            CMD = New OleDb.OleDbCommand(" select * from Pelanggan where ID_Pelanggan ='" & txtidpelanggan.Text & "'", Conn)
             DM = CMD.ExecuteReader
 
             If DM.HasRows = True Then
                 DM.Read()
-                txtkodestruk.Text = DM.Item("id_Kasir")
+                txtidpelanggan.Text = DM.Item("ID_Pelanggan")
                 txtnamapelanggan.Text = DM.Item("Nama_Pelanggan")
                 txtnomeja.Text = DM.Item("Nomer_Meja")
                 txt_Kodepesanan.Focus()
@@ -133,7 +133,7 @@
             MsgBox("Data Transaksi Belum Lengkap")
             'Pengecekan , apabila transaksi belum terjadi maka tidak bisa di ENTER
         Else
-            Dim Simpantransaksi As String = "Insert into Penjualan values ('" &
+            Dim Simpantransaksi As String = "Insert into Transaksi values ('" &
 txtkodestruk.Text & "' , '" & txttgltransaksi.Text & "' , '" & txtjamtransaksi.Text &
 "', '" & txtidpelanggan.Text & "', '" & txtnamapelanggan.Text & "', '" & txtitems.Text &
 "','" & txtbayar.Text & "','" & txtkembali.Text & "', '" & txtGrandtotal.Text & "')"
@@ -141,7 +141,7 @@ txtkodestruk.Text & "' , '" & txttgltransaksi.Text & "' , '" & txtjamtransaksi.T
             CMD.ExecuteNonQuery()
             'Data disimpan di tabel Penjualan
             For baris As Integer = 0 To DataGridView1.Rows.Count - 2
-                Dim Simpandetail As String = "Insert into Detail_jual values ('" &
+                Dim Simpandetail As String = "Insert into Transaksi values ('" &
 txtkodestruk.Text & "', '" & DataGridView1.Rows(baris).Cells(0).Value & "', '" &
 DataGridView1.Rows(baris).Cells(1).Value & "', '" &
 DataGridView1.Rows(baris).Cells(2).Value & "', '" &
@@ -153,11 +153,11 @@ DataGridView1.Rows(baris).Cells(4).Value & "')"
 DataGridView1.Rows(baris).Cells(0).Value & "'", Conn)
                 DM = CMD.ExecuteReader
                 DM.Read()
-                Dim kurangistok As String = "Update Transaksi set Stok = '" &
-DM.Item("Stok") - DataGridView1.Rows(baris).Cells(3).Value & "' where Kode_struk = '" &
-DataGridView1.Rows(baris).Cells(0).Value & "'"
-                CMD = New OleDb.OleDbCommand(kurangistok, Conn)
-                CMD.ExecuteNonQuery()
+                'Dim kurangistok As String = "Update Transaksi set Stok = '" &
+                'DM.Item("Stok") - DataGridView1.Rows(baris).Cells(3).Value & "' where Kode_struk = '" &
+                'DataGridView1.Rows(baris).Cells(0).Value & "'"
+                'CMD = New OleDb.OleDbCommand(kurangistok, Conn)
+                'CMD.ExecuteNonQuery()
             Next
             MsgBox("Transaksi Telah Tersimpan")
             Call kondisiawal()
@@ -169,12 +169,6 @@ DataGridView1.Rows(baris).Cells(0).Value & "'"
             hitungitem = hitungitem + DataGridView1.Rows(i).Cells(3).Value
             txtitems.Text = hitungitem
         Next
-    End Sub
-
- 
-
-    Private Sub txt_Kodepesanan_TextChanged(sender As Object, e As EventArgs) Handles txt_Kodepesanan.TextChanged
-
     End Sub
 End Class
 

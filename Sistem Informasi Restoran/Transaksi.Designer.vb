@@ -67,7 +67,6 @@ Partial Class Transaksi
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -311,9 +310,9 @@ Partial Class Transaksi
         Me.Label9.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.Location = New System.Drawing.Point(2, 26)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(128, 19)
+        Me.Label9.Size = New System.Drawing.Size(104, 19)
         Me.Label9.TabIndex = 0
-        Me.Label9.Text = "Kode Pesanan"
+        Me.Label9.Text = "Kode Menu"
         '
         'GroupBox3
         '
@@ -328,8 +327,8 @@ Partial Class Transaksi
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6})
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 19)
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column6})
+        Me.DataGridView1.Location = New System.Drawing.Point(6, 19)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(772, 81)
         Me.DataGridView1.TabIndex = 16
@@ -434,12 +433,12 @@ Partial Class Transaksi
         '
         'Column1
         '
-        Me.Column1.HeaderText = "Kode Pesanan"
+        Me.Column1.HeaderText = "Kode Menu"
         Me.Column1.Name = "Column1"
         '
         'Column2
         '
-        Me.Column2.HeaderText = "Nama Pelanggan"
+        Me.Column2.HeaderText = "Nama "
         Me.Column2.Name = "Column2"
         '
         'Column3
@@ -451,11 +450,6 @@ Partial Class Transaksi
         '
         Me.Column4.HeaderText = "Jumlah "
         Me.Column4.Name = "Column4"
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Pajak"
-        Me.Column5.Name = "Column5"
         '
         'Column6
         '
@@ -538,6 +532,5 @@ Partial Class Transaksi
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
 End Class

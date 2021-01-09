@@ -51,7 +51,7 @@
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        If txt_IdMenu.Text = "" Or txt_NamaMenu.Text = "" Or cmb_JenisMenu.Text = "" Or txt_HargaMenu.Text = "" Then
+        If txt_IdMenu.Text = "" Or cmb_JenisMenu.Text = "" Or txt_NamaMenu.Text = "" Or txt_HargaMenu.Text = "" Then
             MsgBox("Data Menu Belum Lengkap")
             Exit Sub
 
@@ -64,8 +64,7 @@
             If Not DM.HasRows Then
                 Call koneksiDB()
                 Dim simpan As String
-                simpan = "insert into Menu values ('" & txt_IdMenu.Text & "', '" & txt_NamaMenu.Text & "', '" &
-                cmb_JenisMenu.Text & "', '" & txt_HargaMenu.Text & "')"
+                simpan = "insert into Menu values ('" & txt_IdMenu.Text & "', '" & cmb_JenisMenu.Text & "','" & txt_NamaMenu.Text & "', '" & txt_HargaMenu.Text & "')"
 
                 CMD = New OleDb.OleDbCommand(simpan, Conn)
                 CMD.ExecuteNonQuery()
@@ -82,8 +81,8 @@
     Private Sub DGV_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV.CellContentClick
         On Error Resume Next
         txt_IdMenu.Text = DGV.Rows(e.RowIndex).Cells(0).Value
-        txt_NamaMenu.Text = DGV.Rows(e.RowIndex).Cells(1).Value
-        cmb_JenisMenu.Text = DGV.Rows(e.RowIndex).Cells(2).Value
+        cmb_JenisMenu.Text = DGV.Rows(e.RowIndex).Cells(1).Value
+        txt_NamaMenu.Text = DGV.Rows(e.RowIndex).Cells(2).Value
         txt_HargaMenu.Text = DGV.Rows(e.RowIndex).Cells(3).Value
 
         Call HidupkanForm()
@@ -91,14 +90,13 @@
     End Sub
 
     Private Sub btnedit_Click(sender As Object, e As EventArgs) Handles btnedit.Click
-        If txt_IdMenu.Text = "" Or txt_NamaMenu.Text = "" Or cmb_JenisMenu.Text = "" Or txt_HargaMenu.Text = "" Then
+        If txt_IdMenu.Text = "" Or cmb_JenisMenu.Text = "" Or txt_NamaMenu.Text = "" Or txt_HargaMenu.Text = "" Then
             MsgBox("Data Menu Belum Lengkap")
             Exit Sub
 
         Else
             Call koneksiDB()
-            CMD = New OleDb.OleDbCommand(" update Menu set Nama = '" & txt_NamaMenu.Text & "', Jenis = '" &
-            cmb_JenisMenu.Text & "', Harga = '" & txt_HargaMenu.Text & "'  where ID_Menu ='" & txt_IdMenu.Text & "'", Conn)
+            CMD = New OleDb.OleDbCommand(" update Menu set Jenis = '" & cmb_JenisMenu.Text & "', Nama = '" & txt_NamaMenu.Text & "', Harga = '" & txt_HargaMenu.Text & "'  where ID_Menu ='" & txt_IdMenu.Text & "'", Conn)
             DM = CMD.ExecuteReader
             MsgBox("Update Data Berhasil")
 
