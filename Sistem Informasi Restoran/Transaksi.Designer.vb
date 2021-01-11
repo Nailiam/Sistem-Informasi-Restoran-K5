@@ -44,13 +44,18 @@ Partial Class Transaksi
         Me.txtjumlah = New System.Windows.Forms.TextBox()
         Me.txtharga = New System.Windows.Forms.TextBox()
         Me.txtnama = New System.Windows.Forms.TextBox()
-        Me.txt_Kodepesanan = New System.Windows.Forms.TextBox()
+        Me.txt_KodeMenu = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btn_save = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btn_tutup = New System.Windows.Forms.Button()
@@ -63,11 +68,6 @@ Partial Class Transaksi
         Me.Pajak = New System.Windows.Forms.Label()
         Me.txtpajak = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -234,7 +234,7 @@ Partial Class Transaksi
         Me.GroupBox2.Controls.Add(Me.txtjumlah)
         Me.GroupBox2.Controls.Add(Me.txtharga)
         Me.GroupBox2.Controls.Add(Me.txtnama)
-        Me.GroupBox2.Controls.Add(Me.txt_Kodepesanan)
+        Me.GroupBox2.Controls.Add(Me.txt_KodeMenu)
         Me.GroupBox2.Controls.Add(Me.Label12)
         Me.GroupBox2.Controls.Add(Me.Label11)
         Me.GroupBox2.Controls.Add(Me.Label10)
@@ -267,12 +267,12 @@ Partial Class Transaksi
         Me.txtnama.Size = New System.Drawing.Size(128, 20)
         Me.txtnama.TabIndex = 10
         '
-        'txt_Kodepesanan
+        'txt_KodeMenu
         '
-        Me.txt_Kodepesanan.Location = New System.Drawing.Point(136, 26)
-        Me.txt_Kodepesanan.Name = "txt_Kodepesanan"
-        Me.txt_Kodepesanan.Size = New System.Drawing.Size(107, 20)
-        Me.txt_Kodepesanan.TabIndex = 9
+        Me.txt_KodeMenu.Location = New System.Drawing.Point(136, 26)
+        Me.txt_KodeMenu.Name = "txt_KodeMenu"
+        Me.txt_KodeMenu.Size = New System.Drawing.Size(107, 20)
+        Me.txt_KodeMenu.TabIndex = 9
         '
         'Label12
         '
@@ -332,6 +332,31 @@ Partial Class Transaksi
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(772, 81)
         Me.DataGridView1.TabIndex = 16
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "ID Menu"
+        Me.Column1.Name = "Column1"
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Nama Menu"
+        Me.Column2.Name = "Column2"
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Harga"
+        Me.Column3.Name = "Column3"
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Jumlah "
+        Me.Column4.Name = "Column4"
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "Sub Total"
+        Me.Column6.Name = "Column6"
         '
         'btn_save
         '
@@ -431,31 +456,6 @@ Partial Class Transaksi
         'Timer1
         '
         '
-        'Column1
-        '
-        Me.Column1.HeaderText = "ID Menu"
-        Me.Column1.Name = "Column1"
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Nama Menu"
-        Me.Column2.Name = "Column2"
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Harga"
-        Me.Column3.Name = "Column3"
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Jumlah "
-        Me.Column4.Name = "Column4"
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "Sub Total"
-        Me.Column6.Name = "Column6"
-        '
         'Transaksi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -509,7 +509,7 @@ Partial Class Transaksi
     Friend WithEvents txtjumlah As TextBox
     Friend WithEvents txtharga As TextBox
     Friend WithEvents txtnama As TextBox
-    Friend WithEvents txt_Kodepesanan As TextBox
+    Friend WithEvents txt_KodeMenu As TextBox
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label

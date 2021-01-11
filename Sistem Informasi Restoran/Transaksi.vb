@@ -3,17 +3,17 @@
         Call kondisiawal()
         Call Nomorfakturotomatis()
     End Sub
-    Private Sub txt_Kode_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txt_Kodepesanan.KeyPress
+    Private Sub txt_Kode_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txt_KodeMenu.KeyPress
         If e.KeyChar = Chr(13) Then
             'Chr(13) itu Tombol ENTER
             Call koneksiDB()
-            CMD = New OleDb.OleDbCommand("Select * from Menu where ID_Menu ='" & txt_Kodepesanan.Text & "'", Conn)
+            CMD = New OleDb.OleDbCommand("Select * from Menu where ID_Menu ='" & txt_KodeMenu.Text & "'", Conn)
             DM = CMD.ExecuteReader
             DM.Read()
             If Not DM.HasRows Then
                 MsgBox("Kode Menu Tidak Ada")
             Else
-                txt_Kodepesanan.Text = DM.Item("ID_Menu")
+                txt_KodeMenu.Text = DM.Item("ID_Menu")
                 txtnama.Text = DM.Item("Nama")
                 txtharga.Text = DM.Item("Harga")
                 txtjumlah.Enabled = True
@@ -28,10 +28,6 @@
             hitung = hitung + DataGridView1.Rows(i).Cells(5).Value
             txtGrandtotal.Text = hitung
         Next
-    End Sub
-
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-
     End Sub
     Private Sub txtbayar_keypress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtbayar.KeyPress
         If e.KeyChar = Chr(13) Then
@@ -62,13 +58,13 @@
     Private Sub txtjumlah_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtjumlah.KeyPress
         If e.KeyChar = Chr(13) Then
             If txtnama.Text = "" Or txtharga.Text = "" Or txtpajak.Text = "" Then
-                MsgBox("Masukkan Kode Kode Barang dan tekan enter ")
+                MsgBox("Masukkan Kode Menu dan tekan enter ")
             Else
-                DataGridView1.Rows.Add(New String() {txt_Kodepesanan.Text,
+                DataGridView1.Rows.Add(New String() {txt_KodeMenu.Text,
                  txtnama.Text, txtharga.Text, txtjumlah.Text, Val(txtharga.Text) * Val(txtjumlah.Text) * Val(txtpajak.Text), Val(txtharga.Text) * Val(txtjumlah.Text) + Val(txtharga.Text) * Val(txtjumlah.Text) * Val(txtpajak.Text)})
                 Call RumusGrandTotal()
                 Call kosongkanitem()
-                txt_Kodepesanan.Focus()
+                txt_KodeMenu.Focus()
                 Call carijumlahitem()
             End If
         End If
@@ -103,7 +99,7 @@
                 txtidpelanggan.Text = DM.Item("ID_Pelanggan")
                 txtnamapelanggan.Text = DM.Item("Nama_Pelanggan")
                 txtnomeja.Text = DM.Item("Nomer_Meja")
-                txt_Kodepesanan.Focus()
+                txt_KodeMenu.Focus()
             End If
         Catch ex As Exception
             MsgBox("Data pelanggan tidak ada")

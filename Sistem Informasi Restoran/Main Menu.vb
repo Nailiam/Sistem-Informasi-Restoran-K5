@@ -14,17 +14,14 @@
     Private Sub DataKasirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DataKasirToolStripMenuItem.Click
         Kasir.Show()
     End Sub
-
-    Private Sub DataPembayaranToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DataPembayaranToolStripMenuItem.Click
+    Private Sub DetailTransaksiToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DetailTransaksiToolStripMenuItem.Click
+        Detail_Transaksi.Show()
+    End Sub
+    Private Sub TransaksiToolStripMenuItem1_Click_1(sender As Object, e As EventArgs) Handles TransaksiToolStripMenuItem1.Click
         Transaksi.Show()
     End Sub
-
     Private Sub btnexit_Click(sender As Object, e As EventArgs) Handles btnexit.Click
         Me.Close()
-    End Sub
-
-    Private Sub TransaksiToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles TransaksiToolStripMenuItem1.Click
-        Transaksi.Show()
     End Sub
 
     Private Sub ReportDataMenuToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportDataMenuToolStripMenuItem.Click

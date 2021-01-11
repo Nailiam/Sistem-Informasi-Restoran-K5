@@ -28,7 +28,7 @@
     End Sub
     Sub TampilkanData()
         Call koneksiDB()
-        DA = New OleDb.OleDbDataAdapter("select  * From Detail Transaksi ", Conn)
+        DA = New OleDb.OleDbDataAdapter("select * From Detail Transaksi ", Conn)
         DS = New DataSet
         DA.Fill(DS)
         DGV.DataSource = DS.Tables(0)
@@ -63,14 +63,14 @@
 
         Else
             Call koneksiDB()
-            CMD = New OleDb.OleDbCommand(" select * from Menu where ID_Menu='" & txt_KodeStruk.Text & "'", Conn)
+            CMD = New OleDb.OleDbCommand(" select * from Detail Transaksi where Kode_Struk ='" & txt_KodeStruk.Text & "'", Conn)
             DM = CMD.ExecuteReader
             DM.Read()
 
             If Not DM.HasRows Then
                 Call koneksiDB()
                 Dim simpan As String
-                simpan = "insert into Menu values ('" & txt_KodeStruk.Text & "', '" & txt_IDMenu.Text & "','" & txt_NamaMenu.Text & "', '" & txt_Harga.Text & "','" & txt_Jumlah.Text & "', '" & txt_Subtotal.Text & "')"
+                simpan = "insert into Detail Transaksi values ('" & txt_KodeStruk.Text & "', '" & txt_IDMenu.Text & "','" & txt_NamaMenu.Text & "', '" & txt_Harga.Text & "','" & txt_Jumlah.Text & "', '" & txt_Subtotal.Text & "')"
 
                 CMD = New OleDb.OleDbCommand(simpan, Conn)
                 CMD.ExecuteNonQuery()
@@ -125,7 +125,7 @@
            "Konfirmasi", MessageBoxButtons.YesNoCancel) Then
 
                 Call koneksiDB()
-                CMD = New OleDb.OleDbCommand(" delete from Menu where ID_Menu ='" & txt_KodeStruk.Text & "'", Conn)
+                CMD = New OleDb.OleDbCommand(" delete from Detail Transaksi where Kode_Struk ='" & txt_KodeStruk.Text & "'", Conn)
                 DM = CMD.ExecuteReader
                 MsgBox("Hapus Data Berhasil")
                 Call MatikanForm()
