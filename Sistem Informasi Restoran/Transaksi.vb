@@ -41,10 +41,10 @@
         End If
     End Sub
     Sub kosongkanitem()
-        txtkodestruk.Text = ""
-        txtidpelanggan.Text = ""
-        txtnamapelanggan.Text = ""
-        txtnomeja.Text = ""
+        txt_KodeMenu.Text = ""
+        txtnama.Text = ""
+        txtharga.Text = ""
+        txtjumlah.Text = ""
     End Sub
     Sub kondisiawal()
         txttgltransaksi.Text = Today
