@@ -104,7 +104,7 @@
       <HintPath>..\..\..\300\Downloads\Add Reference\MessagingToolkit.Barcode.dll</HintPath>
     </Reference>
     <Reference Include="MessagingToolkit.QRCode">
-      <HintPath>..\..\..\..\Downloads\MessagingToolkit.QRCode.dll</HintPath>
+      <HintPath>..\..\..\300\Downloads\Add Reference\MessagingToolkit.QRCode.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -390,6 +390,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
