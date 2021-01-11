@@ -21,7 +21,6 @@
             End If
         End If
     End Sub
-
     Sub RumusGrandTotal()
         Dim hitung As Integer = 0
         For i As Integer = 0 To DataGridView1.Rows.Count - 1
