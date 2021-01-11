@@ -62,7 +62,7 @@
             Else
                 DataGridView1.Rows.Add(New String() {txt_KodeMenu.Text,
                  txtnama.Text, txtharga.Text, txtjumlah.Text, Val(txtharga.Text) * Val(txtjumlah.Text) * Val(txtpajak.Text), Val(txtharga.Text) * Val(txtjumlah.Text) + Val(txtharga.Text) * Val(txtjumlah.Text) * Val(txtpajak.Text)})
-                Call RumusGrandTotal()
+                'Call RumusGrandTotal()
                 Call kosongkanitem()
                 txt_KodeMenu.Focus()
                 Call carijumlahitem()
