@@ -68,6 +68,7 @@ Partial Class Transaksi
         Me.Pajak = New System.Windows.Forms.Label()
         Me.txtpajak = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -169,7 +170,7 @@ Partial Class Transaksi
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(563, 131)
+        Me.Label7.Location = New System.Drawing.Point(567, 131)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(30, 13)
         Me.Label7.TabIndex = 6
@@ -360,7 +361,7 @@ Partial Class Transaksi
         '
         'btn_save
         '
-        Me.btn_save.Location = New System.Drawing.Point(16, 394)
+        Me.btn_save.Location = New System.Drawing.Point(4, 394)
         Me.btn_save.Name = "btn_save"
         Me.btn_save.Size = New System.Drawing.Size(75, 33)
         Me.btn_save.TabIndex = 0
@@ -369,7 +370,7 @@ Partial Class Transaksi
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(140, 394)
+        Me.btnCancel.Location = New System.Drawing.Point(96, 394)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(75, 33)
         Me.btnCancel.TabIndex = 14
@@ -378,7 +379,7 @@ Partial Class Transaksi
         '
         'btn_tutup
         '
-        Me.btn_tutup.Location = New System.Drawing.Point(264, 394)
+        Me.btn_tutup.Location = New System.Drawing.Point(188, 394)
         Me.btn_tutup.Name = "btn_tutup"
         Me.btn_tutup.Size = New System.Drawing.Size(75, 33)
         Me.btn_tutup.TabIndex = 15
@@ -389,7 +390,7 @@ Partial Class Transaksi
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(367, 391)
+        Me.Label13.Location = New System.Drawing.Point(385, 394)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(55, 19)
         Me.Label13.TabIndex = 13
@@ -417,7 +418,7 @@ Partial Class Transaksi
         '
         'txtitems
         '
-        Me.txtitems.Location = New System.Drawing.Point(430, 391)
+        Me.txtitems.Location = New System.Drawing.Point(462, 394)
         Me.txtitems.Name = "txtitems"
         Me.txtitems.Size = New System.Drawing.Size(114, 20)
         Me.txtitems.TabIndex = 13
@@ -456,11 +457,21 @@ Partial Class Transaksi
         'Timer1
         '
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(279, 394)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 33)
+        Me.Button1.TabIndex = 18
+        Me.Button1.Text = "Pajak"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Transaksi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(838, 449)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.txtpajak)
         Me.Controls.Add(Me.Pajak)
         Me.Controls.Add(Me.Kembali)
@@ -533,4 +544,5 @@ Partial Class Transaksi
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Button1 As Button
 End Class
