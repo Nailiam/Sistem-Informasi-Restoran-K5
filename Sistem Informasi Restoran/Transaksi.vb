@@ -21,7 +21,6 @@
             End If
         End If
     End Sub
-
     Sub RumusGrandTotal()
         Dim hitung As Integer = 0
         For i As Integer = 0 To DataGridView1.Rows.Count - 1
@@ -62,7 +61,7 @@
             Else
                 DataGridView1.Rows.Add(New String() {txt_KodeMenu.Text,
                  txtnama.Text, txtharga.Text, txtjumlah.Text, Val(txtharga.Text) * Val(txtjumlah.Text) * Val(txtpajak.Text), Val(txtharga.Text) * Val(txtjumlah.Text) + Val(txtharga.Text) * Val(txtjumlah.Text) * Val(txtpajak.Text)})
-                'Call RumusGrandTotal()
+                Call RumusGrandTotal()
                 Call kosongkanitem()
                 txt_KodeMenu.Focus()
                 Call carijumlahitem()
