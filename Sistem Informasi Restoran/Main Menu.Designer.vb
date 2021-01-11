@@ -35,7 +35,6 @@ Partial Class Main_Menu
         Me.DataPelangganToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TransaksiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataKasirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DetailTransaksiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TransaksiToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportDataMenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -130,7 +129,7 @@ Partial Class Main_Menu
         '
         'TransaksiToolStripMenuItem
         '
-        Me.TransaksiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DataKasirToolStripMenuItem, Me.DetailTransaksiToolStripMenuItem, Me.TransaksiToolStripMenuItem1})
+        Me.TransaksiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DataKasirToolStripMenuItem, Me.TransaksiToolStripMenuItem1})
         Me.TransaksiToolStripMenuItem.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TransaksiToolStripMenuItem.Name = "TransaksiToolStripMenuItem"
         Me.TransaksiToolStripMenuItem.Size = New System.Drawing.Size(99, 24)
@@ -139,19 +138,13 @@ Partial Class Main_Menu
         'DataKasirToolStripMenuItem
         '
         Me.DataKasirToolStripMenuItem.Name = "DataKasirToolStripMenuItem"
-        Me.DataKasirToolStripMenuItem.Size = New System.Drawing.Size(201, 24)
+        Me.DataKasirToolStripMenuItem.Size = New System.Drawing.Size(158, 24)
         Me.DataKasirToolStripMenuItem.Text = "Data Kasir"
-        '
-        'DetailTransaksiToolStripMenuItem
-        '
-        Me.DetailTransaksiToolStripMenuItem.Name = "DetailTransaksiToolStripMenuItem"
-        Me.DetailTransaksiToolStripMenuItem.Size = New System.Drawing.Size(201, 24)
-        Me.DetailTransaksiToolStripMenuItem.Text = "Detail Transaksi"
         '
         'TransaksiToolStripMenuItem1
         '
         Me.TransaksiToolStripMenuItem1.Name = "TransaksiToolStripMenuItem1"
-        Me.TransaksiToolStripMenuItem1.Size = New System.Drawing.Size(201, 24)
+        Me.TransaksiToolStripMenuItem1.Size = New System.Drawing.Size(158, 24)
         Me.TransaksiToolStripMenuItem1.Text = "Transaksi"
         '
         'ReportToolStripMenuItem
@@ -230,6 +223,5 @@ Partial Class Main_Menu
     Friend WithEvents ReportPeriodikTransaksiToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportBerdasarkanHargaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportCobaToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DetailTransaksiToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TransaksiToolStripMenuItem1 As ToolStripMenuItem
 End Class
