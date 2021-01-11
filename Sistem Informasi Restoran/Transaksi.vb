@@ -25,7 +25,7 @@
     Sub RumusGrandTotal()
         Dim hitung As Integer = 0
         For i As Integer = 0 To DataGridView1.Rows.Count - 1
-            hitung = hitung + DataGridView1.Rows(i).Cells(5).Value
+            hitung = hitung + DataGridView1.Rows(i).Cells(4).Value
             txtGrandtotal.Text = hitung
         Next
     End Sub
@@ -57,11 +57,11 @@
     End Sub
     Private Sub txtjumlah_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtjumlah.KeyPress
         If e.KeyChar = Chr(13) Then
-            If txtnama.Text = "" Or txtharga.Text = "" Or txtpajak.Text = "" Then
+            If txtnama.Text = "" Or txtharga.Text = "" Then
                 MsgBox("Masukkan Kode Menu dan tekan enter ")
             Else
                 DataGridView1.Rows.Add(New String() {txt_KodeMenu.Text,
-                 txtnama.Text, txtharga.Text, txtjumlah.Text, Val(txtharga.Text) * Val(txtjumlah.Text) * Val(txtpajak.Text), Val(txtharga.Text) * Val(txtjumlah.Text) + Val(txtharga.Text) * Val(txtjumlah.Text) * Val(txtpajak.Text)})
+                 txtnama.Text, txtharga.Text, txtjumlah.Text, Val(txtharga.Text) * Val(txtjumlah.Text)})
                 Call RumusGrandTotal()
                 Call kosongkanitem()
                 txt_KodeMenu.Focus()
