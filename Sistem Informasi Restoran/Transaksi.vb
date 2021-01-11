@@ -141,7 +141,7 @@ txtkodestruk.Text & "' , '" & txttgltransaksi.Text & "' , '" & txtjamtransaksi.T
             CMD.ExecuteNonQuery()
             'Data disimpan di tabel Penjualan
             For baris As Integer = 0 To DataGridView1.Rows.Count - 2
-                Dim Simpandetail As String = "Insert into Transaksi values ('" &
+                Dim Simpandetail As String = "Insert into Detail_Transaksi values ('" &
 txtkodestruk.Text & "', '" & DataGridView1.Rows(baris).Cells(0).Value & "', '" &
 DataGridView1.Rows(baris).Cells(1).Value & "', '" &
 DataGridView1.Rows(baris).Cells(2).Value & "', '" &
@@ -149,7 +149,7 @@ DataGridView1.Rows(baris).Cells(3).Value & "', '" &
 DataGridView1.Rows(baris).Cells(4).Value & "')"
                 CMD = New OleDb.OleDbCommand(Simpandetail, Conn)
                 CMD.ExecuteNonQuery()
-                CMD = New OleDb.OleDbCommand("select * from Trasaksi where Kode_struk = '" &
+                CMD = New OleDb.OleDbCommand("select * from Detail Transaksi where ID_Menu = '" &
 DataGridView1.Rows(baris).Cells(0).Value & "'", Conn)
                 DM = CMD.ExecuteReader
                 DM.Read()

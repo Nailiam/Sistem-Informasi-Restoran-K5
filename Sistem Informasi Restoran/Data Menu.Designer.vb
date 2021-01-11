@@ -33,12 +33,12 @@ Partial Class Data_Menu
         Me.lblwelcome = New System.Windows.Forms.GroupBox()
         Me.txt_NamaMenu = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.cmb_JenisMenu = New System.Windows.Forms.ComboBox()
         Me.txt_HargaMenu = New System.Windows.Forms.TextBox()
         Me.txt_IdMenu = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.cmb_JenisMenu = New System.Windows.Forms.ComboBox()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.lblwelcome.SuspendLayout()
@@ -149,15 +149,6 @@ Partial Class Data_Menu
         Me.Label3.TabIndex = 11
         Me.Label3.Text = "Nama Menu :"
         '
-        'cmb_JenisMenu
-        '
-        Me.cmb_JenisMenu.FormattingEnabled = True
-        Me.cmb_JenisMenu.Items.AddRange(New Object() {"Appetizer", "Main Course", "Dessert", "Snack", "Cold", "Hot", "Juice"})
-        Me.cmb_JenisMenu.Location = New System.Drawing.Point(125, 63)
-        Me.cmb_JenisMenu.Name = "cmb_JenisMenu"
-        Me.cmb_JenisMenu.Size = New System.Drawing.Size(121, 21)
-        Me.cmb_JenisMenu.TabIndex = 10
-        '
         'txt_HargaMenu
         '
         Me.txt_HargaMenu.Location = New System.Drawing.Point(125, 125)
@@ -199,6 +190,15 @@ Partial Class Data_Menu
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ID Menu :"
         '
+        'cmb_JenisMenu
+        '
+        Me.cmb_JenisMenu.FormattingEnabled = True
+        Me.cmb_JenisMenu.Items.AddRange(New Object() {"Appetizer", "Main Course", "Dessert", "Snack", "Cold", "Hot", "Juice"})
+        Me.cmb_JenisMenu.Location = New System.Drawing.Point(125, 63)
+        Me.cmb_JenisMenu.Name = "cmb_JenisMenu"
+        Me.cmb_JenisMenu.Size = New System.Drawing.Size(121, 21)
+        Me.cmb_JenisMenu.TabIndex = 10
+        '
         'Data_Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -233,10 +233,10 @@ Partial Class Data_Menu
     Friend WithEvents lblwelcome As GroupBox
     Friend WithEvents txt_NamaMenu As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents cmb_JenisMenu As ComboBox
     Friend WithEvents txt_HargaMenu As TextBox
     Friend WithEvents txt_IdMenu As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents cmb_JenisMenu As ComboBox
 End Class

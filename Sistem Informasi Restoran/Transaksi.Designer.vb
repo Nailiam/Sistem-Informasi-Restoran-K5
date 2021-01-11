@@ -433,12 +433,12 @@ Partial Class Transaksi
         '
         'Column1
         '
-        Me.Column1.HeaderText = "Kode Menu"
+        Me.Column1.HeaderText = "ID Menu"
         Me.Column1.Name = "Column1"
         '
         'Column2
         '
-        Me.Column2.HeaderText = "Nama "
+        Me.Column2.HeaderText = "Nama Menu"
         Me.Column2.Name = "Column2"
         '
         'Column3
