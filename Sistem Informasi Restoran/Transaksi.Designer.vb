@@ -390,7 +390,7 @@ Partial Class Transaksi
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(385, 394)
+        Me.Label13.Location = New System.Drawing.Point(385, 388)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(55, 19)
         Me.Label13.TabIndex = 13
@@ -418,7 +418,7 @@ Partial Class Transaksi
         '
         'txtitems
         '
-        Me.txtitems.Location = New System.Drawing.Point(462, 394)
+        Me.txtitems.Location = New System.Drawing.Point(450, 390)
         Me.txtitems.Name = "txtitems"
         Me.txtitems.Size = New System.Drawing.Size(114, 20)
         Me.txtitems.TabIndex = 13
@@ -441,7 +441,7 @@ Partial Class Transaksi
         '
         Me.Pajak.AutoSize = True
         Me.Pajak.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Pajak.Location = New System.Drawing.Point(597, 364)
+        Me.Pajak.Location = New System.Drawing.Point(597, 365)
         Me.Pajak.Name = "Pajak"
         Me.Pajak.Size = New System.Drawing.Size(58, 19)
         Me.Pajak.TabIndex = 16
@@ -449,7 +449,7 @@ Partial Class Transaksi
         '
         'txtpajak
         '
-        Me.txtpajak.Location = New System.Drawing.Point(673, 366)
+        Me.txtpajak.Location = New System.Drawing.Point(673, 365)
         Me.txtpajak.Name = "txtpajak"
         Me.txtpajak.Size = New System.Drawing.Size(138, 20)
         Me.txtpajak.TabIndex = 17
@@ -459,7 +459,7 @@ Partial Class Transaksi
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(279, 394)
+        Me.Button1.Location = New System.Drawing.Point(288, 394)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 33)
         Me.Button1.TabIndex = 18

@@ -132,12 +132,12 @@ DataGridView1.Rows(baris).Cells(3).Value & "', '" &
 DataGridView1.Rows(baris).Cells(4).Value & "')"
                 CMD = New OleDb.OleDbCommand(Simpandetail, Conn)
                 CMD.ExecuteNonQuery()
-                CMD = New OleDb.OleDbCommand("select * from Detail_Transaksi where ID_Menu = '" &
+                CMD = New OleDb.OleDbCommand("select * from Menu where ID_Menu = '" &
 DataGridView1.Rows(baris).Cells(0).Value & "'", Conn)
                 DM = CMD.ExecuteReader
                 DM.Read()
-                'Dim kurangistok As String = "Update Transaksi set Stok = '" &
-                'DM.Item("Stok") - DataGridView1.Rows(baris).Cells(3).Value & "' where Kode_struk = '" &
+                'Dim kurangistok As String = "Update Menu set Stok = '" &
+                'DM.Item("Stok") - DataGridView1.Rows(baris).Cells(3).Value & "' where ID_Menu = '" &
                 'DataGridView1.Rows(baris).Cells(0).Value & "'"
                 'CMD = New OleDb.OleDbCommand(kurangistok, Conn)
                 'CMD.ExecuteNonQuery()
