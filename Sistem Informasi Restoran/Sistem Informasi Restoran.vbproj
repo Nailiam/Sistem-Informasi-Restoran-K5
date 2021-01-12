@@ -166,6 +166,12 @@
     <Compile Include="Form Report Coba.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form Report Data Kasir.Designer.vb">
+      <DependentUpon>Form Report Data Kasir.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Report Data Kasir.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form Report Data Menu.Designer.vb">
       <DependentUpon>Form Report Data Menu.vb</DependentUpon>
     </Compile>
@@ -267,6 +273,12 @@
       <DependentUpon>Report Coba.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Report Data Kasir.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report Data Kasir.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Report Data Menu.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -307,6 +319,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form Report Coba.resx">
       <DependentUpon>Form Report Coba.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Report Data Kasir.resx">
+      <DependentUpon>Form Report Data Kasir.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form Report Data Menu.resx">
       <DependentUpon>Form Report Data Menu.vb</DependentUpon>
@@ -357,6 +372,10 @@
     <EmbeddedResource Include="Report Coba.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Report Coba.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Data Kasir.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report Data Kasir.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report Data Menu.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
