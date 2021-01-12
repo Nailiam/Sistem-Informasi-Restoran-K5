@@ -214,10 +214,10 @@
     <Compile Include="Interval Tanggal.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Kasir.Designer.vb">
-      <DependentUpon>Kasir.vb</DependentUpon>
+    <Compile Include="Data Kasir.Designer.vb">
+      <DependentUpon>Data Kasir.vb</DependentUpon>
     </Compile>
-    <Compile Include="Kasir.vb">
+    <Compile Include="Data Kasir.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Koneksi.vb" />
@@ -249,10 +249,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Pelanggan.Designer.vb">
-      <DependentUpon>Pelanggan.vb</DependentUpon>
+    <Compile Include="Data Pelanggan.Designer.vb">
+      <DependentUpon>Data Pelanggan.vb</DependentUpon>
     </Compile>
-    <Compile Include="Pelanggan.vb">
+    <Compile Include="Data Pelanggan.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Report Berdasarkan Harga.vb">
@@ -332,8 +332,8 @@
     <EmbeddedResource Include="Interval Tanggal.resx">
       <DependentUpon>Interval Tanggal.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Kasir.resx">
-      <DependentUpon>Kasir.vb</DependentUpon>
+    <EmbeddedResource Include="Data Kasir.resx">
+      <DependentUpon>Data Kasir.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
@@ -347,8 +347,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pelanggan.resx">
-      <DependentUpon>Pelanggan.vb</DependentUpon>
+    <EmbeddedResource Include="Data Pelanggan.resx">
+      <DependentUpon>Data Pelanggan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report Berdasarkan Harga.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

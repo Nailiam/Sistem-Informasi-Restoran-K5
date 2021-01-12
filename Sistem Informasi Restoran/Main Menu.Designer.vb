@@ -31,10 +31,7 @@ Partial Class Main_Menu
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataKaryawanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataMenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LaporanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DataPelangganToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TransaksiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DataKasirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TransaksiToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportDataMenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -42,6 +39,8 @@ Partial Class Main_Menu
         Me.ReportPeriodikTransaksiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportBerdasarkanHargaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportCobaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DataKasirToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DataPelangganToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip2.SuspendLayout()
         Me.SuspendLayout()
@@ -86,7 +85,7 @@ Partial Class Main_Menu
         '
         'MenuStrip2
         '
-        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.LaporanToolStripMenuItem, Me.TransaksiToolStripMenuItem, Me.ReportToolStripMenuItem})
+        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.TransaksiToolStripMenuItem, Me.ReportToolStripMenuItem})
         Me.MenuStrip2.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip2.Name = "MenuStrip2"
         Me.MenuStrip2.Size = New System.Drawing.Size(697, 28)
@@ -95,7 +94,7 @@ Partial Class Main_Menu
         '
         'ToolStripMenuItem1
         '
-        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DataKaryawanToolStripMenuItem, Me.DataMenuToolStripMenuItem})
+        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DataMenuToolStripMenuItem, Me.DataPelangganToolStripMenuItem1, Me.DataKaryawanToolStripMenuItem, Me.DataKasirToolStripMenuItem1})
         Me.ToolStripMenuItem1.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
         Me.ToolStripMenuItem1.Size = New System.Drawing.Size(107, 24)
@@ -113,38 +112,18 @@ Partial Class Main_Menu
         Me.DataMenuToolStripMenuItem.Size = New System.Drawing.Size(198, 24)
         Me.DataMenuToolStripMenuItem.Text = "Data Menu"
         '
-        'LaporanToolStripMenuItem
-        '
-        Me.LaporanToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DataPelangganToolStripMenuItem})
-        Me.LaporanToolStripMenuItem.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LaporanToolStripMenuItem.Name = "LaporanToolStripMenuItem"
-        Me.LaporanToolStripMenuItem.Size = New System.Drawing.Size(88, 24)
-        Me.LaporanToolStripMenuItem.Text = "Laporan "
-        '
-        'DataPelangganToolStripMenuItem
-        '
-        Me.DataPelangganToolStripMenuItem.Name = "DataPelangganToolStripMenuItem"
-        Me.DataPelangganToolStripMenuItem.Size = New System.Drawing.Size(202, 24)
-        Me.DataPelangganToolStripMenuItem.Text = "Data Pelanggan "
-        '
         'TransaksiToolStripMenuItem
         '
-        Me.TransaksiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DataKasirToolStripMenuItem, Me.TransaksiToolStripMenuItem1})
+        Me.TransaksiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TransaksiToolStripMenuItem1})
         Me.TransaksiToolStripMenuItem.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TransaksiToolStripMenuItem.Name = "TransaksiToolStripMenuItem"
         Me.TransaksiToolStripMenuItem.Size = New System.Drawing.Size(99, 24)
         Me.TransaksiToolStripMenuItem.Text = "Transaksi "
         '
-        'DataKasirToolStripMenuItem
-        '
-        Me.DataKasirToolStripMenuItem.Name = "DataKasirToolStripMenuItem"
-        Me.DataKasirToolStripMenuItem.Size = New System.Drawing.Size(158, 24)
-        Me.DataKasirToolStripMenuItem.Text = "Data Kasir"
-        '
         'TransaksiToolStripMenuItem1
         '
         Me.TransaksiToolStripMenuItem1.Name = "TransaksiToolStripMenuItem1"
-        Me.TransaksiToolStripMenuItem1.Size = New System.Drawing.Size(158, 24)
+        Me.TransaksiToolStripMenuItem1.Size = New System.Drawing.Size(180, 24)
         Me.TransaksiToolStripMenuItem1.Text = "Transaksi"
         '
         'ReportToolStripMenuItem
@@ -185,6 +164,18 @@ Partial Class Main_Menu
         Me.ReportCobaToolStripMenuItem.Size = New System.Drawing.Size(279, 24)
         Me.ReportCobaToolStripMenuItem.Text = "Report Coba"
         '
+        'DataKasirToolStripMenuItem1
+        '
+        Me.DataKasirToolStripMenuItem1.Name = "DataKasirToolStripMenuItem1"
+        Me.DataKasirToolStripMenuItem1.Size = New System.Drawing.Size(198, 24)
+        Me.DataKasirToolStripMenuItem1.Text = "Data Kasir"
+        '
+        'DataPelangganToolStripMenuItem1
+        '
+        Me.DataPelangganToolStripMenuItem1.Name = "DataPelangganToolStripMenuItem1"
+        Me.DataPelangganToolStripMenuItem1.Size = New System.Drawing.Size(198, 24)
+        Me.DataPelangganToolStripMenuItem1.Text = "Data Pelanggan"
+        '
         'Main_Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -212,10 +203,7 @@ Partial Class Main_Menu
     Friend WithEvents MenuStrip2 As MenuStrip
     Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents DataKaryawanToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents LaporanToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DataPelangganToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TransaksiToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DataKasirToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DataMenuToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportDataMenuToolStripMenuItem As ToolStripMenuItem
@@ -224,4 +212,6 @@ Partial Class Main_Menu
     Friend WithEvents ReportBerdasarkanHargaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportCobaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TransaksiToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents DataPelangganToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents DataKasirToolStripMenuItem1 As ToolStripMenuItem
 End Class

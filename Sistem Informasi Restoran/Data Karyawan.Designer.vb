@@ -430,7 +430,7 @@ Partial Class Data_Karyawan
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Data_Karyawan"
-        Me.Text = "Data_Karyawan"
+        Me.Text = "Data Karyawan"
         CType(Me.DGV2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)

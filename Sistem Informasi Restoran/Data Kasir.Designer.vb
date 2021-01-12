@@ -31,6 +31,7 @@ Partial Class Kasir
         Me.btn_save = New System.Windows.Forms.Button()
         Me.btn_input = New System.Windows.Forms.Button()
         Me.Input_Data_Kasir = New System.Windows.Forms.GroupBox()
+        Me.cmb_agama = New System.Windows.Forms.ComboBox()
         Me.txt_alamat = New System.Windows.Forms.RichTextBox()
         Me.cmb_status = New System.Windows.Forms.ComboBox()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
@@ -49,7 +50,6 @@ Partial Class Kasir
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.LabelID = New System.Windows.Forms.Label()
-        Me.cmb_agama = New System.Windows.Forms.ComboBox()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Input_Data_Kasir.SuspendLayout()
@@ -154,6 +154,15 @@ Partial Class Kasir
         Me.Input_Data_Kasir.TabIndex = 26
         Me.Input_Data_Kasir.TabStop = False
         Me.Input_Data_Kasir.Text = "Input Data Kasir"
+        '
+        'cmb_agama
+        '
+        Me.cmb_agama.FormattingEnabled = True
+        Me.cmb_agama.Items.AddRange(New Object() {"Islam", "Budha", "Hindhu", "Kristen"})
+        Me.cmb_agama.Location = New System.Drawing.Point(137, 204)
+        Me.cmb_agama.Name = "cmb_agama"
+        Me.cmb_agama.Size = New System.Drawing.Size(109, 21)
+        Me.cmb_agama.TabIndex = 23
         '
         'txt_alamat
         '
@@ -305,15 +314,6 @@ Partial Class Kasir
         Me.LabelID.TabIndex = 0
         Me.LabelID.Text = "ID Kasir :"
         '
-        'cmb_agama
-        '
-        Me.cmb_agama.FormattingEnabled = True
-        Me.cmb_agama.Items.AddRange(New Object() {"Islam", "Budha", "Hindhu", "Kristen"})
-        Me.cmb_agama.Location = New System.Drawing.Point(137, 204)
-        Me.cmb_agama.Name = "cmb_agama"
-        Me.cmb_agama.Size = New System.Drawing.Size(109, 21)
-        Me.cmb_agama.TabIndex = 23
-        '
         'Kasir
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -328,7 +328,7 @@ Partial Class Kasir
         Me.Controls.Add(Me.btn_input)
         Me.Controls.Add(Me.Input_Data_Kasir)
         Me.Name = "Kasir"
-        Me.Text = "Kasir"
+        Me.Text = "Data Kasir"
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Input_Data_Kasir.ResumeLayout(False)

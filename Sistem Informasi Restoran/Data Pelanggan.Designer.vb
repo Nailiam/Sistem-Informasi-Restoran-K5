@@ -191,7 +191,7 @@ Partial Class Pelanggan
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Pelanggan"
-        Me.Text = "Pelanggan"
+        Me.Text = "Data Pelanggan"
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
