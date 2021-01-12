@@ -26,6 +26,7 @@
         For i As Integer = 0 To DataGridView1.Rows.Count - 1
             hitung = hitung + DataGridView1.Rows(i).Cells(4).Value
             txtGrandtotal.Text = hitung
+            txtsubtotal.Text = hitung
         Next
     End Sub
     Private Sub txtbayar_keypress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtbayar.KeyPress
@@ -123,19 +124,20 @@ txtkodestruk.Text & "' , '" & txtidpelanggan.Text & "' , '" & txtGrandtotal.Text
             CMD = New OleDb.OleDbCommand(Simpantransaksi, Conn)
             CMD.ExecuteNonQuery()
             'Data disimpan di tabel Penjualan
+
             For baris As Integer = 0 To DataGridView1.Rows.Count - 2
                 Dim Simpandetail As String = "Insert into Detail_Transaksi values ('" &
 txtkodestruk.Text & "', '" & DataGridView1.Rows(baris).Cells(0).Value & "', '" &
 DataGridView1.Rows(baris).Cells(1).Value & "', '" &
 DataGridView1.Rows(baris).Cells(2).Value & "', '" &
-DataGridView1.Rows(baris).Cells(3).Value & "', '" &
-DataGridView1.Rows(baris).Cells(4).Value & "')"
+txtitems.Text & "', '" & txtsubtotal.Text & "')"
                 CMD = New OleDb.OleDbCommand(Simpandetail, Conn)
                 CMD.ExecuteNonQuery()
-                CMD = New OleDb.OleDbCommand("select * from Menu where ID_Menu = '" &
-DataGridView1.Rows(baris).Cells(0).Value & "'", Conn)
-                DM = CMD.ExecuteReader
-                DM.Read()
+
+                'CMD = New OleDb.OleDbCommand("select * from Menu where ID_Menu = '" &
+                'DataGridView1.Rows(baris).Cells(0).Value & "'", Conn)
+                'DM = CMD.ExecuteReader
+                'DM.Read()
                 'Dim kurangistok As String = "Update Menu set Stok = '" &
                 'DM.Item("Stok") - DataGridView1.Rows(baris).Cells(3).Value & "' where ID_Menu = '" &
                 'DataGridView1.Rows(baris).Cells(0).Value & "'"

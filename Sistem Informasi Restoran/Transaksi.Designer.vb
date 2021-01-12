@@ -69,6 +69,8 @@ Partial Class Transaksi
         Me.txtpajak = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtsubtotal = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -390,7 +392,7 @@ Partial Class Transaksi
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(385, 388)
+        Me.Label13.Location = New System.Drawing.Point(385, 368)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(55, 19)
         Me.Label13.TabIndex = 13
@@ -418,7 +420,7 @@ Partial Class Transaksi
         '
         'txtitems
         '
-        Me.txtitems.Location = New System.Drawing.Point(450, 390)
+        Me.txtitems.Location = New System.Drawing.Point(477, 367)
         Me.txtitems.Name = "txtitems"
         Me.txtitems.Size = New System.Drawing.Size(114, 20)
         Me.txtitems.TabIndex = 13
@@ -466,11 +468,30 @@ Partial Class Transaksi
         Me.Button1.Text = "Pajak"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(385, 399)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(91, 19)
+        Me.Label8.TabIndex = 19
+        Me.Label8.Text = "Sub Total"
+        '
+        'txtsubtotal
+        '
+        Me.txtsubtotal.Location = New System.Drawing.Point(477, 399)
+        Me.txtsubtotal.Name = "txtsubtotal"
+        Me.txtsubtotal.Size = New System.Drawing.Size(114, 20)
+        Me.txtsubtotal.TabIndex = 20
+        '
         'Transaksi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(838, 449)
+        Me.Controls.Add(Me.txtsubtotal)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.txtpajak)
         Me.Controls.Add(Me.Pajak)
@@ -545,4 +566,6 @@ Partial Class Transaksi
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Button1 As Button
+    Friend WithEvents Label8 As Label
+    Friend WithEvents txtsubtotal As TextBox
 End Class
