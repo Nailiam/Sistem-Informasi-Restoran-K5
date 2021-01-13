@@ -208,6 +208,12 @@
     <Compile Include="Form3.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ID Card.Designer.vb">
+      <DependentUpon>ID Card.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ID Card.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Interval Harga.Designer.vb">
       <DependentUpon>Interval Harga.vb</DependentUpon>
     </Compile>
@@ -261,6 +267,12 @@
     <Compile Include="Data Pelanggan.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Pencarian ID Card.Designer.vb">
+      <DependentUpon>Pencarian ID Card.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pencarian ID Card.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Report Berdasarkan Harga.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -289,6 +301,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Report Data Pelanggan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report ID card.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report ID card.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report Transaksi New.vb">
@@ -341,6 +359,9 @@
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ID Card.resx">
+      <DependentUpon>ID Card.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interval Harga.resx">
       <DependentUpon>Interval Harga.vb</DependentUpon>
     </EmbeddedResource>
@@ -365,6 +386,9 @@
     <EmbeddedResource Include="Data Pelanggan.resx">
       <DependentUpon>Data Pelanggan.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pencarian ID Card.resx">
+      <DependentUpon>Pencarian ID Card.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report Berdasarkan Harga.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Report Berdasarkan Harga.vb</LastGenOutput>
@@ -384,6 +408,10 @@
     <EmbeddedResource Include="Report Data Pelanggan.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Report Data Pelanggan.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report ID card.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report ID card.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report Transaksi New.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

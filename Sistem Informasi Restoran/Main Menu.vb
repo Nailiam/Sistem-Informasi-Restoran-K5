@@ -39,4 +39,8 @@
     Private Sub DataKasirToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles DataKasirToolStripMenuItem1.Click
         Kasir.Show() 'ok
     End Sub
+
+    Private Sub IDCardToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IDCardToolStripMenuItem.Click
+        Pencarian_ID_Card.Show() 'ok
+    End Sub
 End Class
