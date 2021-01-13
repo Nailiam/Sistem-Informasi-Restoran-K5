@@ -41,6 +41,6 @@
     End Sub
 
     Private Sub IDCardToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IDCardToolStripMenuItem.Click
-        Pencarian_ID_Card.Show() 'ok
+        'ok
     End Sub
 End Class
