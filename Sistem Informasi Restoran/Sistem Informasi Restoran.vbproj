@@ -261,6 +261,15 @@
     <Compile Include="Data Pelanggan.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Nota.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Nota1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Nota.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Report Berdasarkan Harga.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -364,6 +373,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Data Pelanggan.resx">
       <DependentUpon>Data Pelanggan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nota.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Nota1.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report Berdasarkan Harga.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
