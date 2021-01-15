@@ -33,12 +33,14 @@ Partial Class Data_Menu
         Me.lblwelcome = New System.Windows.Forms.GroupBox()
         Me.txt_NamaMenu = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.cmb_JenisMenu = New System.Windows.Forms.ComboBox()
         Me.txt_HargaMenu = New System.Windows.Forms.TextBox()
         Me.txt_IdMenu = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.cmb_JenisMenu = New System.Windows.Forms.ComboBox()
+        Me.CachedReport_Berdasarkan_Harga1 = New Sistem_Informasi_Restoran.CachedReport_Berdasarkan_Harga()
+        Me.btnstock = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.lblwelcome.SuspendLayout()
@@ -64,7 +66,7 @@ Partial Class Data_Menu
         '
         'btnExit
         '
-        Me.btnExit.Location = New System.Drawing.Point(206, 253)
+        Me.btnExit.Location = New System.Drawing.Point(206, 260)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(75, 23)
         Me.btnExit.TabIndex = 26
@@ -73,7 +75,7 @@ Partial Class Data_Menu
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(111, 253)
+        Me.btnCancel.Location = New System.Drawing.Point(111, 260)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(75, 23)
         Me.btnCancel.TabIndex = 25
@@ -82,7 +84,7 @@ Partial Class Data_Menu
         '
         'btndelete
         '
-        Me.btndelete.Location = New System.Drawing.Point(12, 253)
+        Me.btndelete.Location = New System.Drawing.Point(12, 260)
         Me.btndelete.Name = "btndelete"
         Me.btndelete.Size = New System.Drawing.Size(75, 23)
         Me.btndelete.TabIndex = 24
@@ -91,7 +93,7 @@ Partial Class Data_Menu
         '
         'btnedit
         '
-        Me.btnedit.Location = New System.Drawing.Point(206, 224)
+        Me.btnedit.Location = New System.Drawing.Point(206, 231)
         Me.btnedit.Name = "btnedit"
         Me.btnedit.Size = New System.Drawing.Size(75, 23)
         Me.btnedit.TabIndex = 23
@@ -100,7 +102,7 @@ Partial Class Data_Menu
         '
         'btnSave
         '
-        Me.btnSave.Location = New System.Drawing.Point(111, 224)
+        Me.btnSave.Location = New System.Drawing.Point(111, 231)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(75, 23)
         Me.btnSave.TabIndex = 22
@@ -109,7 +111,7 @@ Partial Class Data_Menu
         '
         'btnInput
         '
-        Me.btnInput.Location = New System.Drawing.Point(12, 224)
+        Me.btnInput.Location = New System.Drawing.Point(12, 231)
         Me.btnInput.Name = "btnInput"
         Me.btnInput.Size = New System.Drawing.Size(75, 23)
         Me.btnInput.TabIndex = 21
@@ -128,7 +130,7 @@ Partial Class Data_Menu
         Me.lblwelcome.Controls.Add(Me.Label1)
         Me.lblwelcome.Location = New System.Drawing.Point(12, 24)
         Me.lblwelcome.Name = "lblwelcome"
-        Me.lblwelcome.Size = New System.Drawing.Size(269, 172)
+        Me.lblwelcome.Size = New System.Drawing.Size(269, 184)
         Me.lblwelcome.TabIndex = 20
         Me.lblwelcome.TabStop = False
         Me.lblwelcome.Text = "Input Menu"
@@ -148,6 +150,15 @@ Partial Class Data_Menu
         Me.Label3.Size = New System.Drawing.Size(71, 13)
         Me.Label3.TabIndex = 11
         Me.Label3.Text = "Nama Menu :"
+        '
+        'cmb_JenisMenu
+        '
+        Me.cmb_JenisMenu.FormattingEnabled = True
+        Me.cmb_JenisMenu.Items.AddRange(New Object() {"Appetizer", "Main Course", "Dessert", "Snack", "Cold", "Hot", "Juice"})
+        Me.cmb_JenisMenu.Location = New System.Drawing.Point(125, 63)
+        Me.cmb_JenisMenu.Name = "cmb_JenisMenu"
+        Me.cmb_JenisMenu.Size = New System.Drawing.Size(121, 21)
+        Me.cmb_JenisMenu.TabIndex = 10
         '
         'txt_HargaMenu
         '
@@ -190,20 +201,21 @@ Partial Class Data_Menu
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ID Menu :"
         '
-        'cmb_JenisMenu
+        'btnstock
         '
-        Me.cmb_JenisMenu.FormattingEnabled = True
-        Me.cmb_JenisMenu.Items.AddRange(New Object() {"Appetizer", "Main Course", "Dessert", "Snack", "Cold", "Hot", "Juice"})
-        Me.cmb_JenisMenu.Location = New System.Drawing.Point(125, 63)
-        Me.cmb_JenisMenu.Name = "cmb_JenisMenu"
-        Me.cmb_JenisMenu.Size = New System.Drawing.Size(121, 21)
-        Me.cmb_JenisMenu.TabIndex = 10
+        Me.btnstock.Location = New System.Drawing.Point(591, 260)
+        Me.btnstock.Name = "btnstock"
+        Me.btnstock.Size = New System.Drawing.Size(75, 23)
+        Me.btnstock.TabIndex = 28
+        Me.btnstock.Text = "Stock"
+        Me.btnstock.UseVisualStyleBackColor = True
         '
         'Data_Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(678, 314)
+        Me.ClientSize = New System.Drawing.Size(678, 297)
+        Me.Controls.Add(Me.btnstock)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnCancel)
@@ -239,4 +251,6 @@ Partial Class Data_Menu
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents cmb_JenisMenu As ComboBox
+    Friend WithEvents CachedReport_Berdasarkan_Harga1 As CachedReport_Berdasarkan_Harga
+    Friend WithEvents btnstock As Button
 End Class
