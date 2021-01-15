@@ -41,6 +41,6 @@
     End Sub
 
     Private Sub IDCardToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IDCardToolStripMenuItem.Click
-        'ok
+        Cari_ID_card.Show() 'ok
     End Sub
 End Class
