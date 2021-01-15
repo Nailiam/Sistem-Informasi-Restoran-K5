@@ -136,6 +136,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Crystal Report ID Card.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Crystal Report ID Card.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Data Karyawan.Designer.vb">
       <DependentUpon>Data Karyawan.vb</DependentUpon>
     </Compile>
@@ -314,6 +320,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Crystal Report ID Card.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Crystal Report ID Card.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Data Karyawan.resx">
       <DependentUpon>Data Karyawan.vb</DependentUpon>
     </EmbeddedResource>
