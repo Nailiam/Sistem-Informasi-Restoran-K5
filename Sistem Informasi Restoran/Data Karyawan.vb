@@ -219,4 +219,18 @@ Public Class Data_Karyawan
             MsgBox(ex.ToString())
         End Try
     End Sub
+    Private Sub DGV2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV2.CellContentClick
+        On Error Resume Next
+        txt_id_karyawan.Text = DGV2.Rows(e.RowIndex).Cells(0).Value
+        txt_nama_karyawan.Text = DGV2.Rows(e.RowIndex).Cells(1).Value
+        txt_lahir.Text = DGV2.Rows(e.RowIndex).Cells(2).Value
+        DateTimePicker1.Value = DGV2.Rows(e.RowIndex).Cells(3).Value
+        txtumur.Text = DGV2.Rows(e.RowIndex).Cells(4).Value
+        cmb_jk.Text = DGV2.Rows(e.RowIndex).Cells(5).Value
+        cmb_agama.Text = DGV2.Rows(e.RowIndex).Cells(6).Value
+        txt_alamat.Text = DGV2.Rows(e.RowIndex).Cells(7).Value
+        cmb_status.Text = DGV2.Rows(e.RowIndex).Cells(8).Value
+        Call HidupkanForm()
+        txt_id_karyawan.Enabled = False
+    End Sub
 End Class

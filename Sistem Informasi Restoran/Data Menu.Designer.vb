@@ -40,7 +40,8 @@ Partial Class Data_Menu
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.CachedReport_Berdasarkan_Harga1 = New Sistem_Informasi_Restoran.CachedReport_Berdasarkan_Harga()
-        Me.btnstock = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtstok = New System.Windows.Forms.TextBox()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.lblwelcome.SuspendLayout()
@@ -120,6 +121,8 @@ Partial Class Data_Menu
         '
         'lblwelcome
         '
+        Me.lblwelcome.Controls.Add(Me.txtstok)
+        Me.lblwelcome.Controls.Add(Me.Label4)
         Me.lblwelcome.Controls.Add(Me.txt_NamaMenu)
         Me.lblwelcome.Controls.Add(Me.Label3)
         Me.lblwelcome.Controls.Add(Me.cmb_JenisMenu)
@@ -201,21 +204,27 @@ Partial Class Data_Menu
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ID Menu :"
         '
-        'btnstock
+        'Label4
         '
-        Me.btnstock.Location = New System.Drawing.Point(591, 260)
-        Me.btnstock.Name = "btnstock"
-        Me.btnstock.Size = New System.Drawing.Size(75, 23)
-        Me.btnstock.TabIndex = 28
-        Me.btnstock.Text = "Stock"
-        Me.btnstock.UseVisualStyleBackColor = True
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(7, 158)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(71, 13)
+        Me.Label4.TabIndex = 13
+        Me.Label4.Text = "Jumlah Stok :"
+        '
+        'txtstok
+        '
+        Me.txtstok.Location = New System.Drawing.Point(125, 151)
+        Me.txtstok.Name = "txtstok"
+        Me.txtstok.Size = New System.Drawing.Size(121, 20)
+        Me.txtstok.TabIndex = 14
         '
         'Data_Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(678, 297)
-        Me.Controls.Add(Me.btnstock)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnCancel)
@@ -252,5 +261,6 @@ Partial Class Data_Menu
     Friend WithEvents Label1 As Label
     Friend WithEvents cmb_JenisMenu As ComboBox
     Friend WithEvents CachedReport_Berdasarkan_Harga1 As CachedReport_Berdasarkan_Harga
-    Friend WithEvents btnstock As Button
+    Friend WithEvents txtstok As TextBox
+    Friend WithEvents Label4 As Label
 End Class

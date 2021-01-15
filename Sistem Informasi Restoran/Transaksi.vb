@@ -126,23 +126,21 @@ txtkodestruk.Text & "' , '" & txtidpelanggan.Text & "' , '" & txtnamapelanggan.T
             'Data disimpan di tabel Penjualan
 
             For baris As Integer = 0 To DataGridView1.Rows.Count - 2
-                Dim Simpandetail As String = "Insert into Detail_Transaksi values ('" &
-txtkodestruk.Text & "', '" & DataGridView1.Rows(baris).Cells(0).Value & "', '" &
+                Dim Simpandetail As String = "Insert into Detail_Transaksi values ('" & txtkodestruk.Text & "', '" & DataGridView1.Rows(baris).Cells(0).Value & "', '" &
 DataGridView1.Rows(baris).Cells(1).Value & "', '" &
-DataGridView1.Rows(baris).Cells(2).Value & "', '" &
-txtitems.Text & "', '" & txtsubtotal.Text & "')"
+DataGridView1.Rows(baris).Cells(2).Value & "', '" & txtitems.Text & "','" & txtsubtotal.Text & "')"
                 CMD = New OleDb.OleDbCommand(Simpandetail, Conn)
                 CMD.ExecuteNonQuery()
 
-                'CMD = New OleDb.OleDbCommand("select * from Menu where ID_Menu = '" &
-                'DataGridView1.Rows(baris).Cells(0).Value & "'", Conn)
-                'DM = CMD.ExecuteReader
-                'DM.Read()
-                'Dim kurangistok As String = "Update Menu set Stok = '" &
-                'DM.Item("Stok") - DataGridView1.Rows(baris).Cells(3).Value & "' where ID_Menu = '" &
-                'DataGridView1.Rows(baris).Cells(0).Value & "'"
-                'CMD = New OleDb.OleDbCommand(kurangistok, Conn)
-                'CMD.ExecuteNonQuery()
+                CMD = New OleDb.OleDbCommand("select * from Menu where ID_Menu = '" &
+                DataGridView1.Rows(baris).Cells(0).Value & "'", Conn)
+                DM = CMD.ExecuteReader
+                DM.Read()
+                Dim kurangistok As String = "Update Menu set Stok = '" &
+                DM.Item("Stok") - DataGridView1.Rows(baris).Cells(3).Value & "' where ID_Menu = '" &
+                DataGridView1.Rows(baris).Cells(0).Value & "'"
+                CMD = New OleDb.OleDbCommand(kurangistok, Conn)
+                CMD.ExecuteNonQuery()
             Next
             MsgBox("Transaksi Telah Tersimpan")
             Call kondisiawal()

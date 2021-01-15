@@ -142,6 +142,7 @@
     <Compile Include="Cari ID card.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="cls Stok.vb" />
     <Compile Include="Crystal Report ID Card.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
