@@ -1,7 +1,7 @@
 ﻿Imports MessagingToolkit.QRCode.Codec
 Imports MessagingToolkit.Barcode
 Imports WebCam_Capture
-Public Class Form1
+Public Class QRCodeGenerator
     Dim QR_Generator As New MessagingToolkit.QRCode.Codec.QRCodeEncoder
     Dim BR_Generator As New MessagingToolkit.Barcode.BarcodeEncoder
 

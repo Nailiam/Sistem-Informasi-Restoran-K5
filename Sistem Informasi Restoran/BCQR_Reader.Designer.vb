@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form3
+Partial Class BCQR_Reader
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -88,7 +88,7 @@ Partial Class Form3
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
         '
-        'Form3
+        'BCQR_Reader
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -99,8 +99,8 @@ Partial Class Form3
         Me.Controls.Add(Me.btnstop)
         Me.Controls.Add(Me.btnstart)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Name = "Form3"
-        Me.Text = "Form3"
+        Me.Name = "BCQR_Reader"
+        Me.Text = "BCQR_Reader"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

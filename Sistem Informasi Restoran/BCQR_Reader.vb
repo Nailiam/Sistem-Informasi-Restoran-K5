@@ -2,7 +2,7 @@
 Imports MessagingToolkit.Barcode
 Imports WebCam_Capture
 
-Public Class Form3
+Public Class BCQR_Reader
     WithEvents Mywebcam As WebCamCapture
     Dim Reader As QRCodeDecoder
     Dim Scanner As New BarcodeDecoder

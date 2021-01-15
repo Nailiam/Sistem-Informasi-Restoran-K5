@@ -209,22 +209,22 @@
     <Compile Include="Form Report Periodik Transaksi.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="QRCodeGenerator.Designer.vb">
+      <DependentUpon>QRCodeGenerator.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="QRCodeGenerator.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.vb">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <Compile Include="ScanReader.Designer.vb">
+      <DependentUpon>ScanReader.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form2.vb">
+    <Compile Include="ScanReader.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.vb">
-      <DependentUpon>Form3.vb</DependentUpon>
+    <Compile Include="BCQR_Reader.Designer.vb">
+      <DependentUpon>BCQR_Reader.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form3.vb">
+    <Compile Include="BCQR_Reader.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Stock.Designer.vb">
@@ -373,14 +373,14 @@
     <EmbeddedResource Include="Form Report Periodik Transaksi.resx">
       <DependentUpon>Form Report Periodik Transaksi.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="QRCodeGenerator.resx">
+      <DependentUpon>QRCodeGenerator.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <EmbeddedResource Include="ScanReader.resx">
+      <DependentUpon>ScanReader.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.vb</DependentUpon>
+    <EmbeddedResource Include="BCQR_Reader.resx">
+      <DependentUpon>BCQR_Reader.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Stock.resx">
       <DependentUpon>Stock.vb</DependentUpon>

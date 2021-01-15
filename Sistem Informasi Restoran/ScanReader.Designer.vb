@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form2
+Partial Class ScanReader
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -66,7 +66,7 @@ Partial Class Form2
         Me.PictureBox1.TabIndex = 9
         Me.PictureBox1.TabStop = False
         '
-        'Form2
+        'ScanReader
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -75,8 +75,8 @@ Partial Class Form2
         Me.Controls.Add(Me.btnload)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Name = "Form2"
-        Me.Text = "Form2"
+        Me.Name = "ScanReader"
+        Me.Text = "ScanReader"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
