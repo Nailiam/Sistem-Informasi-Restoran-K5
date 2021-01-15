@@ -220,6 +220,12 @@
     <Compile Include="Form3.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Stock.Designer.vb">
+      <DependentUpon>Stock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stock.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Interval Harga.Designer.vb">
       <DependentUpon>Interval Harga.vb</DependentUpon>
     </Compile>
@@ -368,6 +374,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock.resx">
+      <DependentUpon>Stock.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interval Harga.resx">
       <DependentUpon>Interval Harga.vb</DependentUpon>
