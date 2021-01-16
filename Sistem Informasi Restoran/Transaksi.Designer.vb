@@ -465,7 +465,7 @@ Partial Class Transaksi
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 33)
         Me.Button1.TabIndex = 18
-        Me.Button1.Text = "Pajak"
+        Me.Button1.Text = "Hitung"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Label8

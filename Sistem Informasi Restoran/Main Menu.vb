@@ -43,16 +43,15 @@
     Private Sub IDCardToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IDCardToolStripMenuItem.Click
         Cari_ID_card.Show() 'ok
     End Sub
-
-    Private Sub QRCodeGeneratorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QRCodeGeneratorToolStripMenuItem.Click
+    Private Sub QRCodeGeneratorToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles QRCodeGeneratorToolStripMenuItem1.Click
         QRCodeGenerator.Show()
     End Sub
 
-    Private Sub ScanReaderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ScanReaderToolStripMenuItem.Click
+    Private Sub ScanReaderToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ScanReaderToolStripMenuItem1.Click
         ScanReader.Show()
     End Sub
 
-    Private Sub BCQRToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BCQRToolStripMenuItem.Click
+    Private Sub BCToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BCToolStripMenuItem.Click
         BCQR_Reader.Show()
     End Sub
 End Class
