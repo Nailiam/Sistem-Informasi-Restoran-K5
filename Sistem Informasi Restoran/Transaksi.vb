@@ -119,7 +119,7 @@
             'Pengecekan , apabila transaksi belum terjadi maka tidak bisa di ENTER
         Else
             Dim Simpantransaksi As String = "Insert into Transaksi values ('" &
-txtkodestruk.Text & "' , '" & txtidpelanggan.Text & "' , '" & txtnamapelanggan.Text & "', '" & txtnomeja.Text & "', '" & txtGrandtotal.Text & "', '" & txttgltransaksi.Text & "', '" & txtjamtransaksi.Text & "', '" & txtkasir.Text & "', '" & txtitems.Text &
+txtkodestruk.Text & "', '" & txtidpelanggan.Text & "', '" & txtGrandtotal.Text & "', '" & txttgltransaksi.Text & "', '" & txtjamtransaksi.Text & "', '" & txtkasir.Text & "', '" & txtitems.Text &
 "','" & txtpajak.Text & "','" & txtbayar.Text & "','" & txtkembali.Text & "')"
             CMD = New OleDb.OleDbCommand(Simpantransaksi, Conn)
             CMD.ExecuteNonQuery()
