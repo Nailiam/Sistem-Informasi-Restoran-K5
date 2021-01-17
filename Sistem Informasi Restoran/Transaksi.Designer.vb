@@ -385,7 +385,7 @@ Partial Class Transaksi
         Me.btn_tutup.Name = "btn_tutup"
         Me.btn_tutup.Size = New System.Drawing.Size(75, 33)
         Me.btn_tutup.TabIndex = 15
-        Me.btn_tutup.Text = "Tutup"
+        Me.btn_tutup.Text = "Close"
         Me.btn_tutup.UseVisualStyleBackColor = True
         '
         'Label13
