@@ -142,7 +142,6 @@
     <Compile Include="Cari ID card.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="cls Stok.vb" />
     <Compile Include="Crystal Report ID Card.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -227,12 +226,6 @@
     <Compile Include="BCQR_Reader.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Stock.Designer.vb">
-      <DependentUpon>Stock.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Stock.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Interval Harga.Designer.vb">
       <DependentUpon>Interval Harga.vb</DependentUpon>
     </Compile>
@@ -296,12 +289,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Report Berdasarkan Harga.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report Coba.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Report Coba.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report Data Kasir.vb">
@@ -382,9 +369,6 @@
     <EmbeddedResource Include="BCQR_Reader.resx">
       <DependentUpon>BCQR_Reader.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Stock.resx">
-      <DependentUpon>Stock.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Interval Harga.resx">
       <DependentUpon>Interval Harga.vb</DependentUpon>
     </EmbeddedResource>
@@ -416,10 +400,6 @@
     <EmbeddedResource Include="Report Berdasarkan Harga.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Report Berdasarkan Harga.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report Coba.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Report Coba.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report Data Kasir.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
