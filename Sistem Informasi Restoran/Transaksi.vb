@@ -81,7 +81,7 @@
         If Not DM.HasRows Then
             urutankode = "J" + Format(Now, "yyMMdd") + "001"
         Else
-            hitung = Microsoft.VisualBasic.Right(DM.GetString(0), 3)
+            hitung = Microsoft.VisualBasic.Right(DM.GetString(0), 3) + 1
             urutankode = "J" + Format(Now, "yyMMdd") +
            Microsoft.VisualBasic.Right("000" & hitung.ToString, 3)
         End If
@@ -128,7 +128,7 @@ txtkodestruk.Text & "', '" & txtidpelanggan.Text & "', '" & txtGrandtotal.Text &
             For baris As Integer = 0 To DataGridView1.Rows.Count - 2
                 Dim Simpandetail As String = "Insert into Detail_Transaksi values ('" & txtkodestruk.Text & "', '" & DataGridView1.Rows(baris).Cells(0).Value & "', '" &
 DataGridView1.Rows(baris).Cells(1).Value & "', '" &
-DataGridView1.Rows(baris).Cells(2).Value & "', '" & txtitems.Text & "','" & txtsubtotal.Text & "')"
+DataGridView1.Rows(baris).Cells(2).Value & "', '" & DataGridView1.Rows(baris).Cells(3).Value & "','" & DataGridView1.Rows(baris).Cells(4).Value & "'," & GetRandom(1111, 99999).ToString() & ")"
                 CMD = New OleDb.OleDbCommand(Simpandetail, Conn)
                 CMD.ExecuteNonQuery()
 
@@ -144,6 +144,8 @@ DataGridView1.Rows(baris).Cells(2).Value & "', '" & txtitems.Text & "','" & txts
             Next
             MsgBox("Transaksi Telah Tersimpan")
             Call kondisiawal()
+            Nomorfakturotomatis()
+
         End If
     End Sub
     Sub carijumlahitem()

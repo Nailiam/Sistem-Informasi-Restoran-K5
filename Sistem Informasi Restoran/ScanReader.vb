@@ -7,7 +7,7 @@ Public Class ScanReader
     Private Sub btnload_Click(sender As Object, e As EventArgs) Handles btnload.Click
         Dim OPD As New OpenFileDialog
         OPD.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments
-        If OPD.ShowDialog() = True Then
+        If OPD.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
             Try
                 PictureBox1.Load(OPD.FileName)
             Catch ex As Exception

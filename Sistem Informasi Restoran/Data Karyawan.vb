@@ -233,4 +233,8 @@ Public Class Data_Karyawan
         Call HidupkanForm()
         txt_id_karyawan.Enabled = False
     End Sub
+
+    Private Sub Data_Karyawan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TampilkanData()
+    End Sub
 End Class
