@@ -28,10 +28,6 @@
         Interval_Harga.Show() 'ok
     End Sub
 
-    Private Sub ReportCobaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportCobaToolStripMenuItem.Click
-        Form_Report_Coba.Show() 'ok
-    End Sub
-
     Private Sub DataPelangganToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles DataPelangganToolStripMenuItem1.Click
         Pelanggan.Show() 'ok
     End Sub

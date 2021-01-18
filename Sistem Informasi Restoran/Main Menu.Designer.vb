@@ -40,7 +40,6 @@ Partial Class Main_Menu
         Me.ReportDataPelanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportPeriodikTransaksiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportBerdasarkanHargaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportCobaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IDCardToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.QRCodeBarcodeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.QRCodeGeneratorToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
@@ -144,12 +143,12 @@ Partial Class Main_Menu
         'TransaksiToolStripMenuItem1
         '
         Me.TransaksiToolStripMenuItem1.Name = "TransaksiToolStripMenuItem1"
-        Me.TransaksiToolStripMenuItem1.Size = New System.Drawing.Size(180, 24)
+        Me.TransaksiToolStripMenuItem1.Size = New System.Drawing.Size(152, 24)
         Me.TransaksiToolStripMenuItem1.Text = "Transaksi"
         '
         'ReportToolStripMenuItem
         '
-        Me.ReportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportDataMenuToolStripMenuItem, Me.ReportDataPelanToolStripMenuItem, Me.ReportPeriodikTransaksiToolStripMenuItem, Me.ReportBerdasarkanHargaToolStripMenuItem, Me.ReportCobaToolStripMenuItem, Me.IDCardToolStripMenuItem})
+        Me.ReportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportDataMenuToolStripMenuItem, Me.ReportDataPelanToolStripMenuItem, Me.ReportPeriodikTransaksiToolStripMenuItem, Me.ReportBerdasarkanHargaToolStripMenuItem, Me.IDCardToolStripMenuItem})
         Me.ReportToolStripMenuItem.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
         Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(71, 24)
@@ -178,12 +177,6 @@ Partial Class Main_Menu
         Me.ReportBerdasarkanHargaToolStripMenuItem.Name = "ReportBerdasarkanHargaToolStripMenuItem"
         Me.ReportBerdasarkanHargaToolStripMenuItem.Size = New System.Drawing.Size(279, 24)
         Me.ReportBerdasarkanHargaToolStripMenuItem.Text = "Report Berdasarkan Harga"
-        '
-        'ReportCobaToolStripMenuItem
-        '
-        Me.ReportCobaToolStripMenuItem.Name = "ReportCobaToolStripMenuItem"
-        Me.ReportCobaToolStripMenuItem.Size = New System.Drawing.Size(279, 24)
-        Me.ReportCobaToolStripMenuItem.Text = "Report Coba"
         '
         'IDCardToolStripMenuItem
         '
@@ -215,7 +208,7 @@ Partial Class Main_Menu
         '
         Me.BCToolStripMenuItem.Name = "BCToolStripMenuItem"
         Me.BCToolStripMenuItem.Size = New System.Drawing.Size(222, 24)
-        Me.BCToolStripMenuItem.Text = "BC QR Reader"
+        Me.BCToolStripMenuItem.Text = "QR Reader"
         '
         'Main_Menu
         '
@@ -251,7 +244,6 @@ Partial Class Main_Menu
     Friend WithEvents ReportDataPelanToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportPeriodikTransaksiToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportBerdasarkanHargaToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ReportCobaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TransaksiToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents DataPelangganToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents DataKasirToolStripMenuItem1 As ToolStripMenuItem

@@ -178,12 +178,6 @@
     <Compile Include="Form Report Berdasarkan Harga.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form Report Coba.Designer.vb">
-      <DependentUpon>Form Report Coba.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form Report Coba.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Form Report Data Kasir.Designer.vb">
       <DependentUpon>Form Report Data Kasir.vb</DependentUpon>
     </Compile>
@@ -315,6 +309,12 @@
       <DependentUpon>Report Transaksi New.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Struk Transaksi.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Struk Transaksi.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Transaksi.Designer.vb">
       <DependentUpon>Transaksi.vb</DependentUpon>
     </Compile>
@@ -344,9 +344,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form Report Berdasarkan Harga.resx">
       <DependentUpon>Form Report Berdasarkan Harga.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form Report Coba.resx">
-      <DependentUpon>Form Report Coba.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form Report Data Kasir.resx">
       <DependentUpon>Form Report Data Kasir.vb</DependentUpon>
@@ -416,6 +413,10 @@
     <EmbeddedResource Include="Report Transaksi New.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Report Transaksi New.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Struk Transaksi.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Struk Transaksi.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Transaksi.resx">
       <DependentUpon>Transaksi.vb</DependentUpon>
