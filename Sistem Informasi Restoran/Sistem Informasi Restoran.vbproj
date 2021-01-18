@@ -169,9 +169,7 @@
     <Compile Include="Form ID Card.Designer.vb">
       <DependentUpon>Form ID Card.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form ID Card.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Form ID Card.vb" />
     <Compile Include="Form Report Berdasarkan Harga.Designer.vb">
       <DependentUpon>Form Report Berdasarkan Harga.vb</DependentUpon>
     </Compile>
@@ -200,6 +198,12 @@
       <DependentUpon>Form Report Periodik Transaksi.vb</DependentUpon>
     </Compile>
     <Compile Include="Form Report Periodik Transaksi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Report Nota Transaksi.Designer.vb">
+      <DependentUpon>Form Report Nota Transaksi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Report Nota Transaksi.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="QRCodeGenerator.Designer.vb">
@@ -309,6 +313,12 @@
       <DependentUpon>Report Transaksi New.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Struk Nota.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Struk Nota.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Struk Transaksi.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -356,6 +366,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form Report Periodik Transaksi.resx">
       <DependentUpon>Form Report Periodik Transaksi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Report Nota Transaksi.resx">
+      <DependentUpon>Form Report Nota Transaksi.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QRCodeGenerator.resx">
       <DependentUpon>QRCodeGenerator.vb</DependentUpon>
@@ -413,6 +426,10 @@
     <EmbeddedResource Include="Report Transaksi New.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Report Transaksi New.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Struk Nota.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Struk Nota.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Struk Transaksi.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

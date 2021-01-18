@@ -112,6 +112,9 @@
     Private Sub btn_tutup_Click(sender As Object, e As EventArgs) Handles btn_tutup.Click
         Me.Close()
     End Sub
+    Sub Barcode1()
+        Barcode.ImageLocation = ""
+    End Sub
 
     Private Sub btn_save_Click(sender As Object, e As EventArgs) Handles btn_save.Click
         If txtkembali.Text = "" Or txtGrandtotal.Text = "" Then
@@ -120,9 +123,10 @@
         Else
             Dim Simpantransaksi As String = "Insert into Transaksi values ('" &
 txtkodestruk.Text & "', '" & txtidpelanggan.Text & "', '" & txtGrandtotal.Text & "', '" & txttgltransaksi.Text & "', '" & txtjamtransaksi.Text & "', '" & txtkasir.Text & "', '" & txtitems.Text &
-"','" & txtpajak.Text & "','" & txtbayar.Text & "','" & txtkembali.Text & "', '" & PictureBox1.Text & "')"
+"','" & txtpajak.Text & "','" & txtbayar.Text & "','" & txtkembali.Text & "', '" & Barcode.Text & "')"
             CMD = New OleDb.OleDbCommand(Simpantransaksi, Conn)
             CMD.ExecuteNonQuery()
+            Call Barcode1()
             'Data disimpan di tabel Penjualan
 
             For baris As Integer = 0 To DataGridView1.Rows.Count - 2
@@ -150,7 +154,7 @@ DataGridView1.Rows(baris).Cells(2).Value & "', '" & DataGridView1.Rows(baris).Ce
             BR_Generator.IncludeLabel = True
             BR_Generator.CustomLabel = txtkodestruk.Text
             Try
-                PictureBox1.Image = BR_Generator.Encode(MessagingToolkit.Barcode.BarcodeFormat.Code128, txtkodestruk.Text)
+                Barcode.Image = BR_Generator.Encode(MessagingToolkit.Barcode.BarcodeFormat.Code128, txtkodestruk.Text)
                 'PictureBox1.Image = New Bitmap(BR_Generator.Encode(MessagingToolkit.Barcode.BarcodeFormat.ISBN, TextBox2.Text))
             Catch ex As Exception
                 MsgBox(ex.Message)
@@ -168,8 +172,11 @@ DataGridView1.Rows(baris).Cells(2).Value & "', '" & DataGridView1.Rows(baris).Ce
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim Total_Akhir As Integer
-        Total_Akhir = (Val(txtpajak.Text) * Val(txtGrandtotal.Text)) + Val(txtGrandtotal.Text)
+        Dim Hitung As Integer
+        Total_Akhir = ((0.1) * Val(txtGrandtotal.Text)) + Val(txtGrandtotal.Text)
         txtGrandtotal.Text = Total_Akhir
+        Hitung = Val(txtsubtotal.Text) * 0.1
+        txtpajak.Text = Hitung
     End Sub
 End Class
 
