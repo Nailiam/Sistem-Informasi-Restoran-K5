@@ -120,7 +120,7 @@
         Else
             Dim Simpantransaksi As String = "Insert into Transaksi values ('" &
 txtkodestruk.Text & "', '" & txtidpelanggan.Text & "', '" & txtGrandtotal.Text & "', '" & txttgltransaksi.Text & "', '" & txtjamtransaksi.Text & "', '" & txtkasir.Text & "', '" & txtitems.Text &
-"','" & txtpajak.Text & "','" & txtbayar.Text & "','" & txtkembali.Text & "')"
+"','" & txtpajak.Text & "','" & txtbayar.Text & "','" & txtkembali.Text & "', '" & PictureBox1.Text & "')"
             CMD = New OleDb.OleDbCommand(Simpantransaksi, Conn)
             CMD.ExecuteNonQuery()
             'Data disimpan di tabel Penjualan
