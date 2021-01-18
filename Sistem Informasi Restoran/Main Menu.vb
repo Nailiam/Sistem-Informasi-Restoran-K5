@@ -54,4 +54,8 @@
     Private Sub BCToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BCToolStripMenuItem.Click
         BCQR_Reader.Show()
     End Sub
+
+    Private Sub ReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportToolStripMenuItem.Click
+
+    End Sub
 End Class

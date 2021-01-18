@@ -144,7 +144,7 @@ Partial Class Main_Menu
         'TransaksiToolStripMenuItem1
         '
         Me.TransaksiToolStripMenuItem1.Name = "TransaksiToolStripMenuItem1"
-        Me.TransaksiToolStripMenuItem1.Size = New System.Drawing.Size(152, 24)
+        Me.TransaksiToolStripMenuItem1.Size = New System.Drawing.Size(180, 24)
         Me.TransaksiToolStripMenuItem1.Text = "Transaksi"
         '
         'ReportToolStripMenuItem
