@@ -143,6 +143,7 @@ DataGridView1.Rows(baris).Cells(2).Value & "', '" & DataGridView1.Rows(baris).Ce
                 CMD.ExecuteNonQuery()
             Next
             MsgBox("Transaksi Telah Tersimpan")
+            DataGridView1.Rows.Clear()
             Call kondisiawal()
             Nomorfakturotomatis()
             Dim BR_Generator As New MessagingToolkit.Barcode.BarcodeEncoder
