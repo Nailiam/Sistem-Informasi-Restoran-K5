@@ -108,7 +108,7 @@ Partial Class Transaksi
         'Barcode
         '
         Me.Barcode.Location = New System.Drawing.Point(332, 66)
-        Me.Barcode.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Barcode.Margin = New System.Windows.Forms.Padding(2)
         Me.Barcode.Name = "Barcode"
         Me.Barcode.Size = New System.Drawing.Size(184, 79)
         Me.Barcode.TabIndex = 16

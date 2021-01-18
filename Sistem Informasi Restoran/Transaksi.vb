@@ -160,6 +160,7 @@ DataGridView1.Rows(baris).Cells(2).Value & "', '" & DataGridView1.Rows(baris).Ce
                 MsgBox(ex.Message)
             End Try
 
+
         End If
     End Sub
     Sub carijumlahitem()
