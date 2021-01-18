@@ -145,6 +145,15 @@ DataGridView1.Rows(baris).Cells(2).Value & "', '" & DataGridView1.Rows(baris).Ce
             MsgBox("Transaksi Telah Tersimpan")
             Call kondisiawal()
             Nomorfakturotomatis()
+            Dim BR_Generator As New MessagingToolkit.Barcode.BarcodeEncoder
+            BR_Generator.IncludeLabel = True
+            BR_Generator.CustomLabel = txtkodestruk.Text
+            Try
+                PictureBox1.Image = BR_Generator.Encode(MessagingToolkit.Barcode.BarcodeFormat.Code128, txtkodestruk.Text)
+                'PictureBox1.Image = New Bitmap(BR_Generator.Encode(MessagingToolkit.Barcode.BarcodeFormat.ISBN, TextBox2.Text))
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
 
         End If
     End Sub

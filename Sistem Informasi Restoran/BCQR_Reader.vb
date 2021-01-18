@@ -5,7 +5,7 @@ Imports WebCam_Capture
 Public Class BCQR_Reader
     WithEvents Mywebcam As WebCamCapture
     Dim Reader As QRCodeDecoder
-    Dim Scanner As New BarcodeDecoder
+    'Dim Scanner As New BarcodeDecoder
     Dim result As MessagingToolkit.Barcode.Result
     Private Sub MyWebcam_ImageCaptured(source As Object, e As WebcamEventArgs) Handles Mywebcam.ImageCaptured
         PictureBox1.Image = e.WebCamImage
