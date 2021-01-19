@@ -159,10 +159,9 @@ DataGridView1.Rows(baris).Cells(2).Value & "', '" & DataGridView1.Rows(baris).Ce
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try
-            Nota_Struk.Report_Nota_Struk1.SetParameterValue("Kode_Struk", txtkodestruk.Text)
-            Nota_Struk.Show()
-
         End If
+        Nota_Struk.Report_Nota_Struk1.SetParameterValue("Kode_Struk", txtkodestruk.Text)
+        Nota_Struk.Show()
     End Sub
     Sub carijumlahitem()
         Dim hitungitem As Integer = 0
