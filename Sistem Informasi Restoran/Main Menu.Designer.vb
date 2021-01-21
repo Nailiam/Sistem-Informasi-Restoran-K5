@@ -44,7 +44,6 @@ Partial Class Main_Menu
         Me.QRCodeBarcodeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.QRCodeGeneratorToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ScanReaderToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BCToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip2.SuspendLayout()
         Me.SuspendLayout()
@@ -186,7 +185,7 @@ Partial Class Main_Menu
         '
         'QRCodeBarcodeToolStripMenuItem
         '
-        Me.QRCodeBarcodeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.QRCodeGeneratorToolStripMenuItem1, Me.ScanReaderToolStripMenuItem1, Me.BCToolStripMenuItem})
+        Me.QRCodeBarcodeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.QRCodeGeneratorToolStripMenuItem1, Me.ScanReaderToolStripMenuItem1})
         Me.QRCodeBarcodeToolStripMenuItem.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.QRCodeBarcodeToolStripMenuItem.Name = "QRCodeBarcodeToolStripMenuItem"
         Me.QRCodeBarcodeToolStripMenuItem.Size = New System.Drawing.Size(158, 24)
@@ -203,12 +202,6 @@ Partial Class Main_Menu
         Me.ScanReaderToolStripMenuItem1.Name = "ScanReaderToolStripMenuItem1"
         Me.ScanReaderToolStripMenuItem1.Size = New System.Drawing.Size(222, 24)
         Me.ScanReaderToolStripMenuItem1.Text = "Scan Reader"
-        '
-        'BCToolStripMenuItem
-        '
-        Me.BCToolStripMenuItem.Name = "BCToolStripMenuItem"
-        Me.BCToolStripMenuItem.Size = New System.Drawing.Size(222, 24)
-        Me.BCToolStripMenuItem.Text = "QR Reader"
         '
         'Main_Menu
         '
@@ -251,5 +244,4 @@ Partial Class Main_Menu
     Friend WithEvents QRCodeBarcodeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents QRCodeGeneratorToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents ScanReaderToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents BCToolStripMenuItem As ToolStripMenuItem
 End Class

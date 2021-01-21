@@ -24,7 +24,7 @@ Partial Class Transaksi
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Barcode = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.txtGrandtotal = New System.Windows.Forms.TextBox()
         Me.txtkasir = New System.Windows.Forms.TextBox()
         Me.txtjamtransaksi = New System.Windows.Forms.TextBox()
@@ -73,7 +73,7 @@ Partial Class Transaksi
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtsubtotal = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.Barcode, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -81,7 +81,7 @@ Partial Class Transaksi
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.Barcode)
+        Me.GroupBox1.Controls.Add(Me.PictureBox1)
         Me.GroupBox1.Controls.Add(Me.txtGrandtotal)
         Me.GroupBox1.Controls.Add(Me.txtkasir)
         Me.GroupBox1.Controls.Add(Me.txtjamtransaksi)
@@ -105,14 +105,14 @@ Partial Class Transaksi
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Transaksi"
         '
-        'Barcode
+        'PictureBox1
         '
-        Me.Barcode.Location = New System.Drawing.Point(332, 66)
-        Me.Barcode.Margin = New System.Windows.Forms.Padding(2)
-        Me.Barcode.Name = "Barcode"
-        Me.Barcode.Size = New System.Drawing.Size(184, 79)
-        Me.Barcode.TabIndex = 16
-        Me.Barcode.TabStop = False
+        Me.PictureBox1.Location = New System.Drawing.Point(332, 66)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(184, 79)
+        Me.PictureBox1.TabIndex = 16
+        Me.PictureBox1.TabStop = False
         '
         'txtGrandtotal
         '
@@ -534,7 +534,7 @@ Partial Class Transaksi
         Me.Text = "Transaksi"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.Barcode, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
@@ -592,5 +592,5 @@ Partial Class Transaksi
     Friend WithEvents Button1 As Button
     Friend WithEvents Label8 As Label
     Friend WithEvents txtsubtotal As TextBox
-    Friend WithEvents Barcode As PictureBox
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

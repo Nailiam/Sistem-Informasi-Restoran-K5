@@ -81,11 +81,19 @@
         If Not DM.HasRows Then
             urutankode = "J" + Format(Now, "yyMMdd") + "001"
         Else
-            hitung = Microsoft.VisualBasic.Right(DM.GetString(0), 3) + 1
-            urutankode = "J" + Format(Now, "yyMMdd") +
-           Microsoft.VisualBasic.Right("000" & hitung.ToString, 3)
+            hitung = Microsoft.VisualBasic.Right(DM.GetString(0), 9) + 1
+            urutankode = "J" + Format(Now, "yyMMdd") + Microsoft.VisualBasic.Right("000" & hitung.ToString, 3)
         End If
         txtkodestruk.Text = urutankode
+        Dim BR_Generator As New MessagingToolkit.Barcode.BarcodeEncoder
+        BR_Generator.IncludeLabel = True
+        BR_Generator.CustomLabel = txtkodestruk.Text
+        Try
+            PictureBox1.Image = BR_Generator.Encode(MessagingToolkit.Barcode.BarcodeFormat.Code128, txtkodestruk.Text)
+            'PictureBox1.Image = New Bitmap(BR_Generator.Encode(MessagingToolkit.Barcode.BarcodeFormat.ISBN, TextBox2.Text))
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 
     Private Sub txtidpelanggan_TextChanged(sender As Object, e As EventArgs) Handles txtidpelanggan.TextChanged
@@ -113,17 +121,21 @@
         Me.Close()
     End Sub
     Sub Barcode1()
-        Barcode.ImageLocation = ""
+        PictureBox1.ImageLocation = ""
     End Sub
 
     Private Sub btn_save_Click(sender As Object, e As EventArgs) Handles btn_save.Click
+        Dim Barcode As String
+        Barcode = ("C:\Users\ASUS\Pictures\Foto Karyawan\")
+        Barcode = Barcode + txtkodestruk.Text + ".jpg"
+        PictureBox1.Image.Save(Barcode)
         If txtkembali.Text = "" Or txtGrandtotal.Text = "" Then
             MsgBox("Data Transaksi Belum Lengkap")
             'Pengecekan , apabila transaksi belum terjadi maka tidak bisa di ENTER
         Else
             Dim Simpantransaksi As String = "Insert into Transaksi values ('" &
 txtkodestruk.Text & "', '" & txtidpelanggan.Text & "', '" & txtGrandtotal.Text & "', '" & txttgltransaksi.Text & "', '" & txtjamtransaksi.Text & "', '" & txtkasir.Text & "', '" & txtitems.Text &
-"','" & txtpajak.Text & "','" & txtbayar.Text & "','" & txtkembali.Text & "', '" & Barcode.Text & "')"
+"','" & txtpajak.Text & "','" & txtbayar.Text & "','" & txtkembali.Text & "', '" & Barcode & "')"
             CMD = New OleDb.OleDbCommand(Simpantransaksi, Conn)
             CMD.ExecuteNonQuery()
             Call Barcode1()
@@ -148,17 +160,10 @@ DataGridView1.Rows(baris).Cells(2).Value & "', '" & DataGridView1.Rows(baris).Ce
             Next
             MsgBox("Transaksi Telah Tersimpan")
             DataGridView1.Rows.Clear()
+            Call kosongkanitem()
             Call kondisiawal()
             Nomorfakturotomatis()
-            Dim BR_Generator As New MessagingToolkit.Barcode.BarcodeEncoder
-            BR_Generator.IncludeLabel = True
-            BR_Generator.CustomLabel = txtkodestruk.Text
-            Try
-                Barcode.Image = BR_Generator.Encode(MessagingToolkit.Barcode.BarcodeFormat.Code128, txtkodestruk.Text)
-                'PictureBox1.Image = New Bitmap(BR_Generator.Encode(MessagingToolkit.Barcode.BarcodeFormat.ISBN, TextBox2.Text))
-            Catch ex As Exception
-                MsgBox(ex.Message)
-            End Try
+
         End If
         Nota_Struk.Report_Nota_Struk1.SetParameterValue("Kode_Struk", txtkodestruk.Text)
         Nota_Struk.Show()
