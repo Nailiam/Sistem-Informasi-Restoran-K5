@@ -15,9 +15,6 @@
         Pelanggan.Show()
     End Sub
 
-    Private Sub DataPemesananBaruToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DataPemesananBaruToolStripMenuItem.Click
-        Pesan.Show()
-    End Sub
 
     Private Sub DataKasirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DataKasirToolStripMenuItem.Click
         Kasir.Show()
@@ -53,5 +50,9 @@
 
     Private Sub TransaksiToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles TransaksiToolStripMenuItem1.Click
         Transaksi.Show()
+    End Sub
+
+    Private Sub Main_Menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class
