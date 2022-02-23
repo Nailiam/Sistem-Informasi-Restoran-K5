@@ -17,7 +17,7 @@
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
@@ -48,6 +48,52 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>Sistem Informasi Restoran.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>Sistem Informasi Restoran.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>Sistem Informasi Restoran.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>Sistem Informasi Restoran.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
@@ -55,10 +101,10 @@
     <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="MessagingToolkit.Barcode">
-      <HintPath>C:\Users\Naili\Downloads\MessagingToolkit.Barcode.dll</HintPath>
+      <HintPath>..\..\Add Reference\MessagingToolkit.Barcode.dll</HintPath>
     </Reference>
     <Reference Include="MessagingToolkit.QRCode">
-      <HintPath>C:\Users\Naili\Downloads\MessagingToolkit.QRCode.dll</HintPath>
+      <HintPath>..\..\Add Reference\MessagingToolkit.QRCode.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -73,7 +119,7 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
     <Reference Include="WebCam_Capture">
-      <HintPath>C:\Users\Naili\Downloads\WebCam_Capture.dll</HintPath>
+      <HintPath>..\..\Add Reference\WebCam_Capture.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -90,34 +136,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cetak Laporan 1.Designer.vb">
-      <DependentUpon>Cetak Laporan 1.vb</DependentUpon>
+    <Compile Include="Cari ID card.Designer.vb">
+      <DependentUpon>Cari ID card.vb</DependentUpon>
     </Compile>
-    <Compile Include="Cetak Laporan 1.vb">
+    <Compile Include="Cari ID card.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cetak Laporan Periodik.Designer.vb">
-      <DependentUpon>Cetak Laporan Periodik.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Cetak Laporan Periodik.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CrystalReport1.vb">
+    <Compile Include="Crystal Report ID Card.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport1.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="CrystalReport2.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport2.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="CrystalReport3.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport3.rpt</DependentUpon>
+      <DependentUpon>Crystal Report ID Card.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Data Karyawan.Designer.vb">
@@ -126,28 +154,100 @@
     <Compile Include="Data Karyawan.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Data Menu.Designer.vb">
+      <DependentUpon>Data Menu.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="Data Menu.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.vb">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <Compile Include="Detail Transaksi.Designer.vb">
+      <DependentUpon>Detail Transaksi.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form2.vb">
+    <Compile Include="Detail Transaksi.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.vb">
-      <DependentUpon>Form3.vb</DependentUpon>
+    <Compile Include="Form ID Card.Designer.vb">
+      <DependentUpon>Form ID Card.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form3.vb">
+    <Compile Include="Form ID Card.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Kasir.Designer.vb">
-      <DependentUpon>Kasir.vb</DependentUpon>
+    <Compile Include="Form Report Berdasarkan Harga.Designer.vb">
+      <DependentUpon>Form Report Berdasarkan Harga.vb</DependentUpon>
     </Compile>
-    <Compile Include="Kasir.vb">
+    <Compile Include="Form Report Berdasarkan Harga.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Report Data Kasir.Designer.vb">
+      <DependentUpon>Form Report Data Kasir.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Report Data Kasir.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Report Data Menu.Designer.vb">
+      <DependentUpon>Form Report Data Menu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Report Data Menu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Report Data Pelanggan.Designer.vb">
+      <DependentUpon>Form Report Data Pelanggan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Report Data Pelanggan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Report Periodik Transaksi.Designer.vb">
+      <DependentUpon>Form Report Periodik Transaksi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Report Periodik Transaksi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nota_Struk.Designer.vb">
+      <DependentUpon>Nota_Struk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Nota_Struk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QRCodeGenerator.Designer.vb">
+      <DependentUpon>QRCodeGenerator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="QRCodeGenerator.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report Nota Struk.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report Nota Struk.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ScanReader.Designer.vb">
+      <DependentUpon>ScanReader.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ScanReader.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BCQR_Reader.Designer.vb">
+      <DependentUpon>BCQR_Reader.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BCQR_Reader.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interval Harga.Designer.vb">
+      <DependentUpon>Interval Harga.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Interval Harga.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interval Tanggal.Designer.vb">
+      <DependentUpon>Interval Tanggal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Interval Tanggal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data Kasir.Designer.vb">
+      <DependentUpon>Data Kasir.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Data Kasir.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Koneksi.vb" />
@@ -161,19 +261,6 @@
       <DependentUpon>Main Menu.vb</DependentUpon>
     </Compile>
     <Compile Include="Main Menu.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Menu Makanan.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Menu Makanan.Designer.vb">
-      <DependentUpon>Menu Makanan.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Menu Minuman.Designer.vb">
-      <DependentUpon>Menu Minuman.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Menu Minuman.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -192,46 +279,40 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Pelanggan.Designer.vb">
-      <DependentUpon>Pelanggan.vb</DependentUpon>
+    <Compile Include="Data Pelanggan.Designer.vb">
+      <DependentUpon>Data Pelanggan.vb</DependentUpon>
     </Compile>
-    <Compile Include="Pelanggan.vb">
+    <Compile Include="Data Pelanggan.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Per Harga Makanan.Designer.vb">
-      <DependentUpon>Per Harga Makanan.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Per Harga Makanan.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Report Data Makanan.Designer.vb">
-      <DependentUpon>Report Data Makanan.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Report Data Makanan.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Report Data Minuman.Designer.vb">
-      <DependentUpon>Report Data Minuman.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Report Data Minuman.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Report Data Pelanggan.Designer.vb">
-      <DependentUpon>Report Data Pelanggan.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Report Data Pelanggan.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Report Per Harga Makanan.vb">
+    <Compile Include="Report Berdasarkan Harga.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Report Per Harga Makanan.rpt</DependentUpon>
+      <DependentUpon>Report Berdasarkan Harga.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Report Transaksi.vb">
+    <Compile Include="Report Data Kasir.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Report Transaksi.rpt</DependentUpon>
+      <DependentUpon>Report Data Kasir.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report Data Menu.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report Data Menu.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report Data Pelanggan.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report Data Pelanggan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report Transaksi New.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report Transaksi New.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Transaksi.Designer.vb">
@@ -240,41 +321,66 @@
     <Compile Include="Transaksi.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\Forms.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Cetak Laporan 1.resx">
-      <DependentUpon>Cetak Laporan 1.vb</DependentUpon>
+    <EmbeddedResource Include="Cari ID card.resx">
+      <DependentUpon>Cari ID card.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cetak Laporan Periodik.resx">
-      <DependentUpon>Cetak Laporan Periodik.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReport1.rpt">
+    <EmbeddedResource Include="Crystal Report ID Card.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport1.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReport2.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport2.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReport3.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport3.vb</LastGenOutput>
+      <LastGenOutput>Crystal Report ID Card.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Data Karyawan.resx">
       <DependentUpon>Data Karyawan.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="Data Menu.resx">
+      <DependentUpon>Data Menu.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <EmbeddedResource Include="Detail Transaksi.resx">
+      <DependentUpon>Detail Transaksi.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.vb</DependentUpon>
+    <EmbeddedResource Include="Form ID Card.resx">
+      <DependentUpon>Form ID Card.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Kasir.resx">
-      <DependentUpon>Kasir.vb</DependentUpon>
+    <EmbeddedResource Include="Form Report Berdasarkan Harga.resx">
+      <DependentUpon>Form Report Berdasarkan Harga.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Report Data Kasir.resx">
+      <DependentUpon>Form Report Data Kasir.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Report Data Menu.resx">
+      <DependentUpon>Form Report Data Menu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Report Data Pelanggan.resx">
+      <DependentUpon>Form Report Data Pelanggan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Report Periodik Transaksi.resx">
+      <DependentUpon>Form Report Periodik Transaksi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nota_Struk.resx">
+      <DependentUpon>Nota_Struk.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QRCodeGenerator.resx">
+      <DependentUpon>QRCodeGenerator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Nota Struk.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report Nota Struk.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScanReader.resx">
+      <DependentUpon>ScanReader.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BCQR_Reader.resx">
+      <DependentUpon>BCQR_Reader.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interval Harga.resx">
+      <DependentUpon>Interval Harga.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interval Tanggal.resx">
+      <DependentUpon>Interval Tanggal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data Kasir.resx">
+      <DependentUpon>Data Kasir.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
@@ -282,40 +388,34 @@
     <EmbeddedResource Include="Main Menu.resx">
       <DependentUpon>Main Menu.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu Makanan.resx">
-      <DependentUpon>Menu Makanan.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Menu Minuman.resx">
-      <DependentUpon>Menu Minuman.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pelanggan.resx">
-      <DependentUpon>Pelanggan.vb</DependentUpon>
+    <EmbeddedResource Include="Data Pelanggan.resx">
+      <DependentUpon>Data Pelanggan.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Per Harga Makanan.resx">
-      <DependentUpon>Per Harga Makanan.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report Data Makanan.resx">
-      <DependentUpon>Report Data Makanan.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report Data Minuman.resx">
-      <DependentUpon>Report Data Minuman.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report Data Pelanggan.resx">
-      <DependentUpon>Report Data Pelanggan.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report Per Harga Makanan.rpt">
+    <EmbeddedResource Include="Report Berdasarkan Harga.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Report Per Harga Makanan.vb</LastGenOutput>
+      <LastGenOutput>Report Berdasarkan Harga.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report Transaksi.rpt">
+    <EmbeddedResource Include="Report Data Kasir.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Report Transaksi.vb</LastGenOutput>
+      <LastGenOutput>Report Data Kasir.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Data Menu.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report Data Menu.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Data Pelanggan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report Data Pelanggan.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Transaksi New.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report Transaksi New.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Transaksi.resx">
       <DependentUpon>Transaksi.vb</DependentUpon>
@@ -337,6 +437,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

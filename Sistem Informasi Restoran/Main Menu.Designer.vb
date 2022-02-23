@@ -29,22 +29,21 @@ Partial Class Main_Menu
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DataMenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DataPelangganToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataKaryawanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuMakananToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuMinumanToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LaporanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DataPelangganToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DataPemesananBaruToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DataKasirToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.TransaksiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DataKasirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DataPembayaranToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TransaksiToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportTransaksiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportDataMinumanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportDataMenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportDataPelanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportPeriodikTransaksiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportPeriodikTransaksiToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportPerHargaMakananToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportBerdasarkanHargaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IDCardToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.QRCodeBarcodeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.QRCodeGeneratorToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ScanReaderToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip2.SuspendLayout()
         Me.SuspendLayout()
@@ -81,130 +80,128 @@ Partial Class Main_Menu
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 28)
         Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
         Me.MenuStrip1.Size = New System.Drawing.Size(697, 24)
         Me.MenuStrip1.TabIndex = 7
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'MenuStrip2
         '
-        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.LaporanToolStripMenuItem, Me.TransaksiToolStripMenuItem, Me.ReportToolStripMenuItem})
+        Me.MenuStrip2.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.TransaksiToolStripMenuItem, Me.ReportToolStripMenuItem, Me.QRCodeBarcodeToolStripMenuItem})
         Me.MenuStrip2.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip2.Name = "MenuStrip2"
+        Me.MenuStrip2.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
         Me.MenuStrip2.Size = New System.Drawing.Size(697, 28)
         Me.MenuStrip2.TabIndex = 8
         Me.MenuStrip2.Text = "MenuStrip2"
         '
         'ToolStripMenuItem1
         '
-        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DataKaryawanToolStripMenuItem, Me.MenuMakananToolStripMenuItem, Me.MenuMinumanToolStripMenuItem1})
+        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DataMenuToolStripMenuItem, Me.DataPelangganToolStripMenuItem1, Me.DataKaryawanToolStripMenuItem, Me.DataKasirToolStripMenuItem1})
         Me.ToolStripMenuItem1.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
         Me.ToolStripMenuItem1.Size = New System.Drawing.Size(107, 24)
         Me.ToolStripMenuItem1.Text = "Input Data "
         '
+        'DataMenuToolStripMenuItem
+        '
+        Me.DataMenuToolStripMenuItem.Name = "DataMenuToolStripMenuItem"
+        Me.DataMenuToolStripMenuItem.Size = New System.Drawing.Size(198, 24)
+        Me.DataMenuToolStripMenuItem.Text = "Data Menu"
+        '
+        'DataPelangganToolStripMenuItem1
+        '
+        Me.DataPelangganToolStripMenuItem1.Name = "DataPelangganToolStripMenuItem1"
+        Me.DataPelangganToolStripMenuItem1.Size = New System.Drawing.Size(198, 24)
+        Me.DataPelangganToolStripMenuItem1.Text = "Data Pelanggan"
+        '
         'DataKaryawanToolStripMenuItem
         '
         Me.DataKaryawanToolStripMenuItem.Name = "DataKaryawanToolStripMenuItem"
-        Me.DataKaryawanToolStripMenuItem.Size = New System.Drawing.Size(202, 24)
+        Me.DataKaryawanToolStripMenuItem.Size = New System.Drawing.Size(198, 24)
         Me.DataKaryawanToolStripMenuItem.Text = "Data Karyawan "
         '
-        'MenuMakananToolStripMenuItem
+        'DataKasirToolStripMenuItem1
         '
-        Me.MenuMakananToolStripMenuItem.Name = "MenuMakananToolStripMenuItem"
-        Me.MenuMakananToolStripMenuItem.Size = New System.Drawing.Size(202, 24)
-        Me.MenuMakananToolStripMenuItem.Text = "Menu Makanan"
-        '
-        'MenuMinumanToolStripMenuItem1
-        '
-        Me.MenuMinumanToolStripMenuItem1.Name = "MenuMinumanToolStripMenuItem1"
-        Me.MenuMinumanToolStripMenuItem1.Size = New System.Drawing.Size(202, 24)
-        Me.MenuMinumanToolStripMenuItem1.Text = "Menu Minuman "
-        '
-        'LaporanToolStripMenuItem
-        '
-        Me.LaporanToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DataPelangganToolStripMenuItem, Me.DataPemesananBaruToolStripMenuItem})
-        Me.LaporanToolStripMenuItem.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LaporanToolStripMenuItem.Name = "LaporanToolStripMenuItem"
-        Me.LaporanToolStripMenuItem.Size = New System.Drawing.Size(88, 24)
-        Me.LaporanToolStripMenuItem.Text = "Laporan "
-        '
-        'DataPelangganToolStripMenuItem
-        '
-        Me.DataPelangganToolStripMenuItem.Name = "DataPelangganToolStripMenuItem"
-        Me.DataPelangganToolStripMenuItem.Size = New System.Drawing.Size(208, 24)
-        Me.DataPelangganToolStripMenuItem.Text = "Data Pelanggan "
-        '
-        'DataPemesananBaruToolStripMenuItem
-        '
-        Me.DataPemesananBaruToolStripMenuItem.Name = "DataPemesananBaruToolStripMenuItem"
-        Me.DataPemesananBaruToolStripMenuItem.Size = New System.Drawing.Size(208, 24)
-        Me.DataPemesananBaruToolStripMenuItem.Text = "Data Pemesanan "
+        Me.DataKasirToolStripMenuItem1.Name = "DataKasirToolStripMenuItem1"
+        Me.DataKasirToolStripMenuItem1.Size = New System.Drawing.Size(198, 24)
+        Me.DataKasirToolStripMenuItem1.Text = "Data Kasir"
         '
         'TransaksiToolStripMenuItem
         '
-        Me.TransaksiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DataKasirToolStripMenuItem, Me.DataPembayaranToolStripMenuItem, Me.TransaksiToolStripMenuItem1})
+        Me.TransaksiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TransaksiToolStripMenuItem1})
         Me.TransaksiToolStripMenuItem.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TransaksiToolStripMenuItem.Name = "TransaksiToolStripMenuItem"
         Me.TransaksiToolStripMenuItem.Size = New System.Drawing.Size(99, 24)
         Me.TransaksiToolStripMenuItem.Text = "Transaksi "
         '
-        'DataKasirToolStripMenuItem
-        '
-        Me.DataKasirToolStripMenuItem.Name = "DataKasirToolStripMenuItem"
-        Me.DataKasirToolStripMenuItem.Size = New System.Drawing.Size(213, 24)
-        Me.DataKasirToolStripMenuItem.Text = "Data Kasir"
-        '
-        'DataPembayaranToolStripMenuItem
-        '
-        Me.DataPembayaranToolStripMenuItem.Name = "DataPembayaranToolStripMenuItem"
-        Me.DataPembayaranToolStripMenuItem.Size = New System.Drawing.Size(213, 24)
-        Me.DataPembayaranToolStripMenuItem.Text = "Data Pembayaran"
-        '
         'TransaksiToolStripMenuItem1
         '
         Me.TransaksiToolStripMenuItem1.Name = "TransaksiToolStripMenuItem1"
-        Me.TransaksiToolStripMenuItem1.Size = New System.Drawing.Size(213, 24)
+        Me.TransaksiToolStripMenuItem1.Size = New System.Drawing.Size(152, 24)
         Me.TransaksiToolStripMenuItem1.Text = "Transaksi"
         '
         'ReportToolStripMenuItem
         '
-        Me.ReportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportTransaksiToolStripMenuItem, Me.ReportDataMinumanToolStripMenuItem, Me.ReportPeriodikTransaksiToolStripMenuItem, Me.ReportPeriodikTransaksiToolStripMenuItem1, Me.ReportPerHargaMakananToolStripMenuItem})
+        Me.ReportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportDataMenuToolStripMenuItem, Me.ReportDataPelanToolStripMenuItem, Me.ReportPeriodikTransaksiToolStripMenuItem, Me.ReportBerdasarkanHargaToolStripMenuItem, Me.IDCardToolStripMenuItem})
         Me.ReportToolStripMenuItem.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
         Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(71, 24)
         Me.ReportToolStripMenuItem.Text = "Report"
         '
-        'ReportTransaksiToolStripMenuItem
+        'ReportDataMenuToolStripMenuItem
         '
-        Me.ReportTransaksiToolStripMenuItem.Name = "ReportTransaksiToolStripMenuItem"
-        Me.ReportTransaksiToolStripMenuItem.Size = New System.Drawing.Size(284, 24)
-        Me.ReportTransaksiToolStripMenuItem.Text = "Report Data Makanan"
+        Me.ReportDataMenuToolStripMenuItem.Name = "ReportDataMenuToolStripMenuItem"
+        Me.ReportDataMenuToolStripMenuItem.Size = New System.Drawing.Size(279, 24)
+        Me.ReportDataMenuToolStripMenuItem.Text = "Report Data Menu"
         '
-        'ReportDataMinumanToolStripMenuItem
+        'ReportDataPelanToolStripMenuItem
         '
-        Me.ReportDataMinumanToolStripMenuItem.Name = "ReportDataMinumanToolStripMenuItem"
-        Me.ReportDataMinumanToolStripMenuItem.Size = New System.Drawing.Size(284, 24)
-        Me.ReportDataMinumanToolStripMenuItem.Text = "Report Data Minuman"
+        Me.ReportDataPelanToolStripMenuItem.Name = "ReportDataPelanToolStripMenuItem"
+        Me.ReportDataPelanToolStripMenuItem.Size = New System.Drawing.Size(279, 24)
+        Me.ReportDataPelanToolStripMenuItem.Text = "Report Data Pelanggan"
         '
         'ReportPeriodikTransaksiToolStripMenuItem
         '
         Me.ReportPeriodikTransaksiToolStripMenuItem.Name = "ReportPeriodikTransaksiToolStripMenuItem"
-        Me.ReportPeriodikTransaksiToolStripMenuItem.Size = New System.Drawing.Size(284, 24)
-        Me.ReportPeriodikTransaksiToolStripMenuItem.Text = "Report Data Pelanggan"
+        Me.ReportPeriodikTransaksiToolStripMenuItem.Size = New System.Drawing.Size(279, 24)
+        Me.ReportPeriodikTransaksiToolStripMenuItem.Text = "Report Periodik Transaksi"
         '
-        'ReportPeriodikTransaksiToolStripMenuItem1
+        'ReportBerdasarkanHargaToolStripMenuItem
         '
-        Me.ReportPeriodikTransaksiToolStripMenuItem1.Name = "ReportPeriodikTransaksiToolStripMenuItem1"
-        Me.ReportPeriodikTransaksiToolStripMenuItem1.Size = New System.Drawing.Size(284, 24)
-        Me.ReportPeriodikTransaksiToolStripMenuItem1.Text = "Report Periodik Transaksi"
+        Me.ReportBerdasarkanHargaToolStripMenuItem.Name = "ReportBerdasarkanHargaToolStripMenuItem"
+        Me.ReportBerdasarkanHargaToolStripMenuItem.Size = New System.Drawing.Size(279, 24)
+        Me.ReportBerdasarkanHargaToolStripMenuItem.Text = "Report Berdasarkan Harga"
         '
-        'ReportPerHargaMakananToolStripMenuItem
+        'IDCardToolStripMenuItem
         '
-        Me.ReportPerHargaMakananToolStripMenuItem.Name = "ReportPerHargaMakananToolStripMenuItem"
-        Me.ReportPerHargaMakananToolStripMenuItem.Size = New System.Drawing.Size(284, 24)
-        Me.ReportPerHargaMakananToolStripMenuItem.Text = "Report Per Harga Makanan"
+        Me.IDCardToolStripMenuItem.Name = "IDCardToolStripMenuItem"
+        Me.IDCardToolStripMenuItem.Size = New System.Drawing.Size(279, 24)
+        Me.IDCardToolStripMenuItem.Text = "ID Card"
+        '
+        'QRCodeBarcodeToolStripMenuItem
+        '
+        Me.QRCodeBarcodeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.QRCodeGeneratorToolStripMenuItem1, Me.ScanReaderToolStripMenuItem1})
+        Me.QRCodeBarcodeToolStripMenuItem.Font = New System.Drawing.Font("Century Schoolbook", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.QRCodeBarcodeToolStripMenuItem.Name = "QRCodeBarcodeToolStripMenuItem"
+        Me.QRCodeBarcodeToolStripMenuItem.Size = New System.Drawing.Size(158, 24)
+        Me.QRCodeBarcodeToolStripMenuItem.Text = "QR Code / Barcode"
+        '
+        'QRCodeGeneratorToolStripMenuItem1
+        '
+        Me.QRCodeGeneratorToolStripMenuItem1.Name = "QRCodeGeneratorToolStripMenuItem1"
+        Me.QRCodeGeneratorToolStripMenuItem1.Size = New System.Drawing.Size(222, 24)
+        Me.QRCodeGeneratorToolStripMenuItem1.Text = "QR Code Generator"
+        '
+        'ScanReaderToolStripMenuItem1
+        '
+        Me.ScanReaderToolStripMenuItem1.Name = "ScanReaderToolStripMenuItem1"
+        Me.ScanReaderToolStripMenuItem1.Size = New System.Drawing.Size(222, 24)
+        Me.ScanReaderToolStripMenuItem1.Text = "Scan Reader"
         '
         'Main_Menu
         '
@@ -217,7 +214,7 @@ Partial Class Main_Menu
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.MenuStrip2)
         Me.Name = "Main_Menu"
-        Me.Text = "Main_Menu"
+        Me.Text = "Main Menu"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip2.ResumeLayout(False)
         Me.MenuStrip2.PerformLayout()
@@ -233,19 +230,18 @@ Partial Class Main_Menu
     Friend WithEvents MenuStrip2 As MenuStrip
     Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents DataKaryawanToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents MenuMakananToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents MenuMinumanToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents LaporanToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DataPelangganToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DataPemesananBaruToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TransaksiToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DataKasirToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DataPembayaranToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ReportTransaksiToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ReportDataMinumanToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DataMenuToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReportDataMenuToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReportDataPelanToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportPeriodikTransaksiToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ReportPeriodikTransaksiToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents ReportPerHargaMakananToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReportBerdasarkanHargaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TransaksiToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents DataPelangganToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents DataKasirToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents IDCardToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents QRCodeBarcodeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents QRCodeGeneratorToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ScanReaderToolStripMenuItem1 As ToolStripMenuItem
 End Class

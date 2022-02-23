@@ -18,7 +18,7 @@ Imports System
 Imports System.ComponentModel
 
 
-Public Class Report_Data_Pelanggan
+Public Class Report_Data_Menu
     Inherits ReportClass
     
     Public Sub New()
@@ -27,7 +27,7 @@ Public Class Report_Data_Pelanggan
     
     Public Overrides Property ResourceName() As String
         Get
-            Return "Report Data Pelanggan.rpt"
+            Return "Report Data Menu.rpt"
         End Get
         Set
             'Do nothing
@@ -45,7 +45,7 @@ Public Class Report_Data_Pelanggan
     
     Public Overrides Property FullResourceName() As String
         Get
-            Return "Sistem_Informasi_Restoran.Report Data Pelanggan.rpt"
+            Return "Sistem_Informasi_Restoran.Report Data Menu.rpt"
         End Get
         Set
             'Do nothing
@@ -94,7 +94,7 @@ Public Class Report_Data_Pelanggan
 End Class
 
 <System.Drawing.ToolboxBitmapAttribute(GetType(CrystalDecisions.[Shared].ExportOptions), "report.bmp")>  _
-Public Class CachedReport_Data_Pelanggan
+Public Class CachedReport_Data_Menu
     Inherits Component
     Implements ICachedReport
     
@@ -136,7 +136,7 @@ Public Class CachedReport_Data_Pelanggan
     End Property
     
     Public Overridable Function CreateReport() As CrystalDecisions.CrystalReports.Engine.ReportDocument Implements CrystalDecisions.ReportSource.ICachedReport.CreateReport
-        Dim rpt As Report_Data_Pelanggan = New Report_Data_Pelanggan()
+        Dim rpt As Report_Data_Menu = New Report_Data_Menu()
         rpt.Site = Me.Site
         Return rpt
     End Function

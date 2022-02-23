@@ -164,10 +164,10 @@ Public Class Data_Karyawan
             Exit Sub
         Else
             Call koneksiDB()
-            CMD = New OleDb.OleDbCommand("update Kasir set Id_Kasir = '" &
-           txt_id_karyawan.Text & "', Nama_Kasir = '" & txt_nama_karyawan.Text & "', Jenis_Kelamin = '" &
+            CMD = New OleDb.OleDbCommand("update Kasir set Nama_Kasir = '" & txt_nama_karyawan.Text & "', Jenis_Kelamin = '" &
            cmb_jk.Text & "', Tempat_Lahir = '" & txt_lahir.Text & "', Agama = '" & cmb_agama.Text & "', No_Telepon = '" &
-           txt_hp.Text & "', Alamat = '" & txt_alamat.Text & "', Status = '" & cmb_status.Text & "', Photo = '" & txt_foto.Text & "'", Conn)
+           txt_hp.Text & "', Alamat = '" & txt_alamat.Text & "', Status = '" & cmb_status.Text & "', Photo = '" &
+           txt_foto.Text & "'Where Id_Kasir = '" & txt_id_karyawan.Text & "'", Conn)
             DM = CMD.ExecuteReader
             MsgBox("Update Data Berhasil")
         End If
@@ -218,5 +218,23 @@ Public Class Data_Karyawan
         Catch ex As Exception
             MsgBox(ex.ToString())
         End Try
+    End Sub
+    Private Sub DGV2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV2.CellContentClick
+        On Error Resume Next
+        txt_id_karyawan.Text = DGV2.Rows(e.RowIndex).Cells(0).Value
+        txt_nama_karyawan.Text = DGV2.Rows(e.RowIndex).Cells(1).Value
+        txt_lahir.Text = DGV2.Rows(e.RowIndex).Cells(2).Value
+        DateTimePicker1.Value = DGV2.Rows(e.RowIndex).Cells(3).Value
+        txtumur.Text = DGV2.Rows(e.RowIndex).Cells(4).Value
+        cmb_jk.Text = DGV2.Rows(e.RowIndex).Cells(5).Value
+        cmb_agama.Text = DGV2.Rows(e.RowIndex).Cells(6).Value
+        txt_alamat.Text = DGV2.Rows(e.RowIndex).Cells(7).Value
+        cmb_status.Text = DGV2.Rows(e.RowIndex).Cells(8).Value
+        Call HidupkanForm()
+        txt_id_karyawan.Enabled = False
+    End Sub
+
+    Private Sub Data_Karyawan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TampilkanData()
     End Sub
 End Class

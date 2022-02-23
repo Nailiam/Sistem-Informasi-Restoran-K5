@@ -93,7 +93,7 @@ Partial Class Login
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Modern No. 20", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(102, 33)
+        Me.Label1.Location = New System.Drawing.Point(133, 33)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(93, 29)
         Me.Label1.TabIndex = 7
